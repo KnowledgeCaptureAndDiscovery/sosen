@@ -1,0 +1,6 @@
+click
+rdflib
+rdflib-jsonld
+requests
+-e git+https://github.com/KnowledgeCaptureAndDiscovery/somef.git@402dd75685b2647d5270820c2d29028c723496e7#egg=somef&subdirectory=somef\ package
+urllib3

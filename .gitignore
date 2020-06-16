@@ -1,0 +1,6 @@
+# since I name testing files starting with test
+test*
+
+# since these don't need to be committed
+env/
+__pycache__/
