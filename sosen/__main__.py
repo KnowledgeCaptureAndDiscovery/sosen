@@ -34,7 +34,14 @@ def cli():
     required=False,
     default=0.8
 )
-def run(queries, graph_out, threshold):
+@click.option(
+    '--format',
+    '-f',
+    type=click.Choice(["json-ld", "turtle"]),
+    required=False,
+    default="turtle"
+)
+def run(queries, graph_out, threshold, format):
     print("running")
     with open(queries, "r") as in_handle:
         # get all of the queries
@@ -62,7 +69,7 @@ def run(queries, graph_out, threshold):
     graph = DataGraph()
     graph.add_somef_data(combined_data)
     with open(graph_out, "wb") as out_file:
-        out_file.write(graph.g.serialize(format="turtle"))
+        out_file.write(graph.g.serialize(format=format))
 
 
 if __name__ == "__main__":
