@@ -105,6 +105,8 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
         with open(data_dict, "r") as json_in:
             cli_data = json.load(json_in)
 
+        print(f"found {data_dict} with {len(cli_data)} entries")
+
     # get the data from the cli
     num_saves = math.sqrt(len(cli_data))
     for index, github_url in enumerate(github_urls):
