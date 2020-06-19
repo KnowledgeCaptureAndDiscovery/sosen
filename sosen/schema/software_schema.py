@@ -87,7 +87,7 @@ somef_software_schema = {
         "@type": "xsd:string"
     },
     "sd:hasSourceCode": {
-        "@class": "sd:SoftwareSource",
+        "@class": "sd:SourceCode",
         "@id": {
             "@format": "obj:SoftwareSource/{name}",
             "name": ["fullName", "excerpt"]
