@@ -6,6 +6,7 @@ from somef import cli as somef_cli
 from .data_to_graph import DataGraph
 from .get_data import get_zenodo_data
 import math
+import os
 
 print("test")
 
@@ -55,7 +56,13 @@ def cli():
     required=False,
     default="turtle"
 )
-def run(queries, all, graph_out, zenodo_data, threshold, format):
+@click.option(
+    '--data_dict',
+    '-d',
+    type=click.Path(),
+    required=False
+)
+def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
     print("running")
     if not zenodo_data:
         if all:
@@ -92,13 +99,30 @@ def run(queries, all, graph_out, zenodo_data, threshold, format):
     # make sure that the github urls are all unique, too
     github_urls = {data["github_url"] for data in data_and_urls_flattened.values()}
 
+    cli_data = {}
+
+    if data_dict is not None and os.path.exists(data_dict):
+        with open(data_dict, "r") as json_in:
+            cli_data = json.load(json_in)
+
     # get the data from the cli
-    github_urls_and_data = ((github_url, somef_cli.cli_get_data(threshold, repo_url=github_url)) for github_url in github_urls)
-    cli_data = {github_url: data for github_url, data in github_urls_and_data if data is not None}
+    num_saves = math.sqrt(len(cli_data))
+    for index, github_url in enumerate(github_urls):
+        if github_url not in cli_data:
+            data = somef_cli.cli_get_data(threshold, repo_url=github_url)
+            cli_data.update({github_url: data})
+
+            # save the cli_data, too, but only every sqrt or so to keep this O(n)
+            if math.sqrt(index) > num_saves:
+                num_saves += 1
+                with open(data_dict, "w") as json_out:
+                    json.dump(cli_data, json_out)
+                print(f"saved cli_data to {data_dict}")
 
     graph = DataGraph()
 
-    filtered_data = (data for data in data_and_urls_flattened.values() if data["github_url"] in cli_data)
+    filtered_data = (data for data in data_and_urls_flattened.values()
+                     if data["github_url"] in cli_data and cli_data[data["github_url"]] is not None)
 
     for data in filtered_data:
         graph.add_somef_data({**cli_data[data["github_url"]], "zenodo_data": data["zenodo_data"]})
