@@ -108,9 +108,11 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
         print(f"found {data_dict} with {len(cli_data)} entries")
 
     # get the data from the cli
-    num_saves = math.sqrt(len(cli_data))
-    for index, github_url in enumerate(github_urls):
+    index = len(cli_data)
+    num_saves = math.sqrt(index)
+    for github_url in github_urls:
         if github_url not in cli_data:
+            index += 1
             data = somef_cli.cli_get_data(threshold, repo_url=github_url)
             cli_data.update({github_url: data})
 
