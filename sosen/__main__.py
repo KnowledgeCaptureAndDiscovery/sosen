@@ -118,6 +118,8 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
                 with open(data_dict, "w") as json_out:
                     json.dump(cli_data, json_out)
                 print(f"saved cli_data to {data_dict}")
+        else:
+            print(f"{github_url} found cached in {data_dict}")
 
     graph = DataGraph()
 
