@@ -125,6 +125,10 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
         else:
             print(f"{github_url} found cached in {data_dict}")
 
+    # save at the end, too
+    with open(data_dict, "w") as json_out:
+        json.dump(cli_data, json_out)
+
     graph = DataGraph()
 
     filtered_data = (data for data in data_and_urls_flattened.values()
