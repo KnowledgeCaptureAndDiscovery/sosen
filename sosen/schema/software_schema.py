@@ -86,6 +86,21 @@ somef_software_schema = {
         "@path": ["topics", "excerpt"],
         "@type": "xsd:string"
     },
+    "sd:doi": {
+        "@required": True,
+        "@path": ["zenodo_data", "doi"],
+        "@type": "xsd:string"
+    },
+    "sd:identifier": [
+        {
+            "@path": ["zenodo_data", "doi"],
+            "@type": "xsd:string"
+        },
+        {
+            "@path": ["zenodo_data", "conceptdoi"],
+            "@type": "xsd:string"
+        }
+    ],
     "sd:hasSourceCode": {
         "@class": "sd:SourceCode",
         "@id": {
