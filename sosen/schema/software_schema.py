@@ -33,7 +33,7 @@ somef_software_schema = {
         "@path": ["installation", "excerpt"],
         "@type": "xsd:string"
     },
-    "sd:hasExecutionCommand": [
+    "sd:executionInstructions": [
         {
             "@path": ["run", "excerpt"],
             "@type": "xsd:string"
@@ -47,16 +47,15 @@ somef_software_schema = {
         "@path": ["usage", "excerpt"],
         "@type": "xsd:string"
     },
-    "sd:downloadUrl": [
-        {
-            "@path": ["downloadUrl", "excerpt"],
-            "@type": "xsd:anyURI"
-        },
-        {
-            "@path": ["download", "excerpt"],
-            "@type": "xsd:string"
-        }
-    ],
+    "sd:downloadUrl": {
+        "@path": ["downloadUrl", "excerpt"],
+        "@type": "xsd:anyURI"
+    },
+    "sd:downloadInstructions":
+    {
+        "@path": ["download", "excerpt"],
+        "@type": "xsd:string"
+    },
     "sd:softwareRequirements": {
         "@path": ["requirement", "excerpt"],
         "@type": "xsd:string"
