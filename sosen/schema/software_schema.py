@@ -29,7 +29,7 @@ somef_software_schema = {
         "@path": ["citation", "excerpt"],
         "@type": "xsd:string"
     },
-    "sd:hasInstallInstructions": {
+    "sd:hasInstallationInstructions": {
         "@path": ["installation", "excerpt"],
         "@type": "xsd:string"
     },
