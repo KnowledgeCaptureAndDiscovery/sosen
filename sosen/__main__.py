@@ -3,10 +3,15 @@ from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
 import requests
 import json
 from somef import cli as somef_cli
+
+from .get_zenodo_query_data import get_zenodo_query_data
 from .data_to_graph import DataGraph
 from .get_data import get_zenodo_data
 import math
 import os
+from rdflib import Graph
+import rdflib
+from SPARQLWrapper import SPARQLWrapper
 
 print("test")
 
@@ -139,6 +144,44 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
 
     with open(graph_out, "wb") as out_file:
         out_file.write(graph.g.serialize(format=format))
+
+
+@cli.command(help="get testing/training data")
+@click.option(
+    "--queries",
+    "-q",
+    type=click.Path(exists=True),
+    help="Newline-separated file of queries",
+    required=True
+)
+@click.option(
+    "--output",
+    "-o",
+    type=click.Path(),
+    help="Output JSON file to save the data to",
+    required=True
+)
+@click.option(
+    "--graph_in",
+    "-g",
+    type=str,
+    help="link to the SPARQL endpoint"
+)
+def get_data(queries, output, graph_in):
+    sparql = SPARQLWrapper(graph_in)
+
+    with open(queries, "r") as query_file:
+        print("loading queries")
+        queries_set = {stripped_line for stripped_line in
+                   (line.rstrip("\n") for line in query_file)
+                   if len(stripped_line) > 0
+                   }
+        print("querying API")
+        output_data = {query: get_zenodo_query_data(query, sparql) for query in queries_set}
+
+    print("saving data")
+    with open(output, "w") as out_file:
+        json.dump(output_data, out_file)
 
 
 if __name__ == "__main__":

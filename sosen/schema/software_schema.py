@@ -25,10 +25,11 @@ somef_software_schema = {
             "@type": "xsd:string"
         }
     ],
-    "sd:citation": {
+    "sd:preferredCitation": { # change to preferred citation
         "@path": ["citation", "excerpt"],
         "@type": "xsd:string"
     },
+    # todo: add in citation separately from zenodo as sd:citation
     "sd:hasInstallationInstructions": {
         "@path": ["installation", "excerpt"],
         "@type": "xsd:string"
@@ -87,7 +88,7 @@ somef_software_schema = {
     },
     "sd:doi": {
         "@required": True,
-        "@path": ["zenodo_data", "doi"],
+        "@path": ["zenodo_data", "conceptdoi"],
         "@type": "xsd:string"
     },
     "sd:identifier": [
