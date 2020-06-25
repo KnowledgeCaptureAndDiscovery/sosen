@@ -18,3 +18,8 @@ This will run the queries listed in
 and if the result has a GitHub link, then it will extract
 the metadata from GitHub and output it as a Knowledge Graph
 to ```graph_out.ttl```
+
+# running tests
+To run the unit tests, run
+
+```python -m unittest test```
