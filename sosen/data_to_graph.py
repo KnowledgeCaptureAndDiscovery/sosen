@@ -38,9 +38,17 @@ class DataGraph:
             else:
                 return in_dict
         else:
+            def array_or_value(val, index):
+                if DataGraph.is_array(val):
+                    if len(val) > 1:
+                        return val[index]
+                    else:
+                        return val[0]
+                else:
+                    return val
             return [
                 DataGraph.combine_dict(
-                    {key: value[i] if DataGraph.is_array(value) else value
+                    {key: array_or_value(value, i)
                      for key, value in in_dict.items()},
                     method=method
                 ) for i in range(length)
