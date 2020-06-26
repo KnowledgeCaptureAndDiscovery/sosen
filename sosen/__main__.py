@@ -113,17 +113,16 @@ def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
         print(f"found {data_dict} with {len(cli_data)} entries")
 
     # get the data from the cli
-    index = len(cli_data)
-    num_saves = math.sqrt(index)
+    index = 0
     for github_url in github_urls:
         if github_url not in cli_data:
             index += 1
             data = somef_cli.cli_get_data(threshold, repo_url=github_url)
             cli_data.update({github_url: data})
 
-            # save the cli_data, too, but only every sqrt or so to keep this O(n)
-            if math.sqrt(index) > num_saves:
-                num_saves += 1
+            # save every 10 times... saving is pretty quick.
+            if index == 10:
+                index = 0
                 with open(data_dict, "w") as json_out:
                     json.dump(cli_data, json_out)
                 print(f"saved cli_data to {data_dict}")
