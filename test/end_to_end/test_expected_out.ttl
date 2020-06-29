@@ -2,7 +2,7 @@
 @prefix sd: <https://w3id.org/okn/o/sd#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/okn/o/i/Software/science-on-schema.org> a sd:Software ;
+<http://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> a sd:Software ;
     sd:author <http://w3id.org/okn/o/i/Person/ESIPFed> ;
     sd:description "Provides guidance for publishing schema.org as JSON-LD for the sciences"^^xsd:string ;
     sd:doi "10.5281/zenodo.2628755"^^xsd:string ;
@@ -11,27 +11,27 @@
 """^^xsd:string,
         """Google structured data test tool 
 """^^xsd:string ;
-    sd:hasSourceCode <http://w3id.org/okn/o/i/SoftwareSource/science-on-schema.org> ;
-    sd:hasVersion <http://w3id.org/okn/o/i/SoftwareVersion/science-on-schema.org/1.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/science-on-schema.org/1.1.0> ;
+    sd:hasSourceCode <http://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> ;
+    sd:hasVersion <http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
     sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
         "10.5281/zenodo.3736235"^^xsd:string ;
-    sd:name "science-on-schema.org"^^xsd:string .
+    sd:name "ESIPFed/science-on-schema.org"^^xsd:string .
 
 <http://w3id.org/okn/o/i/Person/ESIPFed> a schema:Person ;
     sd:additionalName "ESIPFed"^^schema:Text .
 
-<http://w3id.org/okn/o/i/SoftwareSource/science-on-schema.org> a sd:SourceCode ;
+<http://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
     sd:codeRepository "https://github.com/ESIPFed/science-on-schema.org"^^xsd:anyURI .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
+<http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/ESIPFed/science-on-schema.org/tarball/1.0.0"^^xsd:anyURI,
         "https://api.github.com/repos/ESIPFed/science-on-schema.org/zipball/1.0.0"^^xsd:anyURI,
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "1.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
+<http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
     sd:description """## FIXES\r
 - Using `@type` instead of `schema:additionalType` ([decision](decisions/74-schemaorg-additionalType-vs-RDF-typing.md), Issue #74)\r
 \r

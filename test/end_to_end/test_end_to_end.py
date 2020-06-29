@@ -1,5 +1,5 @@
 import unittest
-from sosen.cli import run
+from sosen.cli import run_scrape
 import os
 
 # run the whole process on a file and verify the output is as expected
@@ -27,7 +27,7 @@ class FromCached(BaseEndToEnd):
         threshold = 0.8
         format = "turtle"
 
-        run(
+        run_scrape(
             queries=queries,
             all=all,
             zenodo_data=zenodo_data,
