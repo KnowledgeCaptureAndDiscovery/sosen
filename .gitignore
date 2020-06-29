@@ -10,3 +10,8 @@ test/end_to_end/test_actual_out.ttl.data_and_urls.json
 # since these don't need to be committed
 env/
 **/__pycache__/
+**/*.pyc
+
+# editor specific files
+**/*.swp
+.idea/
