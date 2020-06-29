@@ -1,6 +1,7 @@
 from rdflib import RDF, Graph, Literal, URIRef, Namespace
 from rdflib.namespace import XSD
 from .schema.software_schema import software_prefixes, somef_software_schema
+import urllib.parse
 
 class DataGraph:
     def __init__(self):
@@ -83,7 +84,11 @@ class DataGraph:
             # if we can't get all the arguments, our ID won't make sense, and we can't create this object
             if None in args.values():
                 return None
-            data_id = DataGraph.combine_dict(args, lambda x: data_id["@format"].format(**x))
+            def format_as_url(args):
+                url_encoded_args = {key: urllib.parse.quote(value) for key, value in args.items()}
+                return data_id["@format"].format(**url_encoded_args)
+
+            data_id = DataGraph.combine_dict(args, format_as_url)
 
         rdf_id = self.resolve_type(data_id)
 

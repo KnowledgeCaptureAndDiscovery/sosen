@@ -12,7 +12,7 @@ import rdflib
 from SPARQLWrapper import SPARQLWrapper
 
 
-def run(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
+def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
     print("running")
     if not zenodo_data:
         if all:

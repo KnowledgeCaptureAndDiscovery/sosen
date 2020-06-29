@@ -1,6 +1,6 @@
 import click
 from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
-from .cli import run, get_data
+from .cli import run_scrape, get_data
 
 print("test")
 
@@ -57,7 +57,7 @@ def cli():
     required=False
 )
 def run(**kwargs):
-    run(**kwargs)
+    run_scrape(**kwargs)
 
 
 @cli.command(help="get testing/training data")
