@@ -66,6 +66,23 @@ class DataGraph:
         else:
             return method(data)
 
+    @staticmethod
+    def resolve_value(data, schema):
+        if isinstance(schema, dict):
+            # resolve the format string
+            args = {key: DataGraph.resolve_path(data, path) for (key, path) in schema.items() if key[0] != "@"}
+            # if we can't get all the arguments, our ID won't make sense, and we can't create this object
+            if None in args.values():
+                return None
+
+            def format_as_url(args):
+                url_encoded_args = {key: urllib.parse.quote(value) for key, value in args.items()}
+                return schema["@format"].format(**url_encoded_args)
+
+            return DataGraph.combine_dict(args, format_as_url)
+        else:
+            return schema
+
     def data_to_graph(self, data, schema):
         assert("@class" in schema and "@id" in schema)
 
@@ -77,18 +94,7 @@ class DataGraph:
                 self.g.add(x_triple)
 
         # first get the id
-        data_id = schema["@id"]
-        if isinstance(data_id, dict):
-            # resolve the format string
-            args = {key: DataGraph.resolve_path(data, path) for (key, path) in data_id.items() if key[0] != "@"}
-            # if we can't get all the arguments, our ID won't make sense, and we can't create this object
-            if None in args.values():
-                return None
-            def format_as_url(args):
-                url_encoded_args = {key: urllib.parse.quote(value) for key, value in args.items()}
-                return data_id["@format"].format(**url_encoded_args)
-
-            data_id = DataGraph.combine_dict(args, format_as_url)
+        data_id = DataGraph.resolve_value(data, schema["@id"])
 
         rdf_id = self.resolve_type(data_id)
 
@@ -112,10 +118,14 @@ class DataGraph:
                     # in this case, we are dealing with a specific instance of a class
                     # create the instance of that object in the graph
                     rdf_value = self.data_to_graph(data, attr_schema)
-                elif "@type" in attr_schema and "@path" in attr_schema:
+                elif "@type" in attr_schema and ("@path" in attr_schema or "@value" in attr_schema):
                     # in this case, we are just dealing with a specific attribute
                     # get the value of the attribute from the data object
-                    obj_value = DataGraph.resolve_path(data, attr_schema["@path"])
+                    if "@path" in attr_schema:
+                        obj_value = DataGraph.resolve_path(data, attr_schema["@path"])
+                    else:
+                        obj_value = DataGraph.resolve_value(data, attr_schema["@value"])
+
                     # get the type of the attribute from the schema object
                     obj_type = self.resolve_type(attr_schema["@type"])
                     # combine the value and type in a Literal

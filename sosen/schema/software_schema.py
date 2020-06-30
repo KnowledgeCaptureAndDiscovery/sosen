@@ -15,7 +15,7 @@ somef_software_schema = {
         "name": ["fullName", "excerpt"]
     },
     # data from SoMEF
-    "sd:description": [
+    "sd:description": [ # add in zenodo description
         {
             "@path": ["description", "excerpt"],
             "@type": "xsd:string"
@@ -23,9 +23,13 @@ somef_software_schema = {
         {
             "@path": ["issues", "excerpt"],
             "@type": "xsd:string"
+        },
+        {
+            "@path": ["zenodo_data", "metadata", "description"],
+            "@type": "xsd:string"
         }
     ],
-    "sd:preferredCitation": { # change to preferred citation
+    "sd:referencePublication": {
         "@path": ["citation", "excerpt"],
         "@type": "xsd:string"
     },
@@ -101,6 +105,17 @@ somef_software_schema = {
             "@type": "xsd:string"
         }
     ],
+    "sd:issueTracker": {
+        "@value": {
+            "@format": "https://github.com/{fullName}/issues",
+            "fullName": ["fullName", "excerpt"]
+        },
+        "@type": "xsd:anyURI"
+    },
+    "sd:readme": {
+        "@path": ["readme_url", "excerpt"],
+        "@type": "xsd:anyURI"
+    },
     "sd:hasSourceCode": {
         "@class": "sd:SourceCode",
         "@id": {

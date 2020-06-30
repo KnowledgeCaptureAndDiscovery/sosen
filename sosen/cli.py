@@ -9,7 +9,7 @@ import math
 import os
 from rdflib import Graph
 import rdflib
-from SPARQLWrapper import SPARQLWrapper
+from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
 
 def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
@@ -89,7 +89,7 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     with open(graph_out, "wb") as out_file:
         out_file.write(graph.g.serialize(format=format))
 
-def get_data(queries, output, graph_in):
+def run_get_data(queries, output, graph_in):
     sparql = SPARQLWrapper(graph_in)
 
     with open(queries, "r") as query_file:
@@ -104,3 +104,35 @@ def get_data(queries, output, graph_in):
     print("saving data")
     with open(output, "w") as out_file:
         json.dump(output_data, out_file)
+
+def get_all_keywords(keywords):
+    if len(keywords) == 0:
+        return []
+
+    keywords_using_first = ["-".join(keywords[0:index+1]) for index, _ in enumerate(keywords)]
+    other_keywords = get_all_keywords(keywords[1:])
+
+    return [*keywords_using_first, *other_keywords]
+
+
+def run_search(keywords, graph_in):
+    all_keywords = get_all_keywords(keywords)
+    sparql = SPARQLWrapper(graph_in)
+
+    queryString = """PREFIX sd: <https://w3id.org/okn/o/sd#>
+SELECT ?obj ?doi
+WHERE {{
+    ?obj sd:keywords ?keyword .
+    FILTER regex(?keyword, '^({kw_regex})$', 'i')
+    ?obj sd:doi ?doi
+}}
+""".format(kw_regex="|".join(all_keywords))
+
+    print(queryString)
+    sparql.setQuery(queryString)
+    sparql.setReturnFormat(SPARQL_JSON)
+    results = sparql.query().convert()
+
+    for result in results['results']['bindings']:
+        print(f"https://doi.org/{result['doi']['value']}, {result['obj']['value']}")
+

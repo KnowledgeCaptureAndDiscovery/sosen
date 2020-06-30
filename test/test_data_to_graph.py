@@ -6,47 +6,6 @@ class Base(unittest.TestCase):
     maxDiff = None
     def setUp(self):
         pass
-    # def test_basic(self):
-    #     test_software = {
-    #         "fullName": "test/test",
-    #         "description": "test",
-    #         "owner": {
-    #             "login": "test"
-    #         }
-    #     }
-    #
-    #     schema_table = {
-    #         "@class": "sd:Software",
-    #         "@id": {
-    #             "@format": "obj:Software/{name}",
-    #             "name": "fullName"
-    #         },
-    #         "sd:name": {
-    #             "@value": "fullName",
-    #             "@type": "xsd:string"
-    #         },
-    #         "sd:description": {
-    #             "@value": "description",
-    #             "@type": "xsd:string"
-    #         },
-    #         "sd:hasAuthor": {
-    #             "@class": "schema:Person",
-    #             "@id": {
-    #                 "@format": "obj:Person/{name}",
-    #                 "name": ["owner", "login"]
-    #             },
-    #             "sd:additionalName": {
-    #                 "@value": ["owner", "login"],
-    #                 "@type": "schema:Text"
-    #             }
-    #         }
-    #     }
-    #
-    #     data_graph = DataGraph()
-    #     data_graph.somef_to_graph(test_software, schema_table)
-    #
-    #     for triple in data_graph.g:
-    #         print(triple)
 
 class FlattenDict(Base):
     def test_combine_dict(self):
@@ -185,37 +144,62 @@ class ResolvePath(Base):
         out = DataGraph.resolve_path(test_obj, version_languages_path)
         self.assertEqual(out, expected_out)
 
-# class EndToEnd(Base):
-#     def test_pretty(self):
-#         example_somef_output = {
-#             "fullName": [{
-#                 "excerpt": "test_person/test_repo",
-#                 "confidence": 1
-#             }],
-#             "description": [{
-#                 "excerpt": "A test repository",
-#                 "confidence": 1
-#             }, {
-#                 "excerpt": "This project uses A to do B",
-#                 "confidence": 0.9
-#             }],
-#             "releases": [{
-#                 "excerpt": {
-#                     "tag_name": "v1",
-#                 },
-#                 "confidence": 1
-#             }, {
-#                 "excerpt": {
-#                     "tag_name": "v2"
-#                 },
-#                 "confidence": 1
-#             }]
-#         }
-#
-#         g = DataGraph()
-#         g.add_somef_data(example_somef_output)
-#
-#         print(g.g.serialize(format="turtle").decode("utf-8"))
+class ResolveValue(Base):
+    def test_basic_value(self):
+        test_schema = {
+            "property": {
+                "@value": "y",
+                "@type": "xsd:string"
+            }
+        }
+        test_data = {}
+
+        expected_out = "y"
+        actual_out = DataGraph.resolve_value(test_data, test_schema["property"]["@value"])
+
+        self.assertEqual(actual_out, expected_out)
+
+    def test_formatted_value(self):
+        test_schema = {
+            "property": {
+                "@value": {
+                    "@format": "{x}/{y}",
+                    "x": "x",
+                    "y": "y"
+                }
+            }
+        }
+
+        test_data = {
+            "x": "1",
+            "y": "2"
+        }
+
+        expected_out = "1/2"
+        actual_out = DataGraph.resolve_value(test_data, test_schema["property"]["@value"])
+
+        self.assertEqual(actual_out, expected_out)
+
+    def test_multiple_formats(self):
+        test_schema = {
+            "property": {
+                "@value": {
+                    "@format": "{x}/{y}",
+                    "x": "x",
+                    "y": "y"
+                }
+            }
+        }
+
+        test_data = {
+            "x": "1",
+            "y": ["2", "3"]
+        }
+
+        expected_out = ["1/2", "1/3"]
+        actual_out = DataGraph.resolve_value(test_data, test_schema["property"]["@value"])
+
+        self.assertEqual(actual_out, expected_out)
 
 
 if __name__ == '__main__':

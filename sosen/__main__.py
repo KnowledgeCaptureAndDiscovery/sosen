@@ -1,6 +1,6 @@
 import click
 from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
-from .cli import run_scrape, get_data
+from .cli import run_scrape, run_get_data, run_search
 
 print("test")
 
@@ -56,7 +56,7 @@ def cli():
     type=click.Path(),
     required=False
 )
-def run(**kwargs):
+def scrape(**kwargs):
     run_scrape(**kwargs)
 
 
@@ -82,8 +82,24 @@ def run(**kwargs):
     help="link to the SPARQL endpoint"
 )
 def get_data(**kwargs):
-    get_data(**kwargs)
+    run_get_data(**kwargs)
+
+@cli.command(help="keyword search")
+@click.argument(
+    "keywords",
+    type=str,
+    nargs=-1
+)
+@click.option(
+    "--graph_in",
+    "-g",
+    type=str,
+    help="link to the SPARQL endpoint"
+)
+def search(**kwargs):
+    run_search(**kwargs)
 
 
 if __name__ == "__main__":
     cli()
+

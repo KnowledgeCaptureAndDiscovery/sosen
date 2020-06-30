@@ -4,7 +4,45 @@
 
 <http://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> a sd:Software ;
     sd:author <http://w3id.org/okn/o/i/Person/ESIPFed> ;
-    sd:description "Provides guidance for publishing schema.org as JSON-LD for the sciences"^^xsd:string ;
+    sd:description """<p>FIXES</p>
+
+<ul>
+	<li>Using <code>@type</code> instead of <code>schema:additionalType</code> (<a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/decisions/74-schemaorg-additionalType-vs-RDF-typing.md">decision</a>, Issue #74)</li>
+</ul>
+
+<p>IMPROVEMENTS</p>
+
+<ul>
+	<li>Use <code>schema:PropertyValue</code> for describing Persistent Identifiers (<a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/decisions/13-schemaorg-identifier-as-PropertyValue.md">decision</a>, Issue #13)
+
+	<ul>
+		<li><a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier">Guide: Dataset - Identifier</a></li>
+		<li><a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/DataRepository.md#identifier">Guide: Data Repository- Identifier</a></li>
+	</ul>
+	</li>
+	<li>Use SPDX URLs for Dataset License (<a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/decisions/47-use-spdx-licenses.md">decision</a>, Issue #47)
+	<ul>
+		<li><a href="https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#license">Guide: Dataset - License</a></li>
+	</ul>
+	</li>
+</ul>
+
+<p>NEW FEATURES</p>
+
+<ul>
+	<li>Describing Dataset Metadata files (<a href="decisions/4-dataset-metadata-distributions.md">decision</a>, Issue #4)
+
+	<ul>
+		<li><a href="guides/Dataset.md#metadata">Guide: Dataset - Metadata Files</a></li>
+	</ul>
+	</li>
+	<li>Gitflow Release Workflow (<a href="decisions/30-release-workflow.md">decision</a>, Issue #30)
+	<ul>
+		<li><a href="CONTRIBUTING.md">CONTRIBUTING.md</a></li>
+	</ul>
+	</li>
+</ul>"""^^xsd:string,
+        "Provides guidance for publishing schema.org as JSON-LD for the sciences"^^xsd:string ;
     sd:doi "10.5281/zenodo.2628755"^^xsd:string ;
     sd:downloadUrl "https://github.com/ESIPFed/science-on-schema.org/releases"^^xsd:anyURI ;
     sd:executionInstructions """Data Catalog Vocabulary (DCAT) 
@@ -16,7 +54,9 @@
         <http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
     sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
         "10.5281/zenodo.3736235"^^xsd:string ;
-    sd:name "ESIPFed/science-on-schema.org"^^xsd:string .
+    sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
+    sd:name "ESIPFed/science-on-schema.org"^^xsd:string ;
+    sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
 
 <http://w3id.org/okn/o/i/Person/ESIPFed> a schema:Person ;
     sd:additionalName "ESIPFed"^^schema:Text .
