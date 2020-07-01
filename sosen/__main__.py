@@ -1,6 +1,7 @@
 import click
 from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
 from .cli import run_scrape, run_get_data, run_search
+from .config import configure as configure_sosen
 
 print("test")
 
@@ -75,12 +76,6 @@ def scrape(**kwargs):
     help="Output JSON file to save the data to",
     required=True
 )
-@click.option(
-    "--graph_in",
-    "-g",
-    type=str,
-    help="link to the SPARQL endpoint"
-)
 def get_data(**kwargs):
     run_get_data(**kwargs)
 
@@ -90,14 +85,15 @@ def get_data(**kwargs):
     type=str,
     nargs=-1
 )
-@click.option(
-    "--graph_in",
-    "-g",
-    type=str,
-    help="link to the SPARQL endpoint"
-)
 def search(**kwargs):
     run_search(**kwargs)
+
+@cli.command(help="Configure sosen. You will be prompted for information")
+def configure():
+    sparql_endpoint = click.prompt("SPARQL Endpoint", default="http://localhost:3030/zenodo")
+    configure_sosen(sparql_endpoint)
+
+
 
 
 if __name__ == "__main__":

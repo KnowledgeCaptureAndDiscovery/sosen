@@ -13,7 +13,7 @@ import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
 from .sparql_queries import get_keyword_matches, get_keyword
-
+from .config import get_config
 
 def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
     print("running")
@@ -125,7 +125,8 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     with open(graph_out, "wb") as out_file:
         out_file.write(graph.g.serialize(format=format))
 
-def run_get_data(queries, output, graph_in):
+def run_get_data(queries, output):
+    graph_in = get_config()["endpoint"]
     sparql = SPARQLWrapper(graph_in)
 
     with open(queries, "r") as query_file:
@@ -151,7 +152,9 @@ def get_all_keywords(keywords):
     return [*keywords_using_first, *other_keywords]
 
 
-def run_search(keywords, graph_in):
+def run_search(keywords):
+    graph_in = get_config()["endpoint"]
+
     keywords = [keyword.lower() for keyword in keywords]
     all_keywords = get_all_keywords(keywords)
     sparql = SPARQLWrapper(graph_in)
