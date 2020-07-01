@@ -1,0 +1,7 @@
+class sd:Keyword
+has property sd:keyword, which is the actual word corresponding to this
+has property sd:documentFrequency, which is the frequency of this keyword across all documents
+(if this is a github keyword, that means what proportion of keyword lists in shows up in,
+and if it is a description-based keyword, this means what proportion of
+
+sd:hasKeyword property for sd:Software

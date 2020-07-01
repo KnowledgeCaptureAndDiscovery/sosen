@@ -15,14 +15,20 @@ class DataGraph:
         for key, value in prefixes.items():
             self.g.bind(key, Namespace(value))
 
+    def add_data(self, data, schema, prefixes):
+        self.prefixes.update(prefixes)
+        self.bind_prefixes(prefixes)
+        self.data_to_graph(data, schema)
+
     def add_somef_data(self, somef_data):
         # process the somef output into data
         # data = DataGraph.process_somef(somef_data)
         # add the prefixes that we use in the software_schema
-        self.prefixes.update(software_prefixes)
-        self.bind_prefixes(software_prefixes)
-        # add the data to the graph, using the software_schema
-        self.data_to_graph(somef_data, somef_software_schema)
+        # self.prefixes.update(software_prefixes)
+        # self.bind_prefixes(software_prefixes)
+        # # add the data to the graph, using the software_schema
+        # self.data_to_graph(somef_data, somef_software_schema)
+        self.add_data(somef_data, somef_software_schema, software_prefixes)
 
     @staticmethod
     def is_array(value):
@@ -95,6 +101,9 @@ class DataGraph:
 
         # first get the id
         data_id = DataGraph.resolve_value(data, schema["@id"])
+        if data_id is None:
+            print(f"data_id was none for data: {data},\nschema: {schema}")
+            return None
 
         rdf_id = self.resolve_type(data_id)
 

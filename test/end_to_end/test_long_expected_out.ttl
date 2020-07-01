@@ -1,0 +1,1097 @@
+@prefix schema: <https://schema.org/> .
+@prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus> a sd:Software ;
+    sd:author <http://w3id.org/okn/o/i/Person/manoelcampos> ;
+    sd:contributionInstructions """Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/cloudsim-plus/contribute)]
+
+"""^^xsd:string,
+        """This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+
+"""^^xsd:string ;
+    sd:description "A modern, full-featured, highly extensible and easier-to-use Java 8+ Framework for Cloud Computing Simulation"^^xsd:string,
+        """TableBuilder objects that are used in all examples and enable printing simulation results in different formats such as ASCII Table, CSV or HTML. It shows results in perfectly aligned tables, including data units. Check the last line of the BasicFirstExample constructor to see how it is easy to print results; 
+Defines types and colors for log messages and enables filtering the level of messages to print. The image below shows how easy is to check things that may be wrong in your simulation (#24).  And for instance, if you want to see just messages from warning level, it's as simple as calling Log.setLevel(ch.qos.logback.classic.Level.WARN); 
+"""^^xsd:string,
+        """Updates and New Features
+<ul>
+<li>Includes all AWS EC2 Instance Templates from the "US Est (Ohio)" Region, available at <a href="https://aws.amazon.com/ec2/pricing/on-demand/">https://aws.amazon.com/ec2/pricing/on-demand/</a></li>
+<li>Add instructions to use Gradle in the README</li>
+<li>#228 - Enables DatacenterBroker to avoid retrying or not the creating of failed VMs</li>
+<li>#233 - Provide more public LOGGER instance for specific classes. Check LoggingExample.java</li>
+<li>#236 - Datacenter kept trying to migrate VMs from under or overloaded Hosts without waiting some time.<pre><code>   A `setHostSearchForMigrationDelay(double delay)` method was introduced in Datacenter. Check MigrationExample1.java
+</code></pre>
+</li>
+</ul>
+Bugfixes
+<ul>
+<li>#54 - VmSchedulerTimeShared wasn't sharing Host PEs between different VMs when there are less Host PEs than required by all VMs</li>
+<li>#226 - Some cloudlets weren't finishing, although the CPU utilization is high</li>
+<li>#227 - MinTimeBetweenEventsExample.java was showing -1 as the ExecTime for almost all Cloudlets</li>
+<li>#229 - VmSchedulerSpaceShared was throwing a NoSuchElementException when all Host PEs were already used</li>
+<li>#231 - When a Cloudlet is bound to a VM and that VM was not created, the Cloudlet status wasn't set to FAILED</li>
+<li>#232 - VmSchedulers were showing a warning "VmSchedulerXX: It was requested an empty list of PEs for Vm YY in Host ZZ" because the resources of a destroyed VM were tried to be deallocated twice</li>
+<li>#234 - VmAllocationPolicyMigrationAbstract was not allocating Hosts without a PowerModel. Since power consumption is buil-in in the HostSimple class of CloudSim Plus, the developer can choose if he/she wants to model power consumption or not using regular Hosts.</li>
+<li>#235 - Some simulations using a VmAllocationPolicyMigration were freezing when there were under/overloaded Hosts.</li>
+</ul>"""^^xsd:string,
+        """You are welcome to contribute to the project.  
+"""^^xsd:string,
+        """[![Build Status](https://img.shields.io/travis/manoelcampos/cloudsim-plus/master.svg)](https://travis-ci.org/manoelcampos/cloudsim-plus) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f132b184d5e475dbbcd356ee84499fc)](https://www.codacy.com/app/manoelcampos/cloudsim-plus?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manoelcampos/cloudsim-plus&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3f132b184d5e475dbbcd356ee84499fc)](https://www.codacy.com/app/manoelcampos/cloudsim-plus?utm_source=github.com&utm_medium=referral&utm_content=manoelcampos/cloudsim-plus&utm_campaign=Badge_Coverage) [![Maven Central](https://img.shields.io/maven-central/v/org.cloudsimplus/cloudsim-plus.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.cloudsimplus%22%20AND%20a:%22cloudsim-plus%22) [![Documentation Status](https://readthedocs.org/projects/cloudsimplus/badge/?version=latest)](http://cloudsimplus.rtfd.io/en/latest/?badge=latest) 
+[![GitHub Closed Issues](https://img.shields.io/github/issues-closed-raw/manoelcampos/cloudsim-plus.svg?style=rounded-square)](http://github.com/manoelcampos/cloudsim-plus/issues) 
+[![GPL licensed](https://img.shields.io/badge/license-GPL-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
+
+CloudSim Plus is a modern, up-to-date, full-featured and fully documented simulation framework. It's easy to use and extend, enabling modeling, simulation, 
+and experimentation of Cloud computing infrastructures and application services. 
+It allows developers to focus on specific system design issues to be investigated, 
+without concerning the low-level details related to Cloud-based infrastructures and services.
+ 
+CloudSim Plus is a fork of CloudSim 3, 
+re-engineered primarily to avoid code duplication,
+provide [code reusability](https://en.wikipedia.org/wiki/Code_reuse) and ensure 
+compliance with software engineering principles and recommendations for extensibility improvements and accuracy. It's currently the state-of-the-art in cloud computing simulation framework. 
+
+The efforts dedicated to this project have been recognized by the [EU/Brasil Cloud FORUM](https://eubrasilcloudforum.eu). 
+A post about CloudSim Plus is available at 
+[this page of the Forum](https://eubrasilcloudforum.eu/en/instituto-federal-de-educação-do-tocantins-brazil-instituto-de-telecomunicações-portugal-and), 
+including a White Paper available in the [Publications Section](#publications).
+
+CloudSim Plus is developed through a partnership between the Systems, Security and Image Communication Lab 
+of [Instituto de Telecomunicações (IT, Portugal)](http://www.it.pt), 
+the [Universidade da Beira Interior (UBI, Portugal)](http://www.ubi.pt) 
+and the [Instituto Federal de Educação Ciência e Tecnologia do Tocantins (IFTO, Brazil)](http://www.ifto.edu.br). 
+It is supported by the Portuguese [Fundação para a Ciência e a Tecnologia (FCT)](https://www.fct.pt) 
+and by the [Brazilian foundation Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)](http://www.capes.gov.br).
+
+:arrow_up:
+
+"""^^xsd:string,
+        """a resource UtilizationModel with an upper threshold or a DatacenterBroker that selects the best Datacenter to submit a VM. 
+"""^^xsd:string,
+        """policy that selects the PM which less processor cores in use to host a VM and, in fact, it is the only policy available.  
+"""^^xsd:string ;
+    sd:doi "10.5281/zenodo.595340"^^xsd:string ;
+    sd:downloadUrl "https://github.com/manoelcampos/cloudsim-plus/releases"^^xsd:anyURI ;
+    sd:executionInstructions """Open/import the project in your IDE: 
+"""^^xsd:string,
+        """Process trace files from Google Cluster Data  
+   creating Hosts and Cloudlets (tasks). A script to download the trace files is available at download-google-cluster-data.sh. Examples are available here (#149). 
+"""^^xsd:string,
+        """To run some example, type the following command at a terminal inside the project's root directory: sh script/bootstrap.sh package.ExampleClassName. 
+"""^^xsd:string ;
+    sd:hasInstallationInstructions """download the project source by cloning the repository issuing the command git clone https://github.com/manoelcampos/cloudsim-plus.git  
+"""^^xsd:string ;
+    sd:hasKeyword <http://w3id.org/okn/o/i/Keyword/auto-scaling>,
+        <http://w3id.org/okn/o/i/Keyword/cloud-computing>,
+        <http://w3id.org/okn/o/i/Keyword/cloud-infrastructure>,
+        <http://w3id.org/okn/o/i/Keyword/cloud-simulation>,
+        <http://w3id.org/okn/o/i/Keyword/cloudsim>,
+        <http://w3id.org/okn/o/i/Keyword/cloudsim-simulator>,
+        <http://w3id.org/okn/o/i/Keyword/cloudsimplus>,
+        <http://w3id.org/okn/o/i/Keyword/google-cluster-data>,
+        <http://w3id.org/okn/o/i/Keyword/iaas>,
+        <http://w3id.org/okn/o/i/Keyword/java>,
+        <http://w3id.org/okn/o/i/Keyword/java8>,
+        <http://w3id.org/okn/o/i/Keyword/load-balancing>,
+        <http://w3id.org/okn/o/i/Keyword/paas>,
+        <http://w3id.org/okn/o/i/Keyword/research>,
+        <http://w3id.org/okn/o/i/Keyword/saas>,
+        <http://w3id.org/okn/o/i/Keyword/simulation>,
+        <http://w3id.org/okn/o/i/Keyword/simulation-framework>,
+        <http://w3id.org/okn/o/i/Keyword/test-bed>,
+        <http://w3id.org/okn/o/i/Keyword/trace>,
+        <http://w3id.org/okn/o/i/Keyword/workload> ;
+    sd:hasSourceCode <http://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> ;
+    sd:hasUsageNotes """In order to build a simulation scenario you have to create, at least: 
+- a datacenter with a list of physical machines (Hosts); 
+- a broker that allows submission of VMs and Cloudlets to be executed, on behalf of a given customer, into the cloud infrastructure; 
+- a list of customer's virtual machines (VMs); 
+- and a list of customer's cloudlets (objects that model resource requirements of different applications).
+
+Due to the simplicity provided by CloudSim Plus, all the code to create a minimal simulation scenario can be as simple as presented below.
+A more adequate and reusable example is available
+[here](/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/BasicFirstExample.java),
+together with [other examples](/cloudsim-plus-examples). Specific examples of CloudSim Plus, showing several
+new exclusive features and advanced scenarios, can be found [here](/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/). 
+
+```java
+//Enables just some level of logging.
+//Make sure to import org.cloudsimplus.util.Log;
+//Log.setLevel(ch.qos.logback.classic.Level.WARN);
+
+//Creates a CloudSim object to initialize the simulation.
+CloudSim cloudsim = new CloudSim();
+
+/*Creates a Broker that will act on behalf of a cloud user (customer).*/
+DatacenterBroker broker0 = new DatacenterBrokerSimple(cloudsim);
+
+//Creates a list of Hosts, each host with a specific list of CPU cores (PEs).
+List hostList = new ArrayList(1);
+List hostPes = new ArrayList(1);
+//Uses a PeProvisionerSimple by default to provision PEs for VMs
+hostPes.add(new PeSimple(20000));
+long ram = 10000; //in Megabytes
+long storage = 100000; //in Megabytes
+long bw = 100000; //in Megabits/s
+
+//Uses ResourceProvisionerSimple by default for RAM and BW provisioning
+//Uses VmSchedulerSpaceShared by default for VM scheduling
+Host host0 = new HostSimple(ram, bw, storage, hostPes);
+hostList.add(host0);
+
+//Creates a Datacenter with a list of Hosts.
+//Uses a VmAllocationPolicySimple by default to allocate VMs
+Datacenter dc0 = new DatacenterSimple(cloudsim, hostList);
+
+//Creates VMs to run applications.
+List vmList = new ArrayList(1);
+//Uses a CloudletSchedulerTimeShared by default to schedule Cloudlets
+Vm vm0 = new VmSimple(1000, 1);
+vm0.setRam(1000).setBw(1000).setSize(1000);
+vmList.add(vm0);
+
+//Creates Cloudlets that represent applications to be run inside a VM.
+List cloudletList = new ArrayList(1);
+//UtilizationModel defining the Cloudlets use only 50% of any resource all the time
+UtilizationModelDynamic utilizationModel = new UtilizationModelDynamic(0.5);
+Cloudlet cloudlet0 = new CloudletSimple(10000, 1, utilizationModel);
+Cloudlet cloudlet1 = new CloudletSimple(10000, 1, utilizationModel);
+cloudlets.add(cloudlet0);
+cloudlets.add(cloudlet1);
+
+broker0.submitVmList(vmList);
+broker0.submitCloudletList(cloudletList);
+
+/*Starts the simulation and waits all cloudlets to be executed, automatically
+stopping when there is no more events to process.*/
+cloudsim.start();
+
+/*Prints results when the simulation is over
+(you can use your own code here to print what you want from this cloudlet list).*/
+new CloudletsTableBuilder(broker0.getCloudletFinishedList()).build();
+```
+
+The presented results are structured and clear to allow better understanding. 
+For example, the image below shows the output for a simulation with two cloudlets (applications).
+
+![Simulation Results](https://github.com/manoelcampos/cloudsim-plus/raw/master/docs/images/simulation-results.png)
+
+:arrow_up:
+
+"""^^xsd:string,
+        """It's much easier to use CloudSim Plus. 
+A complete, side-by-side [comparison between CloudSim and CloudSim Plus Java simulation scenarios 
+is available here](http://cloudsimplus.org/docs/CloudSim-and-CloudSimPlus-Comparison.html).
+
+To update your simulations to use the CloudSim Plus you have to change the way that some objects are instantiated, 
+because some new interfaces were introduced to follow the "program to an interface, 
+not an implementation" recommendation and also to increase [abstraction](https://en.wikipedia.org/wiki/Abstraction_(software_engineering)). 
+These new interfaces were also crucial to implement the [Null Object Pattern](https://en.wikipedia.org/wiki/Null_Object_pattern) 
+to try avoiding `NullPointerException`s.
+
+The initialization of the simulation is not performed by the static `CloudSim.startSimulation` method anymore, which required a lot of parameters.
+Now you have just to instantiate a `CloudSim` object using the default, no-arguments constructor, as shown below. 
+This instance is used in the constructor of `DatacenterBroker` and `Datacenter` objects: 
+
+```java
+CloudSim cloudsim = new CloudSim();
+```
+
+The classes `Datacenter`, `DatacenterCharacteristics`, `Host`, `Pe`, `Vm` and `Cloudlet` were renamed due to 
+the introduction of interfaces with these same names. Now all these classes have a suffix *Simple* 
+(as already defined for some previous classes such as `PeProvisionerSimple` and `VmAllocationPolicySimple`). 
+For instance, to instantiate a `Cloudlet` you have to execute a code such as:
+
+ ```java
+CloudletSimple cloudlet = new CloudletSimple(required, parameters, here);
+```   
+
+However, since these interfaces were introduced in order to also enable the creation of different cloudlet classes, 
+the recommendation is to declare your object using the interface, not the class: 
+ 
+ ```java
+Cloudlet cloudlet = new CloudletSimple(required, parameters, here);
+```   
+
+The method `setBrokerId(int userId)` from `Vm` and `Cloudlet` were refactored to `setBroker(DatacenterBroker broker)`,
+now requiring a `DatacenterBroker` instead of just an int ID which may be even nonexistent.
+
+You don't need to explicitly create a `DatacenterCharacteristics` anymore. Such object is created internally when a `Datacenter` is created.
+A `VmAllocationPolicy` doesn't require any parameter at all. A `Datacenter` doesn't require a name, storage list and scheduling interval too.
+The name will be automatically defined. It and all the other parameter can be set further using the respective setter methods.
+Now it is just required a `CloudSim`, a `Host` list and a `VmAllocationPolicy` instance.
+
+```java
+Datacenter dc0 = new DatacenterSimple(cloudsim, hostList, new VmAllocationPolicySimple());
+```
+
+The way you instantiate a host has changed too. The classes `RamProvisionerSimple` and `BwProvisionerSimple` don't exist anymore. 
+Now you just have the generic class `ResourceProvisionerSimple` and you can just use its default no-args constructor. 
+RAM and bandwidth capacity of the host now are given in the constructor, as it already was for storage. 
+A `VmScheduler` constructor doesn't require any parameter. You don't need to set an ID for each Host, since
+if one is not given, when the List of hosts is attached to a Datacenter, it will generate an ID for those hosts. 
+Instantiating a host should be now similar to:
+
+```java
+long ram = 20480; //in MB
+long bw = 1000000; //in Megabits/s
+long storage = 1000000; //in MB
+Host host = new HostSimple(ram, bw, storage, pesList);
+host.setRamProvisioner(new ResourceProvisionerSimple())
+    .setBwProvisioner(new ResourceProvisionerSimple())
+    .setVmScheduler(new VmSchedulerTimeShared());
+``` 
+
+Additionally, the interface `Storage` was renamed to `FileStorage` and its implementations are 
+`SanStorage` and `HarddriveStorage`, that can be used as before. 
+Finally, since the packages were reorganized, you have to adjust them. 
+However, use your IDE to correct the imports for you. 
+A complete and clear example was presented in the Examples section above.
+
+:arrow_up:
+
+
+
+"""^^xsd:string,
+        """There are 4 ways to use CloudSim Plus. It can be downloaded and executed: 
+(i) downloading a zip file using the button at the top of this page;
+(ii) from the command line; 
+(iii) directly from some IDE; 
+(iv) from [Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cloudsimplus/cloudsim-plus) 
+since you include it as a dependency inside your own project.
+
+You can watch the video below ([high quality version here](https://youtu.be/k2enNoxTYVw)) 
+or follow the instructions in one of the next subsections.
+
+![Downloading CloudSim Plus and running Examples using NetBeans](https://github.com/manoelcampos/cloudsim-plus/raw/master/docs/images/cloudsim-plus-netbeans.gif)
+
+"""^^xsd:string ;
+    sd:hasVersion <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0>,
+        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> ;
+    sd:identifier "10.5281/zenodo.3743168"^^xsd:string,
+        "10.5281/zenodo.595340"^^xsd:string ;
+    sd:issueTracker "https://github.com/manoelcampos/cloudsim-plus/issues"^^xsd:anyURI ;
+    sd:name "manoelcampos/cloudsim-plus"^^xsd:string ;
+    sd:readme "https://github.com/manoelcampos/cloudsim-plus/blob/master/README.md"^^xsd:anyURI ;
+    sd:softwareRequirements """You can add CloudSim Plus API module (which is the only one required to build simulations) as a dependency inside your own Maven or Gradle project.
+This way you can start building your simulations from scratch.
+
+"""^^xsd:string ;
+    sd:supportDetails """The project documentation originated from CloudSim was entirely updated and extended. 
+You can see the javadoc documentation for classes and their elements directly on your IDE.
+
+The documentation is available online at [ReadTheDocs](http://cloudsimplus.rtfd.io/en/latest/?badge=latest), 
+which includes a FAQ and guides.
+CloudSim Plus has extended documentation of classes and interfaces and also includes extremely helpful
+package documentation that can be viewed directly on your IDE or at the link provided above.
+Such a package documentation gives a general overview of the classes used to build a cloud simulation.
+
+A Google Group forum is also available at .
+See the [publications](#publications) section to access published CloudSim Plus papers.
+
+:arrow_up:
+
+
+
+"""^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/auto-scaling> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "auto-scaling"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloud-computing> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloud-computing"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloud-infrastructure> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloud-infrastructure"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloud-simulation> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloud-simulation"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloudsim> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloudsim"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloudsim-simulator> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloudsim-simulator"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/cloudsimplus> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "cloudsimplus"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/google-cluster-data> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "google-cluster-data"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/iaas> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "iaas"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/java> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "java"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/java8> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "java8"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/load-balancing> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "load-balancing"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/paas> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "paas"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/research> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "research"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/saas> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "saas"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/simulation> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "simulation"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/simulation-framework> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "simulation-framework"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/test-bed> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "test-bed"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/trace> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "trace"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Keyword/workload> a sd:Keyword ;
+    sd:documentFrequency "1.0"^^xsd:float ;
+    sd:keyword "workload"^^xsd:string .
+
+<http://w3id.org/okn/o/i/Person/manoelcampos> a schema:Person ;
+    sd:additionalName "manoelcampos"^^schema:Text .
+
+<http://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> a sd:SourceCode ;
+    sd:codeRepository "https://github.com/manoelcampos/cloudsim-plus"^^xsd:anyURI ;
+    sd:programmingLanguage "Java"^^xsd:string,
+        "Shell"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8> a sd:SoftwareVersion ;
+    sd:description """### Added\r
+- Enabled dynamic creation of VMs and Cloudlets without requiring creation of Datacenter Brokers at runtime, enabling VMs to be created on-demand according to arrived cloudlets.\r
+  During simulation execution, new VMs and Cloudlets can be submitted using the methods `submitVmList` and `submitCloudletList` that they will be dynamically created. See the [DynamicCreationOfVmsAndCloudlets.java](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/DynamicCreationOfVmsAndCloudlets.java) example for more details.\r
+- Enabled the complete navigation from Cloudlet up to the Datacenter. Now it is possible to call `cloudlet.getVm().getHost().getDatacenter()` and navigate between all the relationships that were introduced in CloudSim Plus for such classes. And it is totally safe to make such a call, even before starting the simulation, that you will not get a `NullPointerException`. In case you make such a call before the simulation starts, as any allocation of Cloudlet or VMs was made, you will get default objects that follow the Null - Included the example [/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/ParallelSimulationsExample.java]\r
+  that shows how to use Java 8 Parallel Streams to execute mutiple simulations scenarios in parallel.\r
+  Object Design Pattern, namely `Vm.NULL` for `getVm()`, `Host.NULL` for `getHost()` and `Datacenter.NULL` for `getDatacenter()`.\r
+- Included examples that show how to [schedule the simulation termination at a given time](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/TerminateSimulationAtGivenTime.java), how to terminate it [when a specific condition is met](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/TerminateSimulationAtGivenCondition.java) and how to [schedule a simulation pause at an specific time, before the simulation has started, and collect partial results](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/PauseSimulationAtGivenTime1.java) and [at a given time, after the simulation has started](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/PauseSimulationAtGivenTime2.java).\r
+\r
+### Changed\r
+- Changed requirement of cloudsim-plus-examples to Java 8 in order to start providing more advanced examples using Java 8 Lambda Expressions and Streams API.\r
+  Existing examples were not changed and run as before in Java 7.\r
+- Renamed method in Simulation interface: `pause(int src, double delay)` to `Simulation.pauseEntity(int src, double delay)`;\r
+  `hold(int src, long delay)` to `holdEntity(int src, long delay)` and `running()` to `isRunning()`.\r
+\r
+### Removed\r
+- Removed the `numUsers` parameter, that represents the number of created DatacenterBrokers, from CloudSim constructor. Now when a Broker is created, it automatically \r
+  increases the `numberOfUsers` attribute in the given CloudSim instance. This automatically makes possible to create brokers dynamically (during simulation execution) without worring about such an attribute. Usually, dynamic creation of brokers was performed to allow dynamic submission of VMs and Cloudlets during simulation execution. However, as currently the `submitVmList` and `submitCloudletList` methods in DatacenterBroker implementations in CloudSim Plus allow submission of Cloudlets and VMs even after the simulation has started, it is not a requirement anymore to create a new broker just to perform such tasks. \r
+- Removed the `Simulation.stop()` method because it in fact was doing nothing. When the Simulation.start() is called, it already waits for the simulation to\r
+  finish executing and automatically stops when there is not more events to process.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v0.8-beta.8"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v0.8-beta.8"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.8"^^xsd:anyURI ;
+    sd:hasVersionId "v0.8-beta.8"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9> a sd:SoftwareVersion ;
+    sd:description """This release introduces a huge amount of internal refactoring to provide a framework that really deals with actual Objects instead of Integer IDs. This work started several commits before. Previously the framework didn't create actual relationships among different classes, but stored Integer IDs as attributes to represent such relationships. This was a bad, confusing and very error prone design. \r
+\r
+Since such attributes were just an Integer (for instance the Cloudlet.vmId or Vm.brokerId), any possible integer value could be passed to such attributes, even an inexistent ID or the ID of an entity that wasn't from the expected class (the ID of a Datacenter could be set for the Cloudlet.vmId without compilation errors).\r
+\r
+Now CloudSim Plus just accepts IDs in very specific places and usually just internally. All the public interfaces that are used by researchers only accept actual objects such as Datacenters, Hosts, VMs or Cloudlets.\r
+\r
+The framework was maintaining Lists and Maps of several objects that stored just the IDs of such objects, making it difficult to understand what were the actual objects that such Lists/Maps were referencing. With this release, instead of having a List<Integer> to store the IDs of a list of Hosts, the framework uses a List<Host>. The documentation was thoroughly updated for such attributes.\r
+\r
+Now that those attributes require an actual object instead of an ID, it is even easier to use and extend CloudSim Plus. \r
+\r
+Some of the benefits of this new design are presented below:\r
+\r
+- Several classes were refactored to stop working with IDs and starting providing a true object oriented framework.\r
+  Lots of attributes that were defined as a List of Integer or as a Map where the key was Integer, to store\r
+  the ID of entities, were changed to store the object itself not its ID.\r
+  It makes the framework far less error prone, since the Lists and Maps will just accept\r
+  the defined object.\r
+- It makes even clear to understand the framework code and to use it, since\r
+  that when a developer look at some of such Lists or Maps, he/she will immediately know\r
+  what such Lists/Maps are storing.\r
+- Storing actual objects instead of their IDs also improves the framework performance\r
+  since it doesn't have to get the object ID and look for the actual object inside\r
+  another List that in fact stored the objects (as it was common to be done).\r
+- Message passing mechanisms were also improved, storing actual objects into the SimEvent.data attribute\r
+  instead of the object ID. The source and destionation of a message sent is also performed internally\r
+  using just the ID, because changing these behaviour would require far more work.\r
+- The documentation of such Lists/Maps was reviewed and updated.\r
+- Network related classes were those ones that received lots of changes, mainly NetworkPacket implementing classes.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v0.8-beta.9"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v0.8-beta.9"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.9"^^xsd:anyURI ;
+    sd:hasVersionId "v0.8-beta.9"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1> a sd:SoftwareVersion ;
+    sd:description """### Added\r
+- Allowed to delay the submission of VMs by a `DatacenterBroker`, simulating the dynamic arrival of VMs (closes the feature request #23)\r
+- Included extremelly helpful package documentation that can be viewed directly on your IDE or online [here](http://cloudsimplus.org/apidocs/).\r
+  Such a package documentation gives a general overview of the classes used to build a cloud simulation.\r
+\r
+### Changed\r
+- Renamed `Simulation` class method `abruptallyTerminate` to `abort`.\r
+- Renamed the class `HostPacket` to `VmPacket` because such a kind of packet is sent between VMs.\r
+- Renamed the class `NetworkPacket` to `HostPacket` because such a kind of packet is sent between Hosts.\r
+- Renamed the class `InfoPacket` to `IcmpPacket` because such a kind of packet is sent to simulate ping requests (ICMP protocol).\r
+- Classes `IcmpPacket`, `HostPacket` and `VmPacket` now implement the new interface `NetworkPacket`\r
+- Re-designed event notification mechanisms that use the `EventListener` class to enable researchers to get notifications\r
+  about some events during simulation execution. The changes are described below:\r
+  - Classes renamed: `HostToVmEventInfo` to `VmHostEventInfo`, `DatacenterToVmEventInfo` to `VmDatacenterEventInfo`, \r
+    `VmToCloudletEventInfo` to `CloudletVmEventInfo`;\r
+  - Methods `Vm.setOnHostAllocationListener`, `Vm.setOnHostDeallocationListener`, `Vm.setOnVmCreationFailureListener`, `Vm.setOnUpdateVmProcessingListener`, `Cloudlet.setOnUpdateCloudletProcessingListener`, `Cloudlet.setOnCloudletFinishListener`,\r
+    `Simulation.setOnSimulationPausedListener`, `Simulation.setOnEventProcessingListener` and `Simulation.setOnEventProcessingListener`\r
+    were renamed, changing the prefix _set_ to _add_ because now it is possible to add multiple `EventListener`s to the same event \r
+    that you want to be notified about;\r
+  - Respective methods starting with the prefix _remove_ were added for each one of the methods presented above,\r
+    allowing to remove (unregister) an `EventListener` from the list.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v0.9-beta.1"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v0.9-beta.1"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.1"^^xsd:anyURI ;
+    sd:hasVersionId "v0.9-beta.1"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2> a sd:SoftwareVersion ;
+    sd:description """After that CloudSim Plus allowed the submission of VMs and Cloudlets to an already existing DatacenterBroker during simulation execution (see #43), now it provides an exclusive mechanism to perform horizontal scaling of VMs. Such a mechanism creates new VMs for a simulation with dynamic cloudlet arrival, according to a condition defined by the developer. That condition can check if the VM is overloaded based on CPU, BW or RAM usage.\r
+\r
+It also provides a completely redesigned and refactored Network module that just works. The list of included features are as follows:\r
+\r
+## Added\r
+- Introduced a `VmScaling` interface and a `HorizontalVmScalingSimple` class,\r
+  inside the [autoscaling package](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus/src/main/java/org/cloudsimplus/autoscaling), that provides a horizontal scaling mechanism for VMs, allowing dynamic creation of VMs according to an overload condition. Such a condition is defined\r
+  by a predicate that can check different VM resources usage such as CPU, RAM or BW.\r
+  See the new [LoadBalancerByVmHorizontalScalingExample](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/LoadBalancerByVmHorizontalScalingExample.java) for a usage example.\r
+- Added the methods `addOnClockTickListener` and `removeOnClockTickListener` to `Simulation` interface to allow defining a Listener to be notified every time the simulation clock advances.\r
+- Added methods `addOnClockTickListener()` and `removeOnClockTickListener()` in Simulation interface in order to add\r
+  and remove listeners for the new OnClockTick event, that is fired every time that the simulation clock advances.\r
+- Added `Vm.getTotalUtilizationOfCpu()` to get Vm's CPU utilization percentage for the current simulation time.\r
+- Added `Broker.submitVm` and `Broker.submitCloudlet` to add a single Vm or Cloudlet to a broker.\r
+\r
+## Changed\r
+- Renamed the class `GraphReader` to `TopologyReader`.\r
+- Network module was almost totally refactored and redesigned to provide a module that just works.\r
+  The module was not reusasble at all and it had a huge amount of duplicated code. Some classes\r
+  such as Switch were just an entire copy from each other.\r
+  The packet classes relied on ID to identify the sender and receiver entities and it was\r
+  very difficult to know if a given packet class was storing the ID of a Host, Vm or Cloudlet.\r
+  Now the packets use actual objects such as Host, Vm and Cloudlet to make clear\r
+  what kind of entities are communicating.\r
+- The network examples were just confusing and useless. They have been completely refactored\r
+  and redesigned in order to provide a clear and understandable code that can in fact be reusable.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v0.9-beta.2"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v0.9-beta.2"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.2"^^xsd:anyURI ;
+    sd:hasVersionId "v0.9-beta.2"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0> a sd:SoftwareVersion ;
+    sd:description """In January of 2015 we started to contribute to CloudSim and due to different philosophies from CloudSim team we decided to initiate CloudSim Plus as an independent project. One year of intense and constant work later, after 375 commits and [30 issues closed](https://github.com/manoelcampos/cloudsim-plus/issues?utf8=✓&q=is%3Aissue%20is%3Aclosed%20milestone%3A%22CloudSim%20Plus%201.0%22%20), we are proud to announce that CloudSim Plus 1.0 is available as the first stable release.\r
+\r
+The framework went through a comprehensive re-design and we doubt there is a single class that was not refactored to improve code quality, clarity and extensiblity and to provide an [extensive and updated documentation](http://cloudsimplus.org/apidocs/).\r
+\r
+All the performed changes aimed to reduce violation of several software engineering principles, that directly impact researchers trying to extend the framework to provide some specific features for their simulations. Some [bugs](https://github.com/manoelcampos/cloudsim-plus/issues?q=is%3Aissue+is%3Aclosed+label%3Abug+milestone%3A%22CloudSim+Plus+1.0%22) that reduced the framework accuracy were also fixed. Some of these principles, practices and recommendations are [Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern), [SOLID principles](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29) and clean code programming.\r
+\r
+With all these principles in mind, CloudSim Plus has become a modern, better structured and much easier-to-use  cloud simulation framework. It is a Java 8 framework that strongly relies on the most recent features of Java language to provide a code that is simpler, easier to understand and to extend. There are innumerous changes and several exclusive features and improvements that make CloudSim Plus a promising project.\r
+\r
+Some of the most relevant and exclusive features and improvements are presented below:\r
+- Parallel execution of experiments, enabling multiple runs of a given simulation to be executed simultaneously \r
+  in a multi-core machine.\r
+- Horizontal VM scaling to balance workload of dynamically arrived cloudlets by creating new VMs on-demand.\r
+- Dynamic creation of VMs and Cloudlets by delaying their submission to a broker.\r
+- Dynamic creation of VMs at runtime without requiring the need to create new brokers.\r
+- Listener objects to monitor several events happening during simulation execution, enabling metrics collection and dynamic resource allocation for SLA fulfillment.\r
+- Classes and interfaces to allow implementation of heuristics such as Tabu Search, Simulated Annealing, Ant Colony Systems and so on.\r
+- Implementation of the Completely Fair Scheduler used in recent version of the Linux Kernel, that in fact performs task preemption \r
+  as a multi-task mechanism.\r
+- Completely re-designed, reusable and simpler Network module that just works.\r
+- Extremely simpler constructors for objects such as Datacenter, Host, Vm, Cloudlet, VmAllocationPolicy, VmScheduler and ClodletSchedler.\r
+- A very easier way to initialize a simulation by just calling a no-args constructor of the CloudSim class.\r
+- Totally re-organized package and modules structure, grouping classes such as Hosts into an exclusive package.\r
+\r
+And for the first time, a cloud simulation framework is provided at the [Maven Central repository](https://maven-badges.herokuapp.com/maven-central/org.cloudsimplus/cloudsim-plus) to enable a researcher to include CloudSim Plus as a dependency into his/her pom.xml project file, making it even easier to use CloudSim Plus. Such a feature also enables researchers to implement new modules and tools running on top of CloudSim Plus, without requiring them to include CloudSim Plus source code inside their projects. That also encourage these researchers making changes to CloudSim Plus code to submit pull request to include those changes in the official repository, contributing to the entire academic and open source community. \r
+\r
+The efforts of CloudSim Plus already were recognized by the acceptance of a paper in a top conference. More details will be provided as soon as the paper is published. \r
+\r
+We'd like to hear from researchers using CloudSim Plus. Join us at the [Google Groups Forum.](https://groups.google.com/group/cloudsim-plus)\r
+\r
+For more information, check the [README file at the project's home page](https://github.com/manoelcampos/cloudsim-plus).\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.0.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.0.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.0.0"^^xsd:anyURI ;
+    sd:hasVersionId "v1.0.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0> a sd:SoftwareVersion ;
+    sd:description """This release provides some refactoring and bug fixes to enable implementation of Vertical VM Scaling proposed in #7.\r
+\r
+### Fixed\r
+- Closed Isssue #60\r
+- Fixed the issue of allocating the same physical PE for multiple Virtual PEs inside the VmSchedulerTimeShared class.\r
+\r
+### Changed\r
+- Changed the signature of the PeSimple constructor that now requires the PE MIPS capacity instead of an ID,\r
+  because it is in fact an attribute that must belong to a PE. The PE is the one that has a MIPS capacity.\r
+  If a PE ID is not defined, when a PE list is assigned to a Host, the host automatically defines the IDs.\r
+- The PeProvisionerSimple constructor doesn't require any parameter anymore. It internally creates\r
+  an association with the PE that receives the PeProvisioner instance when a Pe is created.\r
+- All the duplicated code inside the PeProvisioner and PeProvisionerSimple were removed.\r
+  The PeProvisionerSimple class now extends the ResourceProvisionerSimple and the PeProvisioner is now an interface.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.1.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.1.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.1.0"^^xsd:anyURI ;
+    sd:hasVersionId "v1.1.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0> a sd:SoftwareVersion ;
+    sd:description """### Added\r
+\r
+- [Vertical VM Scaling Mechanism](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/autoscaling/) ([#7](https://github.com/manoelcampos/cloudsim-plus/issues/7)) \r
+  for up and down scaling of VM resources such as Ram, Bandwidth and PEs (CPUs).\r
+- `double getUtilization()` method in the `UtilizationModel` class to get the utilization percentage of a given resource\r
+  at the current simulation time.\r
+- Methods `getUtilizationOfRam()`, `getUtilizationOfBw()`, `getUtilizationOfCpu()` added to Cloudlet in order\r
+  to get utilization percentage of RAM, BW and CPU, respectively, for the current simulation time.\r
+- `UtilizationModel.Unit` enum to define the measuring unit in which a Cloudlet resource, to which a `UtilizationModel` is associated to,\r
+  will be used. The enum values can be `PERCENTAGE` or `ABSOLUTE`, that respectively defines that the Cloudlet resource usage will be in percentage or absolute values. The existing UtilizationModels continue to define the value in percentage,\r
+  as described in their documentation. The `UtilizationModelDynamic` (previously called `UtilizationModelArithmeticProgression`) allows setting a different unit\r
+  for such an `UtilizationModel` ([#62](https://github.com/manoelcampos/cloudsim-plus/issues/62)).\r
+- `UtilizationModelDynamic` now allows\r
+  defining the resource usage increment behavior using a Lambda Expression, enabling the developer to give a function that performs the increment in an arithmetic, geometric, exponential or any other kind of progression he/she needs ([#64](https://github.com/manoelcampos/cloudsim-plus/issues/64)). \r
+- Updated the `DatacenterBroker` interface and implementing classes, including the methods `setVmComparator` and `setCloudletComparator` to enable\r
+  a developer to set a `Comparator` object (which can be given as a Lambda Expression) to sort VMs and Cloudlets before they are actually requested to be created in some Datacenter. This enables defining priorities to request the creation of such objects.\r
+  If no `Comparator` is defined, the objects creation request follows the order in which they were submitted.\r
+- [Host Fault Injection Mechanism (under development)](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/HostFaultInjectionExample1.java) to enable injection of random failures into Hosts PEs: it injects failures into Host PEs and reallocates working PEs to running   VMs. When all PEs from a Host fail, it starts clones of failed VMs to recovery from failure.  This way, it is simulated the instantiation of VM snapshots into different Hosts ([#81](https://github.com/manoelcampos/cloudsim-plus/issues/81)).\r
+  - Added the method Host.getWorkingPesList().\r
+  - Poisson Distribution implementation enabling the simulation of inter-arrival times of events such as Host failures.\r
+- Added the method void `submitCloudletList(List<? extends Cloudlet> list, Vm vm)` to the `DatacenterBroker`,  enabling submission of a list of cloudlets to run inside a specific VM.\r
+- Added the method void `submitCloudletList(List<? extends Cloudlet> list, Vm vm, double submissionDelay)` to the `DatacenterBroker`,  enabling submission of a list of cloudlets to run inside a specific VM, and at the same time,  allowing delaying the creation of such cloudlets.\r
+- Added a `getCloudletList()` method int the `CloudletScheduler` to get the list of all cloudlets which are executing or waiting inside a given VM.\r
+- Includes new boolean methods to the Pe interface to make easier to check the PE status.\r
+  New methods are `isFree()`, `isBuzy()`, `isFailed(`) and `isWorking()`.\r
+- Allowed disabling log on every `SimEntity` by calling the new method `SimEntity.setLog()`.\r
+  If `Log.disable(`) is called, it disables all simulation logs,\r
+  independent of the configuration on each entity. \r
+  This new feature enables fine-grained control of entities log.\r
+\r
+### Changed\r
+\r
+- Changed the methods `getRam()`, `getBw()` and `getSize()` from Vm interface to instead of returning a long value that represents the resource capacity,\r
+  to return an actual Resource object that provides information about the capacity and usage. The method getSize() was renamed to getStorage().\r
+- Changed the methods `getRamCapacity()`, `getBwCapacity()` and `getStorageCapacity()` from Host interface to instead of returning a long value that represents the resource capacity, to return an actual Resource object that provides information about the capacity and usage. The methods were renamed, removing the "Capacity" suffix.\r
+- Automatic generation of IDs for Hosts, VMs and Cloudlets. \r
+    - Hosts IDs can be manually defined using the `setId()` method, but the constructor parameter was removed.\r
+      The IDs of Hosts across different Datacenters can be duplicated, \r
+      since when a search for a Host is made using the HostList method,\r
+      just the Hosts of a given Datacenter are considered.\r
+    - Hosts IDs are generated when a List of Hosts is attached to a Datacenter. \r
+    - Cloudlets and VMs IDs are generated when they are submitted to a Broker.\r
+- Hosts constructors require the RAM and bandwidth capacity, since storage already was required.\r
+- Instantiating a `ResourceProvisionerSimple` now requires just a default no-args constructor.\r
+- The `DatacenterBroker` interfaces now allow using Java 8 Lambda Expressions to define selection policies.\r
+  - It provides a functional way of defining the policies to select a Datacenter to host a Vm, a fallback Datacenter when the creation of requested VMs failed in the previous selected Datacenter and to select a VM to run a Cloudlet.\r
+  - The DatacenterBrokerSimple is yet selecting the first Datacenter to place VMs and uses a round-robin policy to select a VM to run the Cloudlets. If such behaviors need to be changed, it is not required to create a new DatacenterBroker class. \r
+  - Since there are 3 selection policies to override (the selection of default datacenter, fallback datacenter and VM), the combination of different implementations for these 3 policies will require the creation of several DatacenterBroker implementations that will be impossible to maintain.\r
+  - Using the new functional implementation there is no need to create a new DatacenterBroker class and the implementations can be exchanged just using the new `setDatacenterSupplier`, `setFallbackDatacenterSupplier` and `setVmMapper` methods, passing a Lambda Expression to them.\r
+  - Automatically set the DatacenterBroker when Cloudlets and VMS are submitted. ([#83](https://github.com/manoelcampos/cloudsim-plus/issues/83))\r
+  - Refactored the method `CloudletScheduler.getCloudletFinishedList()` to keep the list of finished Cloudlets after the simulation\r
+    ends. The `DatacenterBroker.getCloudletsFinishedList()` method returns the list of finished Cloudlets, but for all VMs of the broker.\r
+    The `CloudletScheduler` method allows getting the finished list for a specific VM, enabling the researcher to compute some metrics using the data stored in Cloudlets attributes after the simulation ends. ([#78](https://github.com/manoelcampos/cloudsim-plus/issues/78))"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.0"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1> a sd:SoftwareVersion ;
+    sd:description """### Added\r
+- `PowerVmAllocationPolicyMigrationBestFitStaticThreshold` to select the Host to place or migrate a VM\r
+  using a Best Fit policy, that is, it selects the Host with less available resources\r
+  that is enough to place a given VM.\r
+- `EventListener` to notify subscribers when all VMs in the `DatacenterBroker` waiting list were created ([#92](https://github.com/manoelcampos/cloudsim-plus/issues/92)).\r
+- Enables Hosts to be powered on and off ([#89](https://github.com/manoelcampos/cloudsim-plus/issues/89)).\r
+- Enables changing the CPU migration overhead for any VmScheduler.\r
+  A new constructor was added to these schedulers to enable setting this value once \r
+  ([#88](https://github.com/manoelcampos/cloudsim-plus/issues/88)).\r
+- Enables dynamically adding new columns to the simulation results table  ([#87](https://github.com/manoelcampos/cloudsim-plus/issues/87)).\r
+\r
+### Fixed\r
+- Bug fixes ([#95](https://github.com/manoelcampos/cloudsim-plus/issues/95)) \r
+\r
+### Changed\r
+- Updates the Host Fault Injection Mechanism to allow creating a snapshot of a VM\r
+  when all VMs belonging to a broker have failed ([#93](https://github.com/manoelcampos/cloudsim-plus/pull/93))."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.1"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.1"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.1"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.1"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2> a sd:SoftwareVersion ;
+    sd:description """### Added \r
+- [Amazon EC2](http://aws.amazon.com/ec2/) instance templates in JSON format ([#97](https://github.com/manoelcampos/cloudsim-plus/pull/97)).\r
+- `Vm.getStartTime()`, `Vm.getStopTime()` and `Vm.getTotalExecutionTime()` methods to, respectively: get the time a VM started running for the first time; the time it was destroyed in the last Host it executed; and the total execution time across all Hosts the VM possibly have migrated across ([#98](https://github.com/manoelcampos/cloudsim-plus/issues/98)).\r
+-  Allow a VM belonging to a broker to be destroyed after all its Cloudlets have finished, independently of the state of other running VMs and according to a given delay ([#99](https://github.com/manoelcampos/cloudsim-plus/issues/99)).\r
+\r
+### Changed\r
+- Host Fault Injection Mechanism ([#81](https://github.com/manoelcampos/cloudsim-plus/issues/81)).\r
+\r
+### Fixed\r
+- Cloudlets executed with `CloudletSchedulerSpaceShared` were giving incorrect results ([#96](https://github.com/manoelcampos/cloudsim-plus/issues/96))."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.2"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.2"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.2"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.2"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3> a sd:SoftwareVersion ;
+    sd:description """### Added / Changed\r
+- Renamed the `DatacenterBroker` `getVmsCreatedList()` method to `getVmCreatedList()`\r
+  and added a `getVmExecList()` one ([#106](https://github.com/manoelcampos/cloudsim-plus/pull/106)).\r
+  Now the `getVmExecList()` method is the one which stores the list of all currently running VMs.\r
+  These VMs may or may not be running Cloudlets, but they are available\r
+  for new submitted Cloudlets to be placed into them.\r
+  The old `getVmCreatedList()` stores all created VMs for the broker\r
+  along the entire simulation time.\r
+  This way, the list of all created VMs can be queried after the simulation finishes.\r
+\r
+### Changed\r
+- Updates Host Fault Injection Mechanism ([#105](https://github.com/manoelcampos/cloudsim-plus/pull/105))."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.3"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.3"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.3"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.3"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6> a sd:SoftwareVersion ;
+    sd:description "Fix the issue #123 to enable canceling the execution of running Cloudlets."^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.6"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.6"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.6"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.6"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7> a sd:SoftwareVersion ;
+    sd:description ""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.7"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.7"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.7"^^xsd:anyURI ;
+    sd:hasVersionId "v1.2.7"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0> a sd:SoftwareVersion ;
+    sd:description """Enables simulating the physical expansion of a `Datacenter` by dynamically adding new `Hosts` (PMs) at simulation runtime. The `Datacenter` interface now has the methods `addHost` and `addHostList`, which can be called before or after starting the simulation, to expand a `Datacenter` physical capacity by adding new Hosts.\r
+\r
+This release also makes it easier to create a `Datacenter` since a `DatacenterCharacteristics` object is not required anymore. When a `Datacenter` is instantiated, it internally creates a `DatacenterCharacteristics` object. In place of passing such an object to the `Datacenter` constructor, you just need to pass a `List` of `Hosts`.\r
+\r
+This way, instead of creating a `Datacenter` like this:\r
+\r
+```java\r
+DatacenterCharacteristics characts = new DatacenterCharacteristicsSimple(hostList);\r
+Datacenter dc0 = new DatacenterSimple(cloudsim, characts, new VmAllocationPolicySimple());\r
+```\r
+\r
+you simple do:\r
+\r
+```java\r
+Datacenter dc0 = new DatacenterSimple(cloudsim, hostList, new VmAllocationPolicySimple());\r
+```\r
+\r
+The `DatacenterCharacteristics` can be accessed using the `Datacenter.getDatacenterCharacteristics()` method, enabling the characteristics (such as costs) to be changed."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.3.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.3.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.0"^^xsd:anyURI ;
+    sd:hasVersionId "v1.3.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1> a sd:SoftwareVersion ;
+    sd:description """## Fix issue #126\r
+Consider there are 4 Cloudlets running at the same time inside the same VM and that a `UtilizationModelFull` was used to define how a Cloudlet requests RAM from its VM. This issue was enabling, for instance, that all Cloudlets requested together 400% of RAM from the VM, which is obviously not possible without virtual memory (which is not supported in simulations).\r
+\r
+You are strongly recommended to check more details in #126.\r
+\r
+## Send messages between entities\r
+\r
+Enable internal message passing mechanism to accept and `SimEntity` as the source and destination for a message, instead of `int` IDs. That makes easier to interact with the involved entities, enabling the event processing to call some methods directly on these entities. It also avoids looking up the entities into a list or map in order to get an instance to them. That makes the message processing faster.\r
+\r
+This feature also enables freely changing entities' names. When the ID of an entity is changed, its name is accordingly changed to."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.3.1"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.3.1"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.1"^^xsd:anyURI ;
+    sd:hasVersionId "v1.3.1"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2> a sd:SoftwareVersion ;
+    sd:description """## Updates the `ResourceLoader` class \r
+Enables loading a resource from the resource directory, regardless the simulation is running directly from a compiled class or from a jar file.\r
+\r
+## Makes it easier to get an instance of classes that require reading a file,\r
+The classes `BriteNetworkTopology`, `WorkloadFileReader`, `UtilizationModelPlanetLab` and `SlaContract`\r
+now have a simplified `getInstance(String path)` method that just requires the relative path to the file to be loaded. If such file is inside the application's resource directory, it will be found. If it's anywhere else, just provide an absolute file path."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.3.2"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.3.2"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.2"^^xsd:anyURI ;
+    sd:hasVersionId "v1.3.2"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3> a sd:SoftwareVersion ;
+    sd:description """## Removes all the examples that were available at package `org.cloudbus.cloudsim.examples.power`\r
+    \r
+Those simulations aren't in fact examples. They were clearly used just to publish results for the paper [Optimal Online Deterministic Algorithms and Adaptive Heuristics for Energy and Performance Efficient Dynamic Consolidation of Virtual Machines in Cloud Data Centers](http://dx.doi.org/10.1002/cpe.1867).\r
+\r
+Since the code lacks organization and results aren't structured and clear, such simulations just confuse instead of help. A more detailed discussion about the issues in these simulations is [available here](https://groups.google.com/d/msg/cloudsim-plus/6B_EcYE3HgA/VHbB6ZlrBQAJ)."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.3.3"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.3.3"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.3"^^xsd:anyURI ;
+    sd:hasVersionId "v1.3.3"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0> a sd:SoftwareVersion ;
+    sd:description """# INTRODUCTION\r
+\r
+Enables power-aware simulations using regular classes such as`DatacenterSimple`, `HostSimple` and `VmSimple`.  **This way, it automatically allows creating simulations that are both network- and power-aware by using the network versions of such classes.**\r
+ \r
+Any `Host` now has a `PowerSupply` attribute that allows to get power consumption data from. To enable collecting such data, it's is required to set a `PowerModel` object by calling `host.getPowerSupply().setPowerModel(powerModel)`. The only difference from previous versions is that the `PowerModel` is defined inside the `PowerSupply` instead of the `Host`.\r
+\r
+This way, if you don't need power-aware simulations, you need to do nothing because that is the default behaviour.\r
+\r
+There are some examples such as the [PowerExample](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/PowerExample.java) and the [MigrationExample2_PowerUsage](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/migration/MigrationExample2_PowerUsage.java).\r
+\r
+More details are presented below.\r
+\r
+\r
+## VmUtilizationHistory\r
+\r
+Adds the `VmUtilizationHistory` class to store resource utilization history by a given `Vm`. This way, all `Vm` implementations have a `UtilizationHistory` attribute.\r
+\r
+## PowerVm\r
+\r
+`PowerVm` class was removed and its methods were moved to a new VmUtilizationHistory class.\r
+The Vm now has an attribute `VmUtilizationHistory` that enables collecting CPU utilization data. \r
+The `VmUtilizationHistory.enabled` is set by default to false. This way, the user have to manually enable the history to start collecting utilization data. It was disabled by default to reduce memory usage.\r
+\r
+## PowerSupply\r
+\r
+Adds the `PowerSupply` interface to concentrate all power consumption data and operations, enabling any `Host` to get such an information. The `PowerSupply` includes the `PowerModel` that was previously inside the `PowerHost` class.\r
+\r
+## PowerHost\r
+\r
+`PowerHost` class removed and its methods merged into Host. A `PowerSupply` interface was introduced to group power consumption data (including a `PowerModel`). This way, any `Host` can extract power consumption data.  It's just required a PowerModel to be set in the `PowerSupply`.\r
+\r
+\r
+## PowerHostUtilizationHistory and HostDynamicWorkloadSimple\r
+\r
+`PowerHostUtilizationHistory` and `HostDynamicWorkloadSimple` class were removed and their code merged into the `HostSimple` class. \r
+\r
+The Host's `getUtilizationHistory` method gets the CPU utilization history from its VMs. The Host doesn't store any data. The VM utilization history must be enabled to allow getting such data, by calling `vm.getUtilizationHistory().enable()`.\r
+\r
+## VmAllocationPolicy\r
+\r
+Refactors `VmAllocationPolicy` implementations, mainly the `VmAllocationPolicyAbstract` and `VmAllocationPolicySimple`. \r
+\r
+Changed the method `Host findHostForVm(final Vm vm)` to `Optional<Host> findHostForVm(final Vm vm)`, making it return an `Optional` to explicitly indicate that a suitable `Host` may not be found for a given VM.\r
+\r
+The method was defined as abstract in the `VmAllocationPolicyAbstract` and it's the single one initially required to be implemented by subclasses of `VmAllocationPolicyAbstract`. \r
+\r
+Removes `PowerVmAllocationPolicySimple` because it was doing nothing that other policies weren't doing. Introduces the `VmAllocationPolicyFirstFit`.\r
+\r
+Renames the package `org.cloudbus.cloudsim.allocationpolicies.power` to `org.cloudbus.cloudsim.allocationpolicies.migration`. Such allocation policies enable VM migration and can be used now for any kind of simulation, not only for power-aware ones. All internal classes and interfaces were renamed, removing the prefix `Power`.\r
+\r
+# NOTICE\r
+Check [release 2.2.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.0.0) for important updates about power-aware simulations.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.0.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.0.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.0.0"^^xsd:anyURI ;
+    sd:hasVersionId "v2.0.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0> a sd:SoftwareVersion ;
+    sd:description """- Provides a functional implementation of `PowerModel` classes, enabling to pass a `Function` as a parameter to the constructor. Such a `Function` defines how the power consumption increases along the time.\r
+- Introduces the `PowerModelSimple`, enabling the developer to define the power consumption increment as a `Function`. This way, it doesn't require the creation of a new class.\r
+- Removes all code duplication between `PowerModel` classes."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.1.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.1.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.1.0"^^xsd:anyURI ;
+    sd:hasVersionId "v2.1.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0> a sd:SoftwareVersion ;
+    sd:description """The `PowerSupply` was just delegating everything to `PowerModel`. \r
+After refactoring the latter one to provide a better class hierarchy, remove code duplication and fix bugs (#127), `PowerSupply` was merged into the `PowerModel` and the former removed. \r
+\r
+Now, the way to use `PowerModel` is as before the [release 2.0.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.0.0), but with all the benefits of using regular classes to implement power-aware simulations, namely `DatacenterSimple`, `HostSimple` and `VmSimple`.\r
+\r
+You just need to call Host's `setPowerModel(PowerModel powerModel)` method to enable power-aware simulations."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.2.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.2.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.0"^^xsd:anyURI ;
+    sd:hasVersionId "v2.2.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2> a sd:SoftwareVersion ;
+    sd:description """- General cleanup to remove unused and redundant code.\r
+- General code review and refactoring."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.2.2"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.2.2"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.2"^^xsd:anyURI ;
+    sd:hasVersionId "v2.2.2"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0> a sd:SoftwareVersion ;
+    sd:description "- Closes #130"^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.3.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.3.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.0"^^xsd:anyURI ;
+    sd:hasVersionId "v2.3.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1> a sd:SoftwareVersion ;
+    sd:description """## Updates #130\r
+    \r
+- Postpone DatacenterBroker shutdown to the end of the simulation when a termination time is set,\r
+    instead of as soon as all cloudlets finish. This way, the broker waits for new Cloudlets and VMs submitted during simulation runtime, even if the broker is idle.\r
+- Updates DatacenterBrokerSimple to request VM destroy during shutdown. In situations such as when a simulation termination time is set, the broker was kept alive to wait for new Cloudlets and VMs. However, this was causing VM destruction to be ignored when the broker was shutdown.\r
+- Improves information printed by DatacenterBroker.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.3.1"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.3.1"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.1"^^xsd:anyURI ;
+    sd:hasVersionId "v2.3.1"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0> a sd:SoftwareVersion ;
+    sd:description """- General refactoring of Network module, improving code organization and reducing duplication.\r
+- Fix infinite loop issue with network examples.\r
+- Improves documentation.\r
+- Updates network examples.\r
+\r
+## Closed Issues\r
+- #85\r
+- #135 \r
+- #132\r
+- #137\r
+- #138\r
+- #141\r
+- #142\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.4.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.4.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0"^^xsd:anyURI ;
+    sd:hasVersionId "v2.4.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0> a sd:SoftwareVersion ;
+    sd:description """- Defines types and colors for log messages and enables filtering the level of messages to print. The image below shows how easy is to check things that may be wrong in your simulation ([#24](https://github.com/manoelcampos/cloudsim-plus/issues/24)). ![](docs/images/log-messages-by-type.png) And for instance, if you want to see just messages from warning level, it's as simple as calling `Log.setLevel(ch.qos.logback.classic.Level.WARN);` \r
+- Includes all fixes in the Network Module from [version 2.4.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0)."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v3.0.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v3.0.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v3.0.0"^^xsd:anyURI ;
+    sd:hasVersionId "v3.0.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0> a sd:SoftwareVersion ;
+    sd:description """- Process trace files from [Google Cluster Data](https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md) creating Hosts and Cloudlets (tasks). A script to download the trace files is available at [download-google-cluster-data.sh](https://github.com/manoelcampos/cloudsim-plus/blob/master/script/download-google-cluster-data.sh). Examples are available [here](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/traces/google) (#149).\r
+- Reimplement Host's and VM's power usage computation that were returning inconsistent results for different Datacenter's scheduling intervals (#153).\r
+- Makes the UtilizationModelPlanetLab work as a circular list when the Cloudlet using it as a CPU UtilizationModel runs longer than there is data in the trace file. This way, when the end of the file is reached, it starts reading from the beginning to avoid `ArrayIndexOutOfBoundsException` (#152).\r
+- Enables creation of Cloudlets with undefined lengths, so that they can keep running until a message is sent to finish them. This enables the simulation of tasks such as a web service that keeps running waiting for requests, until a signal to finish it is sent. (#150).\r
+- Improves the `HostSimple.isSuitableForVm` method which was incorrectly checking if a Host is suitable for a Vm (#148).\r
+- Other small improvements."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v4.0.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v4.0.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.0"^^xsd:anyURI ;
+    sd:hasVersionId "v4.0.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3> a sd:SoftwareVersion ;
+    sd:description """- Fix #154\r
+- Fix #156\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v4.0.3"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v4.0.3"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.3"^^xsd:anyURI ;
+    sd:hasVersionId "v4.0.3"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1> a sd:SoftwareVersion ;
+    sd:description """- #185 :: Warn when a simulation which has an explicit termination time is lasting too long. This way, the researcher may know if he/she has set a too long termination time, instead of just keep waiting the simulation to finish when there are no events to process.\r
+- #184 :: Refactor ContinuousDistribution implementations providing consistent order in construtor parameters. The parameter order of NormalDistr's constructor was changed from `NormalDistr(long seed, double mean, double standardDeviation)` to `NormalDistr(double mean, double standardDeviation, long seed)`. This way, the `SEED` (when available) is always the last parameter, conforming to constructors of other random number generators such as the UniformDistr. This change probably will cause a compilation error and will be easy to detect and fix. However, if you are using int or long for all the 3 parameters, there will be no error or warning and your simulation results will be just wrong. In such a case, you need to find where you are using this NormalDistr constructor and correct parameters order.\r
+- #183 :: Adds time conversion methods to the Conversion class\r
+- #180 :: When a submission delay is set, VM creation is not being delayed by the DatacenterBroker\r
+- #178 :: Fix confusion between energy, power and their units\r
+- #173, #174, #175 :: Performance improvements for large scale simulations\r
+- #171 :: Cloudlet BW utilization is always zero\r
+- Adds [RamAndBwUsageHistoryExample](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/resourceusage/VmsRamAndBwUsageExample.java) to collect VM's RAM and BW utilization\r
+- #168 :: [Compute VM Power usage](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/power/PowerExample.java)\r
+- #163 :: Some cloudlets don't finish execution - [Adds new example to show it's just a configuration issue.](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/MinTimeBetweenEventsExample.java) \r
+- #161 :: Introduce an [onCloudletStartListener](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/listeners/CloudletListenersExample1.java) to be notified when a Cloudlet starts executing\r
+- #128, #181 :: [Enable VmAllocationPolicy implementations to power Hosts on and off as required](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/power/HostActivation.java).  Introduce the following methods to Host: `getIdleShutdownDeadline()`, `setIdleShutdownDeadline()`, `getUpTime()` and `getTotalUpTime()`. Accordingly updates the Host startTime and shutdownTime when the activation status of a Host changes."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v4.3.1"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v4.3.1"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.3.1"^^xsd:anyURI ;
+    sd:hasVersionId "v4.3.1"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0> a sd:SoftwareVersion ;
+    sd:description """## 1. Important new Features\r
+\r
+### 1.1. Implement synchronous simulations (#205)\r
+\r
+This feature enables the simulation to be run inside a regular loop as below:\r
+\r
+```java\r
+simulation.startSync();\r
+while(simulation.isRunning()){\r
+    simulation.runFor(INTERVAL);\r
+    /*\r
+    Perform some operation here, \r
+    such as data collection or submission of new VMs or Cloudlets. \r
+    */\r
+}\r
+simulation.finish();\r
+```\r
+\r
+That makes it easier to interact with the simulation and perform some tasks, such as data collection.\r
+Thanks for Pawel Koperek.\r
+\r
+### 1.2. DatacenterBroker\r
+\r
+- Enables Broker to try selecting the closest Datacenter to place VMs, according to their time zone (#212).\r
+- Enables Broker to destroy a VM and return the list of unfinished Cloudlets (#209). Thanks for Pawel Koperek.\r
+- Enables placing groups of VMs into the same PM (#90).\r
+- Introduces `DatacenterBrokerBestFit`. Thanks to Humaira Abdul Salam.\r
+- Introduces `DatacenterBrokerFirstFit`.\r
+\r
+## 2. Introduces new `Vm` methods and updates `Host`\r
+    \r
+- The `Vm.getHostCpuUtilization()` method enables computing the relative VM CPU utilization from the `Host`. That is different from the same method in `VmUtilizationHistory` since the former just works during simulation execution, while the latter uses the history to compute the utilization.\r
+- `Vm.getHostRamUtilization()` and `Vm.getHostBwUtilization()` provide the same feature for RAM and BW.\r
+- Adds the `VmRelativeHostResourceUtilizationExample` to show the relative percentage of each resource every VM is using from its Host.\r
+- Introduces `getUpTimeHours()` and `getTotalUpTimeHours()` methods in `Host` interface to return the number of hours a Host has been active.\r
+\r
+Renames following methods in `Host` and `Vm` to provide uniformity:\r
+\r
+- `Host.getUtilizationOfCpu` to `getCpuPercentUtilization`\r
+- `Host.getUtilizationOfCpuMips` to `getCpuMipsUtilization`\r
+- `Host.getUtilizationOfBw` to `getBwUtilization`\r
+- `Host.getUtilizationOfRam` to `getRamUtilization`\r
+- `Vm.getCpuPercentUsage` to `getCpuPercentUtilization`\r
+- `Vm.getTotalCpuMipsUsage` to `getTotalCpuMipsUtilization`\r
+\r
+## 3. Refactor and redesign classes in distributions package (#201)\r
+    \r
+- Provides uniformity for parameter order in `ContinuousDistribution` classes\r
+- Introduces new constructors for `ContinuousDistribution` classes, enabling the researcher to provide a specific `RandomGenerator` instance that will be used as the actual pseudo random number generator.\r
+- Makes the `ContinuousDistribution` classes to use inheritance instead of composition. Despite the recommendation is to favor composition, in this case, that was just causing a huge increase in memory usage in large scale simulations. This way, now `ContinuousDistribution` classes extend `AbstractRealDistribution` instead of storing an attribute of this type.\r
+\r
+## 4. General Features \r
+\r
+- Moves time-related methods from Conversion to TimeUtil class.\r
+- Introduces `VmAllocationPolicyWorstFit`, `VmAllocationPolicyRandom`, `VmAllocationPolicyRoundRobin`.\r
+- Moves `ExperimentRunner` and `Experiment` classes to main module, to enable researchers extend such classes to implement their own experiments that execute in a repeatable manner. This way, they can use a scientific approach to collect valid results. Moving this base classes to the main module stops researchers from depending on the `cloudsim-plus-testbeds` module, which just provides existing testbeds that may be used just as a learning resource.\r
+- Smaller bug-fixes.\r
+\r
+## 5. Performance \r
+\r
+The performance improvements in this release are impressive. The list below shows where the improvements were made. If you want a glympse of the impact in simulation time, check the end of the [Exclusive Features section](https://github.com/manoelcampos/cloudsim-plus#main-exclusive-features) at the home page.\r
+\r
+- Improves performance of Broker's Cloudlets creation request (#203)\r
+- The `Host` previous utilization mips is just used when there is a `DatacenterPowerSupply` instance attached to the `Datacenter`. Since getting the utilization of CPU is a very expensive operation in large scale experiments, if a Datacenter power supply is not set, the value is not stored.\r
+- Improves performance of idle VM detection (#200).\r
+- Improves overall performance of VmAllocationPolicies (#190, #191).\r
+- Improves `DatacenterBroker` performance for allocation of VMs and Cloudlets (#109, #188).\r
+- Improves `DatacenterBroker` performance for checking if a VM is alive (#187).\r
+\r
+### 5.1 `UtilizationModelStochastic`\r
+\r
+- Improves performance when getting the utilization value from the history map (#194).\r
+- Introduces `historyEnabled` attribute and `setHistoryEnabled()` to allow enabling or disabling the history of utilization values (#197).\r
+- Enables the utilization history by default, because that option brings more performance (at the cost of higher memory consumption). If you are running a large scale simulation, that history may grow too much, which will impact performance anyway. But for regular simulations, enabling the history provides better performance because a lower number of pseudo-random numbers will be generated.\r
+- Enables the `UtilizationModelStochastic` to always return a new utilization\r
+    * Allow the researcher to decide if a `UtilizationModelStochastic` instance will always return a new utilization value every time the `getUtilization()` methods are called.\r
+    * Returning a new random utilization value for every call to those methods enables the researcher to use a single `UtilizationModelStochastic` instance for all Cloudlets. This drastically reduces simulation time and memory consumption in large scale simulations. It also ensures that distinct Cloudlets may have different resource utilization even for the same requested time."""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v5.0.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v5.0.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.0.0"^^xsd:anyURI ;
+    sd:hasVersionId "v5.0.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0> a sd:SoftwareVersion ;
+    sd:description """## New Features\r
+\r
+- Add size() method to Datacenter interface to enable getting its number of Hosts.\r
+- #216 :: Enable manual VM migrations based on arbitrary conditions\r
+- #221 :: Enable UtilizationModelPlanetLab to read the number of lines from a comment at the beginning of the file \r
+- #222 :: Enable UtilizationModelPlanetLab to scale the values read from the trace\r
+\r
+\r
+## BugFixes\r
+\r
+- #214\r
+- #215\r
+- #217\r
+- #218\r
+- #219\r
+- #220\r
+- #223\r
+- #224\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v5.1.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v5.1.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.1.0"^^xsd:anyURI ;
+    sd:hasVersionId "v5.1.0"^^xsd:string .
+
+<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> a sd:SoftwareVersion ;
+    sd:description """## Updates and New Features\r
+\r
+- Includes all AWS EC2 Instance Templates from the "US Est (Ohio)" Region, available at https://aws.amazon.com/ec2/pricing/on-demand/\r
+- Add instructions to use Gradle in the README\r
+- #228 - Enables DatacenterBroker to avoid retrying or not the creating of failed VMs\r
+- #233 - Provide more public LOGGER instances for specific classes. Check [LoggingExample.java](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/LoggingExample.java)\r
+- #236 - Datacenter kept trying to migrate VMs from under or overloaded Hosts without waiting some time.\r
+         A `setHostSearchForMigrationDelay(double delay)` method was introduced in Datacenter. Check [MigrationExample1.java](https://github.com/manoelcampos/cloudsim-plus/blob/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/migration/MigrationExample1.java)\r
+\r
+## Bugfixes\r
+\r
+-  #54 - VmSchedulerTimeShared wasn't sharing Host PEs between different VMs when there is fewer Host PEs than required by all VMs\r
+- #226 - Some cloudlets weren't finishing, although the CPU utilization is high\r
+- #227 - MinTimeBetweenEventsExample.java was showing -1 as the ExecTime for almost all Cloudlets\r
+- #229 - VmSchedulerSpaceShared was throwing a NoSuchElementException when all Host PEs were already used\r
+- #231 - When a Cloudlet is bound to a VM and that VM was not created, the Cloudlet status wasn't set to FAILED\r
+- #232 - VmSchedulers were showing a warning "VmSchedulerXX: It was requested an empty list of PEs for Vm YY in Host ZZ" because the resources of a destroyed VM were tried to be deallocated twice\r
+- #234 - VmAllocationPolicyMigrationAbstract was not allocating Hosts without a PowerModel. Since power consumption is buil-in in the HostSimple class of CloudSim Plus, the developer can choose if he/she wants to model power consumption or not using regular Hosts.\r
+- #235 - Some simulations using a VmAllocationPolicyMigration were freezing when there were under/overloaded Hosts.\r
+"""^^xsd:string ;
+    sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v5.4.0"^^xsd:anyURI,
+        "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v5.4.0"^^xsd:anyURI,
+        "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.4.0"^^xsd:anyURI ;
+    sd:hasVersionId "v5.4.0"^^xsd:string .
+

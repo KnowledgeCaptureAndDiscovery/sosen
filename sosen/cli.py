@@ -4,12 +4,15 @@ from somef import cli as somef_cli
 
 from .get_zenodo_query_data import get_zenodo_query_data
 from .data_to_graph import DataGraph
+from .schema.keyword_schema import keyword_schema, keyword_prefixes
 from .get_data import get_zenodo_data
 import math
 import os
 from rdflib import Graph
 import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
+
+from .sparql_queries import get_keyword_matches, get_keyword
 
 
 def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
@@ -74,17 +77,50 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
         else:
             print(f"{github_url} found cached in {data_dict}")
 
+
     # save at the end, too
     with open(data_dict, "w") as json_out:
         json.dump(cli_data, json_out)
 
-    graph = DataGraph()
-
     filtered_data = (data for data in data_and_urls_flattened.values()
                      if data["github_url"] in cli_data and cli_data[data["github_url"]] is not None)
 
-    for data in filtered_data:
-        graph.add_somef_data({**cli_data[data["github_url"]], "zenodo_data": data["zenodo_data"]})
+    document_data = [{**cli_data[data["github_url"]], "zenodo_data": data["zenodo_data"]}
+                     for data in filtered_data]
+
+    # create the keywords with document frequencies
+    total_documents = len(document_data)
+    keyword_frequency = {}
+
+    def make_list(maybe_list):
+        if isinstance(maybe_list, list) or isinstance(maybe_list, tuple):
+            return maybe_list
+        else:
+            return [maybe_list]
+
+
+    for document in document_data:
+        topics = document["topics"]
+        topics = make_list(topics)
+        for keyword_obj in topics:
+            keyword_second_list = make_list(keyword_obj["excerpt"])
+            for keyword in keyword_second_list:
+                if keyword in keyword_frequency:
+                    keyword_frequency[keyword] += 1
+                else:
+                    keyword_frequency[keyword] = 1
+
+    keyword_data = ({"keyword": keyword, "documentFrequency": frequency/total_documents}
+                    for keyword, frequency in keyword_frequency.items())
+
+    # add data to graph
+    graph = DataGraph()
+    for data in document_data:
+        graph.add_somef_data(data)
+
+    # add keyword data to graph
+    for data in keyword_data:
+        graph.add_data(data, keyword_schema, keyword_prefixes)
 
     with open(graph_out, "wb") as out_file:
         out_file.write(graph.g.serialize(format=format))
@@ -116,23 +152,80 @@ def get_all_keywords(keywords):
 
 
 def run_search(keywords, graph_in):
+    keywords = [keyword.lower() for keyword in keywords]
     all_keywords = get_all_keywords(keywords)
     sparql = SPARQLWrapper(graph_in)
 
-    queryString = """PREFIX sd: <https://w3id.org/okn/o/sd#>
-SELECT ?obj ?doi
-WHERE {{
-    ?obj sd:keywords ?keyword .
-    FILTER regex(?keyword, '^({kw_regex})$', 'i')
-    ?obj sd:doi ?doi
-}}
-""".format(kw_regex="|".join(all_keywords))
+    keyword_dfs = {}
 
-    print(queryString)
-    sparql.setQuery(queryString)
-    sparql.setReturnFormat(SPARQL_JSON)
-    results = sparql.query().convert()
+    # first, get all of the keywords and their frequencies
+    for keyword in all_keywords:
+        query_string = get_keyword.format(keyword=keyword)
+        sparql.setQuery(query_string)
+        # print(query_string)
+        sparql.setReturnFormat(SPARQL_JSON)
+        results = sparql.query().convert()
 
-    for result in results['results']['bindings']:
-        print(f"https://doi.org/{result['doi']['value']}, {result['obj']['value']}")
+        # there's only 1 or 0 results but this is an easier way of writing that
+        for result in results['results']['bindings']:
+            keyword_id = result['keyword_id']['value']
+            keyword_df = result['keyword_df']['value']
+            keyword_dfs[keyword_id] = float(keyword_df)
+
+    # now, get the documents that match these keywords
+    all_results = {}
+    for keyword_id, keyword_df in keyword_dfs.items():
+        query_string = get_keyword_matches.format(keyword_id=keyword_id)
+        sparql.setQuery(query_string)
+        # print(query_string)
+        sparql.setReturnFormat(SPARQL_JSON)
+        results = sparql.query().convert()
+
+        # calculate the idf
+        keyword_idf = -1 * math.log(keyword_df, math.e)
+
+        print(f"keyword: {keyword_id}, idf: {keyword_idf}")
+
+        for result in results['results']['bindings']:
+            obj_id = result['obj']['value']
+            keyword_count = result['keyword_count']['value']
+
+            if obj_id in all_results:
+                all_results[obj_id]['keyword_idf_sum'] += keyword_idf
+            else:
+                all_results[obj_id] = {
+                    'keyword_idf_sum': keyword_idf,
+                    'keyword_count': int(keyword_count)
+                }
+
+    # all_results = {}
+    # for keyword in all_keywords:
+    #     query_string = get_keyword_matches.format(keyword=keyword)
+    #     sparql.setQuery(query_string)
+    #     print(query_string)
+    #     sparql.setReturnFormat(SPARQL_JSON)
+    #     results = sparql.query().convert()
+    #
+    #     for result in results['results']['bindings']:
+    #         obj_id = result['obj']['value']
+    #         keyword_count = result['keyword_count']['value']
+    #
+    #         if obj_id in all_results:
+    #             all_results[obj_id]['keyword_matches'] += 1
+    #         else:
+    #             all_results[obj_id] = {
+    #                 'keyword_matches': 1,
+    #                 'keyword_count': int(keyword_count)
+    #             }
+
+    tf_idf_results = [{"obj_id": obj_id, "tf_idf": value['keyword_idf_sum']/value['keyword_count']}
+                      for obj_id, value in all_results.items()]
+
+    tf_idf_results.sort(key=lambda obj: obj["tf_idf"], reverse=True)
+
+    for index, result in enumerate(tf_idf_results):
+        if index >= 20:
+            break
+        print(result)
+
 

@@ -7,6 +7,9 @@ software_prefixes = {
     "obj": "http://w3id.org/okn/o/i/"
 }
 
+# this goes down here to resolve what would otherwise be a circular dependency
+from .keyword_schema import keyword_id_format
+
 somef_software_schema = {
     # class and id
     "@class": "sd:Software",
@@ -86,9 +89,13 @@ somef_software_schema = {
         "@path": ["license", "excerpt", "url"],
         "@type": "xsd:anyURI"
     },
-    "sd:keywords": {
-        "@path": ["topics", "excerpt"],
-        "@type": "xsd:string"
+    # link to the keyword, which will be generated separately
+    "sd:hasKeyword": {
+        "@class": "sd:Keyword",
+        "@id": {
+            "@format": keyword_id_format,
+            "keyword": ["topics", "excerpt"]
+        },
     },
     "sd:doi": {
         "@required": True,
