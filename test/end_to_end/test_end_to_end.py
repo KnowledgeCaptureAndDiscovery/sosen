@@ -6,7 +6,7 @@ import os
 
 
 class BaseEndToEnd(unittest.TestCase):
-    maxDiff = None
+    # maxDiff = None
 
     def setUp(self):
         pass

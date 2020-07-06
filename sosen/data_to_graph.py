@@ -75,17 +75,26 @@ class DataGraph:
     @staticmethod
     def resolve_value(data, schema):
         if isinstance(schema, dict):
-            # resolve the format string
-            args = {key: DataGraph.resolve_path(data, path) for (key, path) in schema.items() if key[0] != "@"}
-            # if we can't get all the arguments, our ID won't make sense, and we can't create this object
-            if None in args.values():
-                return None
+            if "@format" in schema:
+                # resolve the format string
+                args = {key: DataGraph.resolve_path(data, path) for (key, path) in schema.items() if key[0] != "@"}
+                # if we can't get all the arguments, our ID won't make sense, and we can't create this object
+                if None in args.values():
+                    return None
 
-            def format_as_url(args):
-                url_encoded_args = {key: urllib.parse.quote(value) for key, value in args.items()}
-                return schema["@format"].format(**url_encoded_args)
+                def format_as_url(args):
+                    # url encode if the string does not start with the value
+                    url_encoded_args = {key: value if schema["@format"].startswith("{" + key + "}")
+                                        else urllib.parse.quote(value)
+                                        for key, value in args.items()}
 
-            return DataGraph.combine_dict(args, format_as_url)
+                    return schema["@format"].format(**url_encoded_args)
+
+                return DataGraph.combine_dict(args, format_as_url)
+            elif "@path" in schema:
+                return DataGraph.resolve_path(data, schema["@path"])
+            else:
+                exit(f"schema {schema} must have @format or @path")
         else:
             return schema
 
@@ -106,6 +115,7 @@ class DataGraph:
             return None
 
         rdf_id = self.resolve_type(data_id)
+        print(rdf_id)
 
         # then, get the type
         rdf_type = self.resolve_type(schema["@class"])
@@ -144,8 +154,7 @@ class DataGraph:
                         lambda x: Literal(x["value"], datatype=x["type"]) if x["value"] is not None else None
                     )
                 else:
-                    exit(f"{attr_schema} not a valid value")
-                    return None  # needed because the linter doesn't know exit is a return
+                    break
 
                 # add the object to the graph if it does not already exist
 
@@ -182,7 +191,11 @@ class DataGraph:
 
     def resolve_type_helper(self, type_name):
         # split the string around the colon
-        colon_index = type_name.index(":")
+        try:
+            colon_index = type_name.index(":")
+        except ValueError:
+            return type_name
+
         type_prefix = type_name[0:colon_index]
         type_id = type_name[colon_index + 1:]
 

@@ -1,10 +1,12 @@
-from rdflib import XSD
+from .schema_prefixes import schema, sd, xsd, obj, sosen, rdfs
 
 software_prefixes = {
-    "schema": "https://schema.org/",
-    "sd": "https://w3id.org/okn/o/sd#",
-    "xsd": str(XSD),
-    "obj": "http://w3id.org/okn/o/i/"
+    "schema": schema,
+    "sd": sd,
+    "xsd": xsd,
+    "obj": obj,
+    "sosen": sosen,
+    "rdfs": rdfs
 }
 
 # this goes down here to resolve what would otherwise be a circular dependency
@@ -90,6 +92,7 @@ somef_software_schema = {
         "@type": "xsd:anyURI"
     },
     # link to the keyword, which will be generated separately
+    # todo: this needs to be changed
     "sd:hasKeyword": {
         "@class": "sd:Keyword",
         "@id": {

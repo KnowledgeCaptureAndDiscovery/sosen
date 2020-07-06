@@ -5,3 +5,22 @@ has property sd:documentFrequency, which is the frequency of this keyword across
 and if it is a description-based keyword, this means what proportion of
 
 sd:hasKeyword property for sd:Software
+
+
+For description keywords:
+
+sd:Software
+    sosen:descriptionKeywordCount: the total number of keywords in the description
+    sosen:hasDescriptionKeyword: Link to a KeywordRelationship object
+
+sosen:KeywordRelationship:
+    sosen:descriptionCount
+    sosen:keyword
+
+sosen:Keyword
+    sosen:documentInCount
+    rdfs:label
+
+sosen:Global
+    sosen:documentCount
+

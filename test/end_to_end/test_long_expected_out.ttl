@@ -1,9 +1,1372 @@
+@prefix obj: <https://w3id.org/okn/o/i/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix sosen: <('http://example.org/sosen#',)> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus> a sd:Software ;
-    sd:author <http://w3id.org/okn/o/i/Person/manoelcampos> ;
+obj:Global a sosen:Global ;
+    sd:descriptionDocumentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/20a> a sosen:Keyword ;
+    rdfs:label "20a"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/20and> a sosen:Keyword ;
+    rdfs:label "20and"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/20central> a sosen:Keyword ;
+    rdfs:label "20central"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/22> a sosen:Keyword ;
+    rdfs:label "22"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/226> a sosen:Keyword ;
+    rdfs:label "226"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/227> a sosen:Keyword ;
+    rdfs:label "227"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/228> a sosen:Keyword ;
+    rdfs:label "228"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/229> a sosen:Keyword ;
+    rdfs:label "229"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/22cloudsim> a sosen:Keyword ;
+    rdfs:label "22cloudsim"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/22org> a sosen:Keyword ;
+    rdfs:label "22org"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/231> a sosen:Keyword ;
+    rdfs:label "231"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/232> a sosen:Keyword ;
+    rdfs:label "232"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/233> a sosen:Keyword ;
+    rdfs:label "233"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/234> a sosen:Keyword ;
+    rdfs:label "234"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/235> a sosen:Keyword ;
+    rdfs:label "235"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/236> a sosen:Keyword ;
+    rdfs:label "236"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/24> a sosen:Keyword ;
+    rdfs:label "24"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/3f132b184d5e475dbbcd356ee84499fc> a sosen:Keyword ;
+    rdfs:label "3f132b184d5e475dbbcd356ee84499fc"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/54> a sosen:Keyword ;
+    rdfs:label "54"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/accuracy> a sosen:Keyword ;
+    rdfs:label "accuracy"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/add> a sosen:Keyword ;
+    rdfs:label "add"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/aligned> a sosen:Keyword ;
+    rdfs:label "aligned"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/allocating> a sosen:Keyword ;
+    rdfs:label "allocating"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/allows> a sosen:Keyword ;
+    rdfs:label "allows"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/amazon> a sosen:Keyword ;
+    rdfs:label "amazon"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/amp> a sosen:Keyword ;
+    rdfs:label "amp"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/aperfei%C3%A7oamento> a sosen:Keyword ;
+    rdfs:label "aperfeiçoamento"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/api> a sosen:Keyword ;
+    rdfs:label "api"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/app> a sosen:Keyword ;
+    rdfs:label "app"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/application> a sosen:Keyword ;
+    rdfs:label "application"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/arrow_up> a sosen:Keyword ;
+    rdfs:label "arrow_up"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/art> a sosen:Keyword ;
+    rdfs:label "art"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ascii> a sosen:Keyword ;
+    rdfs:label "ascii"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/available> a sosen:Keyword ;
+    rdfs:label "available"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/avoid> a sosen:Keyword ;
+    rdfs:label "avoid"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/aws> a sosen:Keyword ;
+    rdfs:label "aws"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/badge> a sosen:Keyword ;
+    rdfs:label "badge"^^xsd:string ;
+    sosen:documentCount 7 .
+
+<https://w3id.org/okn/o/i/Keyword/badge_coverage> a sosen:Keyword ;
+    rdfs:label "badge_coverage"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/badge_grade> a sosen:Keyword ;
+    rdfs:label "badge_grade"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/based> a sosen:Keyword ;
+    rdfs:label "based"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/basicfirstexample> a sosen:Keyword ;
+    rdfs:label "basicfirstexample"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/beira> a sosen:Keyword ;
+    rdfs:label "beira"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/best> a sosen:Keyword ;
+    rdfs:label "best"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/blue> a sosen:Keyword ;
+    rdfs:label "blue"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/bound> a sosen:Keyword ;
+    rdfs:label "bound"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/br> a sosen:Keyword ;
+    rdfs:label "br"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/brasil> a sosen:Keyword ;
+    rdfs:label "brasil"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/brazil> a sosen:Keyword ;
+    rdfs:label "brazil"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/brazilian> a sosen:Keyword ;
+    rdfs:label "brazilian"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/bugfixes> a sosen:Keyword ;
+    rdfs:label "bugfixes"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/buil> a sosen:Keyword ;
+    rdfs:label "buil"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/build> a sosen:Keyword ;
+    rdfs:label "build"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/calling> a sosen:Keyword ;
+    rdfs:label "calling"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/capes> a sosen:Keyword ;
+    rdfs:label "capes"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/central> a sosen:Keyword ;
+    rdfs:label "central"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/ch> a sosen:Keyword ;
+    rdfs:label "ch"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/check> a sosen:Keyword ;
+    rdfs:label "check"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/choose> a sosen:Keyword ;
+    rdfs:label "choose"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ci> a sosen:Keyword ;
+    rdfs:label "ci"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ci%C3%AAncia> a sosen:Keyword ;
+    rdfs:label "ciência"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/class> a sosen:Keyword ;
+    rdfs:label "class"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/classes> a sosen:Keyword ;
+    rdfs:label "classes"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/classic> a sosen:Keyword ;
+    rdfs:label "classic"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/closed> a sosen:Keyword ;
+    rdfs:label "closed"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/cloud> a sosen:Keyword ;
+    rdfs:label "cloud"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/cloudlet> a sosen:Keyword ;
+    rdfs:label "cloudlet"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/cloudlets> a sosen:Keyword ;
+    rdfs:label "cloudlets"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/codacy> a sosen:Keyword ;
+    rdfs:label "codacy"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/code> a sosen:Keyword ;
+    rdfs:label "code"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/code_reuse> a sosen:Keyword ;
+    rdfs:label "code_reuse"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/colors> a sosen:Keyword ;
+    rdfs:label "colors"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/com> a sosen:Keyword ;
+    rdfs:label "com"^^xsd:string ;
+    sosen:documentCount 9 .
+
+<https://w3id.org/okn/o/i/Keyword/communication> a sosen:Keyword ;
+    rdfs:label "communication"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/compliance> a sosen:Keyword ;
+    rdfs:label "compliance"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/computing> a sosen:Keyword ;
+    rdfs:label "computing"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/concerning> a sosen:Keyword ;
+    rdfs:label "concerning"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/constructor> a sosen:Keyword ;
+    rdfs:label "constructor"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/consumption> a sosen:Keyword ;
+    rdfs:label "consumption"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/contribute> a sosen:Keyword ;
+    rdfs:label "contribute"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/coordena%C3%A7%C3%A3o> a sosen:Keyword ;
+    rdfs:label "coordenação"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/cores> a sosen:Keyword ;
+    rdfs:label "cores"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/coverage> a sosen:Keyword ;
+    rdfs:label "coverage"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/cpu> a sosen:Keyword ;
+    rdfs:label "cpu"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/created> a sosen:Keyword ;
+    rdfs:label "created"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/creating> a sosen:Keyword ;
+    rdfs:label "creating"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/csv> a sosen:Keyword ;
+    rdfs:label "csv"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/currently> a sosen:Keyword ;
+    rdfs:label "currently"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/da> a sosen:Keyword ;
+    rdfs:label "da"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/data> a sosen:Keyword ;
+    rdfs:label "data"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/datacenter> a sosen:Keyword ;
+    rdfs:label "datacenter"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/datacenterbroker> a sosen:Keyword ;
+    rdfs:label "datacenterbroker"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/date> a sosen:Keyword ;
+    rdfs:label "date"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/deallocated> a sosen:Keyword ;
+    rdfs:label "deallocated"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/dedicated> a sosen:Keyword ;
+    rdfs:label "dedicated"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/defines> a sosen:Keyword ;
+    rdfs:label "defines"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/delay> a sosen:Keyword ;
+    rdfs:label "delay"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/demand> a sosen:Keyword ;
+    rdfs:label "demand"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/design> a sosen:Keyword ;
+    rdfs:label "design"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/destroyed> a sosen:Keyword ;
+    rdfs:label "destroyed"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/details> a sosen:Keyword ;
+    rdfs:label "details"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/developed> a sosen:Keyword ;
+    rdfs:label "developed"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/developer> a sosen:Keyword ;
+    rdfs:label "developer"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/developers> a sosen:Keyword ;
+    rdfs:label "developers"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/different> a sosen:Keyword ;
+    rdfs:label "different"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/documentation> a sosen:Keyword ;
+    rdfs:label "documentation"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/documented> a sosen:Keyword ;
+    rdfs:label "documented"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/double> a sosen:Keyword ;
+    rdfs:label "double"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/duplication> a sosen:Keyword ;
+    rdfs:label "duplication"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/easier> a sosen:Keyword ;
+    rdfs:label "easier"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/easy> a sosen:Keyword ;
+    rdfs:label "easy"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/ec2> a sosen:Keyword ;
+    rdfs:label "ec2"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/edu> a sosen:Keyword ;
+    rdfs:label "edu"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/educa%C3%A7%C3%A3o> a sosen:Keyword ;
+    rdfs:label "educação"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/efforts> a sosen:Keyword ;
+    rdfs:label "efforts"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/en> a sosen:Keyword ;
+    rdfs:label "en"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/enable> a sosen:Keyword ;
+    rdfs:label "enable"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/enables> a sosen:Keyword ;
+    rdfs:label "enables"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/enabling> a sosen:Keyword ;
+    rdfs:label "enabling"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/engineered> a sosen:Keyword ;
+    rdfs:label "engineered"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/engineering> a sosen:Keyword ;
+    rdfs:label "engineering"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ensure> a sosen:Keyword ;
+    rdfs:label "ensure"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/est> a sosen:Keyword ;
+    rdfs:label "est"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/eu> a sosen:Keyword ;
+    rdfs:label "eu"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/eubrasilcloudforum> a sosen:Keyword ;
+    rdfs:label "eubrasilcloudforum"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/examples> a sosen:Keyword ;
+    rdfs:label "examples"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/exectime> a sosen:Keyword ;
+    rdfs:label "exectime"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/experimentation> a sosen:Keyword ;
+    rdfs:label "experimentation"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/extend> a sosen:Keyword ;
+    rdfs:label "extend"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/extensibility> a sosen:Keyword ;
+    rdfs:label "extensibility"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/extensible> a sosen:Keyword ;
+    rdfs:label "extensible"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/fact> a sosen:Keyword ;
+    rdfs:label "fact"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/failed> a sosen:Keyword ;
+    rdfs:label "failed"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/fct> a sosen:Keyword ;
+    rdfs:label "fct"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/featured> a sosen:Keyword ;
+    rdfs:label "featured"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/features> a sosen:Keyword ;
+    rdfs:label "features"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/federal> a sosen:Keyword ;
+    rdfs:label "federal"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/filtering> a sosen:Keyword ;
+    rdfs:label "filtering"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/finishing> a sosen:Keyword ;
+    rdfs:label "finishing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/focus> a sosen:Keyword ;
+    rdfs:label "focus"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/fork> a sosen:Keyword ;
+    rdfs:label "fork"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/formats> a sosen:Keyword ;
+    rdfs:label "formats"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/forum> a sosen:Keyword ;
+    rdfs:label "forum"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/foundation> a sosen:Keyword ;
+    rdfs:label "foundation"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/framework> a sosen:Keyword ;
+    rdfs:label "framework"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/freezing> a sosen:Keyword ;
+    rdfs:label "freezing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/fully> a sosen:Keyword ;
+    rdfs:label "fully"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/funda%C3%A7%C3%A3o> a sosen:Keyword ;
+    rdfs:label "fundação"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/github> a sosen:Keyword ;
+    rdfs:label "github"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/gnu> a sosen:Keyword ;
+    rdfs:label "gnu"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/gov> a sosen:Keyword ;
+    rdfs:label "gov"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/gpl> a sosen:Keyword ;
+    rdfs:label "gpl"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/grade> a sosen:Keyword ;
+    rdfs:label "grade"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/gradle> a sosen:Keyword ;
+    rdfs:label "gradle"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/high> a sosen:Keyword ;
+    rdfs:label "high"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/highly> a sosen:Keyword ;
+    rdfs:label "highly"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/host> a sosen:Keyword ;
+    rdfs:label "host"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/hosts> a sosen:Keyword ;
+    rdfs:label "hosts"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/hostsimple> a sosen:Keyword ;
+    rdfs:label "hostsimple"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/href> a sosen:Keyword ;
+    rdfs:label "href"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/html> a sosen:Keyword ;
+    rdfs:label "html"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/http> a sosen:Keyword ;
+    rdfs:label "http"^^xsd:string ;
+    sosen:documentCount 7 .
+
+<https://w3id.org/okn/o/i/Keyword/https> a sosen:Keyword ;
+    rdfs:label "https"^^xsd:string ;
+    sosen:documentCount 17 .
+
+<https://w3id.org/okn/o/i/Keyword/ifto> a sosen:Keyword ;
+    rdfs:label "ifto"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/image> a sosen:Keyword ;
+    rdfs:label "image"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/img> a sosen:Keyword ;
+    rdfs:label "img"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/improvements> a sosen:Keyword ;
+    rdfs:label "improvements"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/includes> a sosen:Keyword ;
+    rdfs:label "includes"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/including> a sosen:Keyword ;
+    rdfs:label "including"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/infrastructures> a sosen:Keyword ;
+    rdfs:label "infrastructures"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/instance> a sosen:Keyword ;
+    rdfs:label "instance"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/instituto> a sosen:Keyword ;
+    rdfs:label "instituto"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/instructions> a sosen:Keyword ;
+    rdfs:label "instructions"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/interior> a sosen:Keyword ;
+    rdfs:label "interior"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/introduced> a sosen:Keyword ;
+    rdfs:label "introduced"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/investigated> a sosen:Keyword ;
+    rdfs:label "investigated"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/io> a sosen:Keyword ;
+    rdfs:label "io"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/issues> a sosen:Keyword ;
+    rdfs:label "issues"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/just> a sosen:Keyword ;
+    rdfs:label "just"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/kept> a sosen:Keyword ;
+    rdfs:label "kept"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/lab> a sosen:Keyword ;
+    rdfs:label "lab"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/label> a sosen:Keyword ;
+    rdfs:label "label"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/latest> a sosen:Keyword ;
+    rdfs:label "latest"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/level> a sosen:Keyword ;
+    rdfs:label "level"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/li> a sosen:Keyword ;
+    rdfs:label "li"^^xsd:string ;
+    sosen:documentCount 26 .
+
+<https://w3id.org/okn/o/i/Keyword/license> a sosen:Keyword ;
+    rdfs:label "license"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/licensed> a sosen:Keyword ;
+    rdfs:label "licensed"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/licenses> a sosen:Keyword ;
+    rdfs:label "licenses"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/line> a sosen:Keyword ;
+    rdfs:label "line"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/list> a sosen:Keyword ;
+    rdfs:label "list"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/log> a sosen:Keyword ;
+    rdfs:label "log"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/logback> a sosen:Keyword ;
+    rdfs:label "logback"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/logger> a sosen:Keyword ;
+    rdfs:label "logger"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/loggingexample> a sosen:Keyword ;
+    rdfs:label "loggingexample"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/low> a sosen:Keyword ;
+    rdfs:label "low"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/manoelcampos> a sosen:Keyword ;
+    rdfs:label "manoelcampos"^^xsd:string ;
+    sosen:documentCount 8 .
+
+<https://w3id.org/okn/o/i/Keyword/master> a sosen:Keyword ;
+    rdfs:label "master"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/maven> a sosen:Keyword ;
+    rdfs:label "maven"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/messages> a sosen:Keyword ;
+    rdfs:label "messages"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/method> a sosen:Keyword ;
+    rdfs:label "method"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/migrate> a sosen:Keyword ;
+    rdfs:label "migrate"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/migrationexample1> a sosen:Keyword ;
+    rdfs:label "migrationexample1"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/mintimebetweeneventsexample> a sosen:Keyword ;
+    rdfs:label "mintimebetweeneventsexample"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/model> a sosen:Keyword ;
+    rdfs:label "model"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/modeling> a sosen:Keyword ;
+    rdfs:label "modeling"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/modern> a sosen:Keyword ;
+    rdfs:label "modern"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/n%C3%ADvel> a sosen:Keyword ;
+    rdfs:label "nível"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/new> a sosen:Keyword ;
+    rdfs:label "new"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/nosuchelementexception> a sosen:Keyword ;
+    rdfs:label "nosuchelementexception"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/objects> a sosen:Keyword ;
+    rdfs:label "objects"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ohio> a sosen:Keyword ;
+    rdfs:label "ohio"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/org> a sosen:Keyword ;
+    rdfs:label "org"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/overloaded> a sosen:Keyword ;
+    rdfs:label "overloaded"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/page> a sosen:Keyword ;
+    rdfs:label "page"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/paper> a sosen:Keyword ;
+    rdfs:label "paper"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/para> a sosen:Keyword ;
+    rdfs:label "para"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/partnership> a sosen:Keyword ;
+    rdfs:label "partnership"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/perfectly> a sosen:Keyword ;
+    rdfs:label "perfectly"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/pes> a sosen:Keyword ;
+    rdfs:label "pes"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/pessoal> a sosen:Keyword ;
+    rdfs:label "pessoal"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/plus> a sosen:Keyword ;
+    rdfs:label "plus"^^xsd:string ;
+    sosen:documentCount 15 .
+
+<https://w3id.org/okn/o/i/Keyword/pm> a sosen:Keyword ;
+    rdfs:label "pm"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/policy> a sosen:Keyword ;
+    rdfs:label "policy"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/portugal> a sosen:Keyword ;
+    rdfs:label "portugal"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/portuguese> a sosen:Keyword ;
+    rdfs:label "portuguese"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/post> a sosen:Keyword ;
+    rdfs:label "post"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/power> a sosen:Keyword ;
+    rdfs:label "power"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/powermodel> a sosen:Keyword ;
+    rdfs:label "powermodel"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/pre> a sosen:Keyword ;
+    rdfs:label "pre"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/pricing> a sosen:Keyword ;
+    rdfs:label "pricing"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/primarily> a sosen:Keyword ;
+    rdfs:label "primarily"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/principles> a sosen:Keyword ;
+    rdfs:label "principles"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/print> a sosen:Keyword ;
+    rdfs:label "print"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/printing> a sosen:Keyword ;
+    rdfs:label "printing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/processor> a sosen:Keyword ;
+    rdfs:label "processor"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/project> a sosen:Keyword ;
+    rdfs:label "project"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/projects> a sosen:Keyword ;
+    rdfs:label "projects"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/provide> a sosen:Keyword ;
+    rdfs:label "provide"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/pt> a sosen:Keyword ;
+    rdfs:label "pt"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/public> a sosen:Keyword ;
+    rdfs:label "public"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/publications> a sosen:Keyword ;
+    rdfs:label "publications"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/qos> a sosen:Keyword ;
+    rdfs:label "qos"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/raw> a sosen:Keyword ;
+    rdfs:label "raw"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/readme> a sosen:Keyword ;
+    rdfs:label "readme"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/readthedocs> a sosen:Keyword ;
+    rdfs:label "readthedocs"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/recognized> a sosen:Keyword ;
+    rdfs:label "recognized"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/recommendations> a sosen:Keyword ;
+    rdfs:label "recommendations"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/referral> a sosen:Keyword ;
+    rdfs:label "referral"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/region> a sosen:Keyword ;
+    rdfs:label "region"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/regular> a sosen:Keyword ;
+    rdfs:label "regular"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/related> a sosen:Keyword ;
+    rdfs:label "related"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/requested> a sosen:Keyword ;
+    rdfs:label "requested"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/required> a sosen:Keyword ;
+    rdfs:label "required"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/resource> a sosen:Keyword ;
+    rdfs:label "resource"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/resources> a sosen:Keyword ;
+    rdfs:label "resources"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/results> a sosen:Keyword ;
+    rdfs:label "results"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/retrying> a sosen:Keyword ;
+    rdfs:label "retrying"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/reusability> a sosen:Keyword ;
+    rdfs:label "reusability"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/rounded> a sosen:Keyword ;
+    rdfs:label "rounded"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/rtfd> a sosen:Keyword ;
+    rdfs:label "rtfd"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/search> a sosen:Keyword ;
+    rdfs:label "search"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/section> a sosen:Keyword ;
+    rdfs:label "section"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/security> a sosen:Keyword ;
+    rdfs:label "security"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/selects> a sosen:Keyword ;
+    rdfs:label "selects"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/services> a sosen:Keyword ;
+    rdfs:label "services"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/set> a sosen:Keyword ;
+    rdfs:label "set"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/sethostsearchformigrationdelay> a sosen:Keyword ;
+    rdfs:label "sethostsearchformigrationdelay"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/setlevel> a sosen:Keyword ;
+    rdfs:label "setlevel"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/sharing> a sosen:Keyword ;
+    rdfs:label "sharing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/shields> a sosen:Keyword ;
+    rdfs:label "shields"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/showing> a sosen:Keyword ;
+    rdfs:label "showing"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/shows> a sosen:Keyword ;
+    rdfs:label "shows"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/simple> a sosen:Keyword ;
+    rdfs:label "simple"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/simulations> a sosen:Keyword ;
+    rdfs:label "simulations"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/software> a sosen:Keyword ;
+    rdfs:label "software"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/specific> a sosen:Keyword ;
+    rdfs:label "specific"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/square> a sosen:Keyword ;
+    rdfs:label "square"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/state> a sosen:Keyword ;
+    rdfs:label "state"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/status> a sosen:Keyword ;
+    rdfs:label "status"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/style> a sosen:Keyword ;
+    rdfs:label "style"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/submit> a sosen:Keyword ;
+    rdfs:label "submit"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/superior> a sosen:Keyword ;
+    rdfs:label "superior"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/supported> a sosen:Keyword ;
+    rdfs:label "supported"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/svg> a sosen:Keyword ;
+    rdfs:label "svg"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/systems> a sosen:Keyword ;
+    rdfs:label "systems"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/table> a sosen:Keyword ;
+    rdfs:label "table"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/tablebuilder> a sosen:Keyword ;
+    rdfs:label "tablebuilder"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/tables> a sosen:Keyword ;
+    rdfs:label "tables"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/tecnologia> a sosen:Keyword ;
+    rdfs:label "tecnologia"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/telecomunica%C3%A7%C3%B5es> a sosen:Keyword ;
+    rdfs:label "telecomunicações"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/templates> a sosen:Keyword ;
+    rdfs:label "templates"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/things> a sosen:Keyword ;
+    rdfs:label "things"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/threshold> a sosen:Keyword ;
+    rdfs:label "threshold"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/throwing> a sosen:Keyword ;
+    rdfs:label "throwing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/time> a sosen:Keyword ;
+    rdfs:label "time"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/tocantins> a sosen:Keyword ;
+    rdfs:label "tocantins"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/travis> a sosen:Keyword ;
+    rdfs:label "travis"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/tried> a sosen:Keyword ;
+    rdfs:label "tried"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/trying> a sosen:Keyword ;
+    rdfs:label "trying"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/twice> a sosen:Keyword ;
+    rdfs:label "twice"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/types> a sosen:Keyword ;
+    rdfs:label "types"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ubi> a sosen:Keyword ;
+    rdfs:label "ubi"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/ul> a sosen:Keyword ;
+    rdfs:label "ul"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/units> a sosen:Keyword ;
+    rdfs:label "units"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/universidade> a sosen:Keyword ;
+    rdfs:label "universidade"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/updates> a sosen:Keyword ;
+    rdfs:label "updates"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/upper> a sosen:Keyword ;
+    rdfs:label "upper"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/use> a sosen:Keyword ;
+    rdfs:label "use"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/used> a sosen:Keyword ;
+    rdfs:label "used"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/using> a sosen:Keyword ;
+    rdfs:label "using"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/utilization> a sosen:Keyword ;
+    rdfs:label "utilization"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/utilizationmodel> a sosen:Keyword ;
+    rdfs:label "utilizationmodel"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/utm_campaign> a sosen:Keyword ;
+    rdfs:label "utm_campaign"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/utm_content> a sosen:Keyword ;
+    rdfs:label "utm_content"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/utm_medium> a sosen:Keyword ;
+    rdfs:label "utm_medium"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/utm_source> a sosen:Keyword ;
+    rdfs:label "utm_source"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/version> a sosen:Keyword ;
+    rdfs:label "version"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vm> a sosen:Keyword ;
+    rdfs:label "vm"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/vmallocationpolicymigration> a sosen:Keyword ;
+    rdfs:label "vmallocationpolicymigration"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vmallocationpolicymigrationabstract> a sosen:Keyword ;
+    rdfs:label "vmallocationpolicymigrationabstract"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vms> a sosen:Keyword ;
+    rdfs:label "vms"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/vmschedulers> a sosen:Keyword ;
+    rdfs:label "vmschedulers"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vmschedulerspaceshared> a sosen:Keyword ;
+    rdfs:label "vmschedulerspaceshared"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vmschedulertimeshared> a sosen:Keyword ;
+    rdfs:label "vmschedulertimeshared"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vmschedulerxx> a sosen:Keyword ;
+    rdfs:label "vmschedulerxx"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/waiting> a sosen:Keyword ;
+    rdfs:label "waiting"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/want> a sosen:Keyword ;
+    rdfs:label "want"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/wants> a sosen:Keyword ;
+    rdfs:label "wants"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/warn> a sosen:Keyword ;
+    rdfs:label "warn"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/warning> a sosen:Keyword ;
+    rdfs:label "warning"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/wasn> a sosen:Keyword ;
+    rdfs:label "wasn"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/welcome> a sosen:Keyword ;
+    rdfs:label "welcome"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/weren> a sosen:Keyword ;
+    rdfs:label "weren"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/white> a sosen:Keyword ;
+    rdfs:label "white"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/wiki> a sosen:Keyword ;
+    rdfs:label "wiki"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/wikipedia> a sosen:Keyword ;
+    rdfs:label "wikipedia"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/wrong> a sosen:Keyword ;
+    rdfs:label "wrong"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/www> a sosen:Keyword ;
+    rdfs:label "www"^^xsd:string ;
+    sosen:documentCount 8 .
+
+<https://w3id.org/okn/o/i/Keyword/yy> a sosen:Keyword ;
+    rdfs:label "yy"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/zz> a sosen:Keyword ;
+    rdfs:label "zz"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus> a sd:Software,
+        sd:software ;
+    sd:author <https://w3id.org/okn/o/i/Person/manoelcampos> ;
     sd:contributionInstructions """Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/cloudsim-plus/contribute)]
 
 """^^xsd:string,
@@ -81,29 +1444,372 @@ and by the [Brazilian foundation Coordenação de Aperfeiçoamento de Pessoal de
 """^^xsd:string,
         """To run some example, type the following command at a terminal inside the project's root directory: sh script/bootstrap.sh package.ExampleClassName. 
 """^^xsd:string ;
+    sd:hasDescriptionKeyword <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20a>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20and>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20central>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/226>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/227>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/228>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/229>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22cloudsim>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22org>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/231>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/232>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/233>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/234>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/235>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/236>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/24>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/3f132b184d5e475dbbcd356ee84499fc>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/54>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/accuracy>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/add>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aligned>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/allocating>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/allows>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/amazon>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/amp>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aperfei%C3%A7oamento>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/api>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/app>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/application>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/arrow_up>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/art>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ascii>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/available>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/avoid>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aws>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge_coverage>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge_grade>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/based>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/basicfirstexample>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/beira>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/best>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/blue>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/bound>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/br>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brasil>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brazil>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brazilian>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/bugfixes>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/buil>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/build>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/calling>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/capes>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/central>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ch>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/check>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/choose>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ci>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ci%C3%AAncia>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/class>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/classes>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/classic>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/closed>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloud>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudlet>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudlets>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudsim>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudsimplus>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/codacy>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/code>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/code_reuse>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/colors>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/com>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/communication>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/compliance>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/computing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/concerning>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/constructor>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/consumption>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/contribute>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/coordena%C3%A7%C3%A3o>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cores>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/coverage>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cpu>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/created>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/creating>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/csv>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/currently>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/da>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/data>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/datacenter>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/datacenterbroker>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/date>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/deallocated>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/dedicated>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/defines>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/delay>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/demand>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/design>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/destroyed>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/details>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developed>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developer>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developers>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/different>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/documentation>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/documented>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/double>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/duplication>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/easier>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/easy>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ec2>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/edu>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/educa%C3%A7%C3%A3o>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/efforts>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/en>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enable>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enables>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enabling>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/engineered>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/engineering>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ensure>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/est>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/eu>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/eubrasilcloudforum>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/examples>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/exectime>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/experimentation>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extend>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extensibility>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extensible>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fact>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/failed>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fct>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/featured>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/features>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/federal>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/filtering>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/finishing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/focus>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fork>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/formats>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/forum>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/foundation>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/framework>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/freezing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fully>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/funda%C3%A7%C3%A3o>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/github>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gnu>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gov>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gpl>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/grade>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gradle>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/high>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/highly>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/host>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/hosts>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/hostsimple>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/href>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/html>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/http>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/https>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ifto>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/image>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/img>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/improvements>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/includes>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/including>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/infrastructures>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instance>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instituto>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instructions>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/interior>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/introduced>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/investigated>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/io>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/issues>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/java>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/just>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/kept>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/lab>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/label>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/latest>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/level>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/li>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/license>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/licensed>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/licenses>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/line>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/list>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/log>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/logback>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/logger>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/loggingexample>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/low>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/manoelcampos>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/master>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/maven>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/messages>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/method>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/migrate>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/migrationexample1>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/mintimebetweeneventsexample>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/model>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/modeling>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/modern>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/n%C3%ADvel>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/new>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/nosuchelementexception>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/objects>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ohio>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/org>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/overloaded>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/page>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/paper>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/para>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/partnership>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/perfectly>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pes>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pessoal>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/plus>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pm>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/policy>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/portugal>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/portuguese>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/post>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/power>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/powermodel>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pre>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pricing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/primarily>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/principles>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/print>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/printing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/processor>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/project>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/projects>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/provide>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pt>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/public>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/publications>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/qos>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/raw>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/readme>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/readthedocs>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/recognized>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/recommendations>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/referral>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/region>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/regular>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/related>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/requested>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/required>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/resource>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/resources>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/results>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/retrying>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/reusability>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/rounded>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/rtfd>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/search>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/section>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/security>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/selects>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/services>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/set>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/sethostsearchformigrationdelay>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/setlevel>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/sharing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/shields>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/showing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/shows>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simple>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simulation>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simulations>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/software>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/specific>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/square>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/state>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/status>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/style>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/submit>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/superior>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/supported>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/svg>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/systems>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/table>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tablebuilder>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tables>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tecnologia>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/telecomunica%C3%A7%C3%B5es>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/templates>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/things>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/threshold>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/throwing>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/time>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tocantins>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/travis>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tried>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/trying>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/twice>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/types>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ubi>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ul>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/units>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/universidade>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/updates>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/upper>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/use>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/used>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/using>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utilization>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utilizationmodel>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_campaign>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_content>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_medium>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_source>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/version>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vm>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmallocationpolicymigration>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmallocationpolicymigrationabstract>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vms>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulers>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulerspaceshared>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulertimeshared>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulerxx>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/waiting>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/want>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wants>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/warn>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/warning>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wasn>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/welcome>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/weren>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/white>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wiki>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wikipedia>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wrong>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/www>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/yy>,
+        <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/zz> ;
     sd:hasInstallationInstructions """download the project source by cloning the repository issuing the command git clone https://github.com/manoelcampos/cloudsim-plus.git  
 """^^xsd:string ;
-    sd:hasKeyword <http://w3id.org/okn/o/i/Keyword/auto-scaling>,
-        <http://w3id.org/okn/o/i/Keyword/cloud-computing>,
-        <http://w3id.org/okn/o/i/Keyword/cloud-infrastructure>,
-        <http://w3id.org/okn/o/i/Keyword/cloud-simulation>,
-        <http://w3id.org/okn/o/i/Keyword/cloudsim>,
-        <http://w3id.org/okn/o/i/Keyword/cloudsim-simulator>,
-        <http://w3id.org/okn/o/i/Keyword/cloudsimplus>,
-        <http://w3id.org/okn/o/i/Keyword/google-cluster-data>,
-        <http://w3id.org/okn/o/i/Keyword/iaas>,
-        <http://w3id.org/okn/o/i/Keyword/java>,
-        <http://w3id.org/okn/o/i/Keyword/java8>,
-        <http://w3id.org/okn/o/i/Keyword/load-balancing>,
-        <http://w3id.org/okn/o/i/Keyword/paas>,
-        <http://w3id.org/okn/o/i/Keyword/research>,
-        <http://w3id.org/okn/o/i/Keyword/saas>,
-        <http://w3id.org/okn/o/i/Keyword/simulation>,
-        <http://w3id.org/okn/o/i/Keyword/simulation-framework>,
-        <http://w3id.org/okn/o/i/Keyword/test-bed>,
-        <http://w3id.org/okn/o/i/Keyword/trace>,
-        <http://w3id.org/okn/o/i/Keyword/workload> ;
-    sd:hasSourceCode <http://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> ;
+    sd:hasKeyword <https://w3id.org/okn/o/i/Keyword/auto-scaling>,
+        <https://w3id.org/okn/o/i/Keyword/cloud-computing>,
+        <https://w3id.org/okn/o/i/Keyword/cloud-infrastructure>,
+        <https://w3id.org/okn/o/i/Keyword/cloud-simulation>,
+        <https://w3id.org/okn/o/i/Keyword/cloudsim>,
+        <https://w3id.org/okn/o/i/Keyword/cloudsim-simulator>,
+        <https://w3id.org/okn/o/i/Keyword/cloudsimplus>,
+        <https://w3id.org/okn/o/i/Keyword/google-cluster-data>,
+        <https://w3id.org/okn/o/i/Keyword/iaas>,
+        <https://w3id.org/okn/o/i/Keyword/java>,
+        <https://w3id.org/okn/o/i/Keyword/java8>,
+        <https://w3id.org/okn/o/i/Keyword/load-balancing>,
+        <https://w3id.org/okn/o/i/Keyword/paas>,
+        <https://w3id.org/okn/o/i/Keyword/research>,
+        <https://w3id.org/okn/o/i/Keyword/saas>,
+        <https://w3id.org/okn/o/i/Keyword/simulation>,
+        <https://w3id.org/okn/o/i/Keyword/simulation-framework>,
+        <https://w3id.org/okn/o/i/Keyword/test-bed>,
+        <https://w3id.org/okn/o/i/Keyword/trace>,
+        <https://w3id.org/okn/o/i/Keyword/workload> ;
+    sd:hasSourceCode <https://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> ;
     sd:hasUsageNotes """In order to build a simulation scenario you have to create, at least: 
 - a datacenter with a list of physical machines (Hosts); 
 - a broker that allows submission of VMs and Cloudlets to be executed, on behalf of a given customer, into the cloud infrastructure; 
@@ -268,36 +1974,36 @@ or follow the instructions in one of the next subsections.
 ![Downloading CloudSim Plus and running Examples using NetBeans](https://github.com/manoelcampos/cloudsim-plus/raw/master/docs/images/cloudsim-plus-netbeans.gif)
 
 """^^xsd:string ;
-    sd:hasVersion <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> ;
+    sd:hasVersion <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> ;
     sd:identifier "10.5281/zenodo.3743168"^^xsd:string,
         "10.5281/zenodo.595340"^^xsd:string ;
     sd:issueTracker "https://github.com/manoelcampos/cloudsim-plus/issues"^^xsd:anyURI ;
@@ -325,95 +2031,1096 @@ See the [publications](#publications) section to access published CloudSim Plus 
 
 """^^xsd:string .
 
-<http://w3id.org/okn/o/i/Keyword/auto-scaling> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "auto-scaling"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/auto-scaling> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/cloud-computing> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloud-computing"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloud-computing> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/cloud-infrastructure> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloud-infrastructure"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloud-infrastructure> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/cloud-simulation> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloud-simulation"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloud-simulation> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/cloudsim> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloudsim"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloudsim> a sosen:Keyword,
+        sd:Keyword ;
+    rdfs:label "cloudsim"^^xsd:string ;
+    sosen:documentCount 15 .
 
-<http://w3id.org/okn/o/i/Keyword/cloudsim-simulator> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloudsim-simulator"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloudsim-simulator> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/cloudsimplus> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "cloudsimplus"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/cloudsimplus> a sosen:Keyword,
+        sd:Keyword ;
+    rdfs:label "cloudsimplus"^^xsd:string ;
+    sosen:documentCount 4 .
 
-<http://w3id.org/okn/o/i/Keyword/google-cluster-data> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "google-cluster-data"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/google-cluster-data> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/iaas> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "iaas"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/iaas> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/java> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "java"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/java> a sosen:Keyword,
+        sd:Keyword ;
+    rdfs:label "java"^^xsd:string ;
+    sosen:documentCount 4 .
 
-<http://w3id.org/okn/o/i/Keyword/java8> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "java8"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/java8> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/load-balancing> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "load-balancing"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/load-balancing> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/paas> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "paas"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/paas> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/research> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "research"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/research> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/saas> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "saas"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/saas> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/simulation> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "simulation"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/simulation> a sosen:Keyword,
+        sd:Keyword ;
+    rdfs:label "simulation"^^xsd:string ;
+    sosen:documentCount 6 .
 
-<http://w3id.org/okn/o/i/Keyword/simulation-framework> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "simulation-framework"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/simulation-framework> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/test-bed> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "test-bed"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/test-bed> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/trace> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "trace"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/trace> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Keyword/workload> a sd:Keyword ;
-    sd:documentFrequency "1.0"^^xsd:float ;
-    sd:keyword "workload"^^xsd:string .
+<https://w3id.org/okn/o/i/Keyword/workload> a sd:Keyword .
 
-<http://w3id.org/okn/o/i/Person/manoelcampos> a schema:Person ;
+<https://w3id.org/okn/o/i/Person/manoelcampos> a schema:Person ;
     sd:additionalName "manoelcampos"^^schema:Text .
 
-<http://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> a sd:SourceCode ;
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20a> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20and> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/20central> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/226> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/227> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/228> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/229> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22cloudsim> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/22org> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/231> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/232> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/233> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/234> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/235> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/236> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/24> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/3f132b184d5e475dbbcd356ee84499fc> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/54> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/accuracy> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/add> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aligned> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/allocating> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/allows> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/amazon> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/amp> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aperfei%C3%A7oamento> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/api> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/app> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/application> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/arrow_up> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/art> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ascii> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/available> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/avoid> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/aws> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 7 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge_coverage> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/badge_grade> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/based> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/basicfirstexample> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/beira> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/best> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/blue> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/bound> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/br> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brasil> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brazil> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/brazilian> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/bugfixes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/buil> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/build> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/calling> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/capes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/central> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ch> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/check> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/choose> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ci> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ci%C3%AAncia> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/class> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/classes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/classic> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/closed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloud> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudlet> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudlets> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudsim> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 15 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cloudsimplus> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/codacy> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/code> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/code_reuse> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/colors> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/com> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 9 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/communication> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/compliance> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/computing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/concerning> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/constructor> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/consumption> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/contribute> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/coordena%C3%A7%C3%A3o> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cores> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/coverage> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/cpu> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/created> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/creating> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/csv> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/currently> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/da> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/data> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/datacenter> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/datacenterbroker> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/date> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/deallocated> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/dedicated> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/defines> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/delay> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/demand> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/design> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/destroyed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/details> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developer> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/developers> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/different> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/documentation> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/documented> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/double> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/duplication> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/easier> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/easy> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ec2> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/edu> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/educa%C3%A7%C3%A3o> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/efforts> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/en> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enable> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enables> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/enabling> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/engineered> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/engineering> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ensure> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/est> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/eu> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/eubrasilcloudforum> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/examples> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/exectime> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/experimentation> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extend> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extensibility> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/extensible> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fact> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/failed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fct> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/featured> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/features> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/federal> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/filtering> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/finishing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/focus> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fork> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/formats> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/forum> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/foundation> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/framework> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/freezing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/fully> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/funda%C3%A7%C3%A3o> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/github> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gnu> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gov> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gpl> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/grade> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/gradle> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/high> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/highly> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/host> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/hosts> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/hostsimple> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/href> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/html> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/http> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 7 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/https> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 17 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ifto> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/image> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/img> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/improvements> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/includes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/including> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/infrastructures> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instance> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instituto> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/instructions> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/interior> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/introduced> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/investigated> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/io> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/issues> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/java> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/just> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/kept> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/lab> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/label> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/latest> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/level> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/li> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 26 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/license> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/licensed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/licenses> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/line> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/list> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/log> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/logback> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/logger> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/loggingexample> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/low> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/manoelcampos> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 8 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/master> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/maven> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/messages> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/method> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/migrate> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/migrationexample1> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/mintimebetweeneventsexample> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/model> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/modeling> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/modern> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/n%C3%ADvel> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/new> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/nosuchelementexception> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/objects> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ohio> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/org> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/overloaded> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/page> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/paper> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/para> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/partnership> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/perfectly> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pessoal> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/plus> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 15 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pm> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/policy> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/portugal> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/portuguese> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/post> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/power> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/powermodel> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pre> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pricing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/primarily> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/principles> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/print> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/printing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/processor> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/project> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/projects> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/provide> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/pt> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/public> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/publications> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/qos> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/raw> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/readme> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/readthedocs> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/recognized> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/recommendations> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/referral> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/region> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/regular> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/related> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/requested> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/required> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/resource> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/resources> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/results> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/retrying> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/reusability> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/rounded> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/rtfd> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/search> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/section> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/security> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/selects> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/services> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/set> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/sethostsearchformigrationdelay> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/setlevel> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/sharing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/shields> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/showing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/shows> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simple> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simulation> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/simulations> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/software> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/specific> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/square> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/state> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/status> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/style> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/submit> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/superior> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/supported> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/svg> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/systems> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/table> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tablebuilder> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tables> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tecnologia> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/telecomunica%C3%A7%C3%B5es> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/templates> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/things> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/threshold> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/throwing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/time> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tocantins> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/travis> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/tried> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/trying> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/twice> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/types> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ubi> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/ul> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/units> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/universidade> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/updates> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/upper> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/use> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/used> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/using> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utilization> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utilizationmodel> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_campaign> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_content> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_medium> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/utm_source> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/version> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vm> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmallocationpolicymigration> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmallocationpolicymigrationabstract> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vms> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulers> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulerspaceshared> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulertimeshared> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/vmschedulerxx> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/waiting> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/want> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wants> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/warn> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/warning> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wasn> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/welcome> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/weren> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/white> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wiki> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wikipedia> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/wrong> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/www> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 8 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/yy> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus/KeywordRelationship/zz> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/SoftwareSource/manoelcampos/cloudsim-plus> a sd:SourceCode ;
     sd:codeRepository "https://github.com/manoelcampos/cloudsim-plus"^^xsd:anyURI ;
     sd:programmingLanguage "Java"^^xsd:string,
         "Shell"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8> a sd:SoftwareVersion ;
     sd:description """### Added\r
 - Enabled dynamic creation of VMs and Cloudlets without requiring creation of Datacenter Brokers at runtime, enabling VMs to be created on-demand according to arrived cloudlets.\r
   During simulation execution, new VMs and Cloudlets can be submitted using the methods `submitVmList` and `submitCloudletList` that they will be dynamically created. See the [DynamicCreationOfVmsAndCloudlets.java](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/DynamicCreationOfVmsAndCloudlets.java) example for more details.\r
@@ -439,7 +3146,7 @@ See the [publications](#publications) section to access published CloudSim Plus 
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.8"^^xsd:anyURI ;
     sd:hasVersionId "v0.8-beta.8"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9> a sd:SoftwareVersion ;
     sd:description """This release introduces a huge amount of internal refactoring to provide a framework that really deals with actual Objects instead of Integer IDs. This work started several commits before. Previously the framework didn't create actual relationships among different classes, but stored Integer IDs as attributes to represent such relationships. This was a bad, confusing and very error prone design. \r
 \r
 Since such attributes were just an Integer (for instance the Cloudlet.vmId or Vm.brokerId), any possible integer value could be passed to such attributes, even an inexistent ID or the ID of an entity that wasn't from the expected class (the ID of a Datacenter could be set for the Cloudlet.vmId without compilation errors).\r
@@ -474,7 +3181,7 @@ Some of the benefits of this new design are presented below:\r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.9"^^xsd:anyURI ;
     sd:hasVersionId "v0.8-beta.9"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1> a sd:SoftwareVersion ;
     sd:description """### Added\r
 - Allowed to delay the submission of VMs by a `DatacenterBroker`, simulating the dynamic arrival of VMs (closes the feature request #23)\r
 - Included extremelly helpful package documentation that can be viewed directly on your IDE or online [here](http://cloudsimplus.org/apidocs/).\r
@@ -502,7 +3209,7 @@ Some of the benefits of this new design are presented below:\r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.1"^^xsd:anyURI ;
     sd:hasVersionId "v0.9-beta.1"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2> a sd:SoftwareVersion ;
     sd:description """After that CloudSim Plus allowed the submission of VMs and Cloudlets to an already existing DatacenterBroker during simulation execution (see #43), now it provides an exclusive mechanism to perform horizontal scaling of VMs. Such a mechanism creates new VMs for a simulation with dynamic cloudlet arrival, according to a condition defined by the developer. That condition can check if the VM is overloaded based on CPU, BW or RAM usage.\r
 \r
 It also provides a completely redesigned and refactored Network module that just works. The list of included features are as follows:\r
@@ -535,7 +3242,7 @@ It also provides a completely redesigned and refactored Network module that just
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.2"^^xsd:anyURI ;
     sd:hasVersionId "v0.9-beta.2"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0> a sd:SoftwareVersion ;
     sd:description """In January of 2015 we started to contribute to CloudSim and due to different philosophies from CloudSim team we decided to initiate CloudSim Plus as an independent project. One year of intense and constant work later, after 375 commits and [30 issues closed](https://github.com/manoelcampos/cloudsim-plus/issues?utf8=✓&q=is%3Aissue%20is%3Aclosed%20milestone%3A%22CloudSim%20Plus%201.0%22%20), we are proud to announce that CloudSim Plus 1.0 is available as the first stable release.\r
 \r
 The framework went through a comprehensive re-design and we doubt there is a single class that was not refactored to improve code quality, clarity and extensiblity and to provide an [extensive and updated documentation](http://cloudsimplus.org/apidocs/).\r
@@ -572,7 +3279,7 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0> a sd:SoftwareVersion ;
     sd:description """This release provides some refactoring and bug fixes to enable implementation of Vertical VM Scaling proposed in #7.\r
 \r
 ### Fixed\r
@@ -593,7 +3300,7 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.1.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0> a sd:SoftwareVersion ;
     sd:description """### Added\r
 \r
 - [Vertical VM Scaling Mechanism](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/autoscaling/) ([#7](https://github.com/manoelcampos/cloudsim-plus/issues/7)) \r
@@ -652,7 +3359,7 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1> a sd:SoftwareVersion ;
     sd:description """### Added\r
 - `PowerVmAllocationPolicyMigrationBestFitStaticThreshold` to select the Host to place or migrate a VM\r
   using a Best Fit policy, that is, it selects the Host with less available resources\r
@@ -675,7 +3382,7 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.1"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.1"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2> a sd:SoftwareVersion ;
     sd:description """### Added \r
 - [Amazon EC2](http://aws.amazon.com/ec2/) instance templates in JSON format ([#97](https://github.com/manoelcampos/cloudsim-plus/pull/97)).\r
 - `Vm.getStartTime()`, `Vm.getStopTime()` and `Vm.getTotalExecutionTime()` methods to, respectively: get the time a VM started running for the first time; the time it was destroyed in the last Host it executed; and the total execution time across all Hosts the VM possibly have migrated across ([#98](https://github.com/manoelcampos/cloudsim-plus/issues/98)).\r
@@ -691,7 +3398,7 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.2"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.2"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3> a sd:SoftwareVersion ;
     sd:description """### Added / Changed\r
 - Renamed the `DatacenterBroker` `getVmsCreatedList()` method to `getVmCreatedList()`\r
   and added a `getVmExecList()` one ([#106](https://github.com/manoelcampos/cloudsim-plus/pull/106)).\r
@@ -709,21 +3416,21 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.3"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.3"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6> a sd:SoftwareVersion ;
     sd:description "Fix the issue #123 to enable canceling the execution of running Cloudlets."^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.6"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.6"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.6"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.6"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7> a sd:SoftwareVersion ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.7"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.7"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.7"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.7"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0> a sd:SoftwareVersion ;
     sd:description """Enables simulating the physical expansion of a `Datacenter` by dynamically adding new `Hosts` (PMs) at simulation runtime. The `Datacenter` interface now has the methods `addHost` and `addHostList`, which can be called before or after starting the simulation, to expand a `Datacenter` physical capacity by adding new Hosts.\r
 \r
 This release also makes it easier to create a `Datacenter` since a `DatacenterCharacteristics` object is not required anymore. When a `Datacenter` is instantiated, it internally creates a `DatacenterCharacteristics` object. In place of passing such an object to the `Datacenter` constructor, you just need to pass a `List` of `Hosts`.\r
@@ -747,7 +3454,7 @@ The `DatacenterCharacteristics` can be accessed using the `Datacenter.getDatacen
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1> a sd:SoftwareVersion ;
     sd:description """## Fix issue #126\r
 Consider there are 4 Cloudlets running at the same time inside the same VM and that a `UtilizationModelFull` was used to define how a Cloudlet requests RAM from its VM. This issue was enabling, for instance, that all Cloudlets requested together 400% of RAM from the VM, which is obviously not possible without virtual memory (which is not supported in simulations).\r
 \r
@@ -763,7 +3470,7 @@ This feature also enables freely changing entities' names. When the ID of an ent
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.1"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2> a sd:SoftwareVersion ;
     sd:description """## Updates the `ResourceLoader` class \r
 Enables loading a resource from the resource directory, regardless the simulation is running directly from a compiled class or from a jar file.\r
 \r
@@ -775,7 +3482,7 @@ now have a simplified `getInstance(String path)` method that just requires the r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.2"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.2"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3> a sd:SoftwareVersion ;
     sd:description """## Removes all the examples that were available at package `org.cloudbus.cloudsim.examples.power`\r
     \r
 Those simulations aren't in fact examples. They were clearly used just to publish results for the paper [Optimal Online Deterministic Algorithms and Adaptive Heuristics for Energy and Performance Efficient Dynamic Consolidation of Virtual Machines in Cloud Data Centers](http://dx.doi.org/10.1002/cpe.1867).\r
@@ -786,7 +3493,7 @@ Since the code lacks organization and results aren't structured and clear, such 
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.3"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.3"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0> a sd:SoftwareVersion ;
     sd:description """# INTRODUCTION\r
 \r
 Enables power-aware simulations using regular classes such as`DatacenterSimple`, `HostSimple` and `VmSimple`.  **This way, it automatically allows creating simulations that are both network- and power-aware by using the network versions of such classes.**\r
@@ -845,7 +3552,7 @@ Check [release 2.2.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0> a sd:SoftwareVersion ;
     sd:description """- Provides a functional implementation of `PowerModel` classes, enabling to pass a `Function` as a parameter to the constructor. Such a `Function` defines how the power consumption increases along the time.\r
 - Introduces the `PowerModelSimple`, enabling the developer to define the power consumption increment as a `Function`. This way, it doesn't require the creation of a new class.\r
 - Removes all code duplication between `PowerModel` classes."""^^xsd:string ;
@@ -854,7 +3561,7 @@ Check [release 2.2.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.1.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0> a sd:SoftwareVersion ;
     sd:description """The `PowerSupply` was just delegating everything to `PowerModel`. \r
 After refactoring the latter one to provide a better class hierarchy, remove code duplication and fix bugs (#127), `PowerSupply` was merged into the `PowerModel` and the former removed. \r
 \r
@@ -866,7 +3573,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.2.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2> a sd:SoftwareVersion ;
     sd:description """- General cleanup to remove unused and redundant code.\r
 - General code review and refactoring."""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.2.2"^^xsd:anyURI,
@@ -874,14 +3581,14 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.2"^^xsd:anyURI ;
     sd:hasVersionId "v2.2.2"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0> a sd:SoftwareVersion ;
     sd:description "- Closes #130"^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.3.0"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.3.0"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.3.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1> a sd:SoftwareVersion ;
     sd:description """## Updates #130\r
     \r
 - Postpone DatacenterBroker shutdown to the end of the simulation when a termination time is set,\r
@@ -894,7 +3601,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v2.3.1"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0> a sd:SoftwareVersion ;
     sd:description """- General refactoring of Network module, improving code organization and reducing duplication.\r
 - Fix infinite loop issue with network examples.\r
 - Improves documentation.\r
@@ -914,7 +3621,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.4.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0> a sd:SoftwareVersion ;
     sd:description """- Defines types and colors for log messages and enables filtering the level of messages to print. The image below shows how easy is to check things that may be wrong in your simulation ([#24](https://github.com/manoelcampos/cloudsim-plus/issues/24)). ![](docs/images/log-messages-by-type.png) And for instance, if you want to see just messages from warning level, it's as simple as calling `Log.setLevel(ch.qos.logback.classic.Level.WARN);` \r
 - Includes all fixes in the Network Module from [version 2.4.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0)."""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v3.0.0"^^xsd:anyURI,
@@ -922,7 +3629,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v3.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v3.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0> a sd:SoftwareVersion ;
     sd:description """- Process trace files from [Google Cluster Data](https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md) creating Hosts and Cloudlets (tasks). A script to download the trace files is available at [download-google-cluster-data.sh](https://github.com/manoelcampos/cloudsim-plus/blob/master/script/download-google-cluster-data.sh). Examples are available [here](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/traces/google) (#149).\r
 - Reimplement Host's and VM's power usage computation that were returning inconsistent results for different Datacenter's scheduling intervals (#153).\r
 - Makes the UtilizationModelPlanetLab work as a circular list when the Cloudlet using it as a CPU UtilizationModel runs longer than there is data in the trace file. This way, when the end of the file is reached, it starts reading from the beginning to avoid `ArrayIndexOutOfBoundsException` (#152).\r
@@ -934,7 +3641,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v4.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3> a sd:SoftwareVersion ;
     sd:description """- Fix #154\r
 - Fix #156\r
 """^^xsd:string ;
@@ -943,7 +3650,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.3"^^xsd:anyURI ;
     sd:hasVersionId "v4.0.3"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1> a sd:SoftwareVersion ;
     sd:description """- #185 :: Warn when a simulation which has an explicit termination time is lasting too long. This way, the researcher may know if he/she has set a too long termination time, instead of just keep waiting the simulation to finish when there are no events to process.\r
 - #184 :: Refactor ContinuousDistribution implementations providing consistent order in construtor parameters. The parameter order of NormalDistr's constructor was changed from `NormalDistr(long seed, double mean, double standardDeviation)` to `NormalDistr(double mean, double standardDeviation, long seed)`. This way, the `SEED` (when available) is always the last parameter, conforming to constructors of other random number generators such as the UniformDistr. This change probably will cause a compilation error and will be easy to detect and fix. However, if you are using int or long for all the 3 parameters, there will be no error or warning and your simulation results will be just wrong. In such a case, you need to find where you are using this NormalDistr constructor and correct parameters order.\r
 - #183 :: Adds time conversion methods to the Conversion class\r
@@ -961,7 +3668,7 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v4.3.1"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0> a sd:SoftwareVersion ;
     sd:description """## 1. Important new Features\r
 \r
 ### 1.1. Implement synchronous simulations (#205)\r
@@ -1044,7 +3751,7 @@ The performance improvements in this release are impressive. The list below show
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v5.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0> a sd:SoftwareVersion ;
     sd:description """## New Features\r
 \r
 - Add size() method to Datacenter interface to enable getting its number of Hosts.\r
@@ -1069,7 +3776,7 @@ The performance improvements in this release are impressive. The list below show
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v5.1.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> a sd:SoftwareVersion ;
     sd:description """## Updates and New Features\r
 \r
 - Includes all AWS EC2 Instance Templates from the "US Est (Ohio)" Region, available at https://aws.amazon.com/ec2/pricing/on-demand/\r

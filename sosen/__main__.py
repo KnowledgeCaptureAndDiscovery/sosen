@@ -3,8 +3,6 @@ from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
 from .cli import run_scrape, run_get_data, run_search
 from .config import configure as configure_sosen
 
-print("test")
-
 @click.group(context_settings={'help_option_names':['-h','--help']})
 def cli():
     print("SoSEn Command Line Interface")

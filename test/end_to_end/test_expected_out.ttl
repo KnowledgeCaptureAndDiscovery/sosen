@@ -1,9 +1,260 @@
+@prefix obj: <https://w3id.org/okn/o/i/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix sosen: <('http://example.org/sosen#',)> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> a sd:Software ;
-    sd:author <http://w3id.org/okn/o/i/Person/ESIPFed> ;
+obj:Global a sosen:Global ;
+    sd:descriptionDocumentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/13> a sosen:Keyword ;
+    rdfs:label "13"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/30> a sosen:Keyword ;
+    rdfs:label "30"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/47> a sosen:Keyword ;
+    rdfs:label "47"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/74> a sosen:Keyword ;
+    rdfs:label "74"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/additionaltype> a sosen:Keyword ;
+    rdfs:label "additionaltype"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/blob> a sosen:Keyword ;
+    rdfs:label "blob"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/code> a sosen:Keyword ;
+    rdfs:label "code"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/com> a sosen:Keyword ;
+    rdfs:label "com"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/contributing> a sosen:Keyword ;
+    rdfs:label "contributing"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/data> a sosen:Keyword ;
+    rdfs:label "data"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/datarepository> a sosen:Keyword ;
+    rdfs:label "datarepository"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/dataset> a sosen:Keyword ;
+    rdfs:label "dataset"^^xsd:string ;
+    sosen:documentCount 9 .
+
+<https://w3id.org/okn/o/i/Keyword/decision> a sosen:Keyword ;
+    rdfs:label "decision"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/decisions> a sosen:Keyword ;
+    rdfs:label "decisions"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/describing> a sosen:Keyword ;
+    rdfs:label "describing"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/distributions> a sosen:Keyword ;
+    rdfs:label "distributions"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/esipfed> a sosen:Keyword ;
+    rdfs:label "esipfed"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/features> a sosen:Keyword ;
+    rdfs:label "features"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/files> a sosen:Keyword ;
+    rdfs:label "files"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/fixes> a sosen:Keyword ;
+    rdfs:label "fixes"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/gitflow> a sosen:Keyword ;
+    rdfs:label "gitflow"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/github> a sosen:Keyword ;
+    rdfs:label "github"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/guidance> a sosen:Keyword ;
+    rdfs:label "guidance"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/guide> a sosen:Keyword ;
+    rdfs:label "guide"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/guides> a sosen:Keyword ;
+    rdfs:label "guides"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/href> a sosen:Keyword ;
+    rdfs:label "href"^^xsd:string ;
+    sosen:documentCount 10 .
+
+<https://w3id.org/okn/o/i/Keyword/https> a sosen:Keyword ;
+    rdfs:label "https"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/identifier> a sosen:Keyword ;
+    rdfs:label "identifier"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/identifiers> a sosen:Keyword ;
+    rdfs:label "identifiers"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/improvements> a sosen:Keyword ;
+    rdfs:label "improvements"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/instead> a sosen:Keyword ;
+    rdfs:label "instead"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/issue> a sosen:Keyword ;
+    rdfs:label "issue"^^xsd:string ;
+    sosen:documentCount 5 .
+
+<https://w3id.org/okn/o/i/Keyword/json> a sosen:Keyword ;
+    rdfs:label "json"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ld> a sosen:Keyword ;
+    rdfs:label "ld"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/li> a sosen:Keyword ;
+    rdfs:label "li"^^xsd:string ;
+    sosen:documentCount 20 .
+
+<https://w3id.org/okn/o/i/Keyword/license> a sosen:Keyword ;
+    rdfs:label "license"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/licenses> a sosen:Keyword ;
+    rdfs:label "licenses"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/md> a sosen:Keyword ;
+    rdfs:label "md"^^xsd:string ;
+    sosen:documentCount 11 .
+
+<https://w3id.org/okn/o/i/Keyword/metadata> a sosen:Keyword ;
+    rdfs:label "metadata"^^xsd:string ;
+    sosen:documentCount 4 .
+
+<https://w3id.org/okn/o/i/Keyword/new> a sosen:Keyword ;
+    rdfs:label "new"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/org> a sosen:Keyword ;
+    rdfs:label "org"^^xsd:string ;
+    sosen:documentCount 7 .
+
+<https://w3id.org/okn/o/i/Keyword/persistent> a sosen:Keyword ;
+    rdfs:label "persistent"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/propertyvalue> a sosen:Keyword ;
+    rdfs:label "propertyvalue"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/provides> a sosen:Keyword ;
+    rdfs:label "provides"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/publishing> a sosen:Keyword ;
+    rdfs:label "publishing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/rdf> a sosen:Keyword ;
+    rdfs:label "rdf"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/release> a sosen:Keyword ;
+    rdfs:label "release"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/repository> a sosen:Keyword ;
+    rdfs:label "repository"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/schema> a sosen:Keyword ;
+    rdfs:label "schema"^^xsd:string ;
+    sosen:documentCount 9 .
+
+<https://w3id.org/okn/o/i/Keyword/schemaorg> a sosen:Keyword ;
+    rdfs:label "schemaorg"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/science> a sosen:Keyword ;
+    rdfs:label "science"^^xsd:string ;
+    sosen:documentCount 6 .
+
+<https://w3id.org/okn/o/i/Keyword/sciences> a sosen:Keyword ;
+    rdfs:label "sciences"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/spdx> a sosen:Keyword ;
+    rdfs:label "spdx"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Keyword/type> a sosen:Keyword ;
+    rdfs:label "type"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/typing> a sosen:Keyword ;
+    rdfs:label "typing"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/ul> a sosen:Keyword ;
+    rdfs:label "ul"^^xsd:string ;
+    sosen:documentCount 14 .
+
+<https://w3id.org/okn/o/i/Keyword/urls> a sosen:Keyword ;
+    rdfs:label "urls"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/use> a sosen:Keyword ;
+    rdfs:label "use"^^xsd:string ;
+    sosen:documentCount 3 .
+
+<https://w3id.org/okn/o/i/Keyword/using> a sosen:Keyword ;
+    rdfs:label "using"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/vs> a sosen:Keyword ;
+    rdfs:label "vs"^^xsd:string ;
+    sosen:documentCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/workflow> a sosen:Keyword ;
+    rdfs:label "workflow"^^xsd:string ;
+    sosen:documentCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> a sd:Software,
+        sd:software ;
+    sd:author <https://w3id.org/okn/o/i/Person/ESIPFed> ;
     sd:description """<p>FIXES</p>
 
 <ul>
@@ -49,29 +300,273 @@
 """^^xsd:string,
         """Google structured data test tool 
 """^^xsd:string ;
-    sd:hasSourceCode <http://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> ;
-    sd:hasVersion <http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
-        <http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
+    sd:hasDescriptionKeyword <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/13>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/30>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/47>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/74>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/additionaltype>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/blob>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/code>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/com>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/contributing>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/data>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/datarepository>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/dataset>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/decision>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/decisions>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/describing>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/distributions>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/esipfed>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/features>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/files>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/fixes>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/gitflow>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/github>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guidance>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guide>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guides>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/href>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/https>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/identifier>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/identifiers>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/improvements>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/instead>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/issue>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/json>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/ld>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/li>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/license>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/licenses>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/md>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/metadata>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/new>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/org>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/persistent>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/propertyvalue>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/provides>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/publishing>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/rdf>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/release>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/repository>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/schema>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/schemaorg>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/science>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/sciences>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/spdx>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/type>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/typing>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/ul>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/urls>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/use>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/using>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/vs>,
+        <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/workflow> ;
+    sd:hasSourceCode <https://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> ;
+    sd:hasVersion <https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
+        <https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
     sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
         "10.5281/zenodo.3736235"^^xsd:string ;
     sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
     sd:name "ESIPFed/science-on-schema.org"^^xsd:string ;
     sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
 
-<http://w3id.org/okn/o/i/Person/ESIPFed> a schema:Person ;
+<https://w3id.org/okn/o/i/Person/ESIPFed> a schema:Person ;
     sd:additionalName "ESIPFed"^^schema:Text .
 
-<http://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/13> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/30> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/47> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/74> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/additionaltype> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/blob> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/code> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/com> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/contributing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/data> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/datarepository> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/dataset> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 9 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/decision> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/decisions> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/describing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/distributions> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/esipfed> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/features> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/files> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/fixes> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/gitflow> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/github> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guidance> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guide> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/guides> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/href> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 10 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/https> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/identifier> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/identifiers> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/improvements> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/instead> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/issue> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 5 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/json> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/ld> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/li> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 20 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/license> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/licenses> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/md> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 11 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/metadata> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 4 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/new> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/org> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 7 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/persistent> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/propertyvalue> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/provides> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/publishing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/rdf> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/release> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/repository> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/schema> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 9 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/schemaorg> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/science> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 6 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/sciences> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/spdx> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/type> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/typing> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/ul> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 14 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/urls> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/use> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 3 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/using> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/vs> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 .
+
+<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/workflow> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 2 .
+
+<https://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
     sd:codeRepository "https://github.com/ESIPFed/science-on-schema.org"^^xsd:anyURI .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/ESIPFed/science-on-schema.org/tarball/1.0.0"^^xsd:anyURI,
         "https://api.github.com/repos/ESIPFed/science-on-schema.org/zipball/1.0.0"^^xsd:anyURI,
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "1.0.0"^^xsd:string .
 
-<http://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
     sd:description """## FIXES\r
 - Using `@type` instead of `schema:additionalType` ([decision](decisions/74-schemaorg-additionalType-vs-RDF-typing.md), Issue #74)\r
 \r
