@@ -207,8 +207,6 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
         "descriptionDocumentCount": total_documents
     }
 
-    print(global_prefixes)
-    print(keyword_prefixes)
     graph.add_data(global_data, global_schema, global_prefixes)
 
     with open(graph_out, "wb") as out_file:

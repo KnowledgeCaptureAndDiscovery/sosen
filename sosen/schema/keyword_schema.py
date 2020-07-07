@@ -30,7 +30,7 @@ description_keyword_in_software_schema = {
     "@id": {
         "@path": "id"
     },
-    "sd:hasDescriptionKeyword": {
+    "sosen:hasDescriptionKeyword": {
         "@class": "sosen:KeywordRelationship",
         "@id": {
             "@format": "{softwareName}/KeywordRelationship/{keyword}",
@@ -45,11 +45,12 @@ description_keyword_in_software_schema = {
             "@id": {
                 "@format": keyword_id_format,
                 "keyword": ["keywords", "label"]
-            }
+            },
+            "@class": "sosen:Keyword"
         }
     },
-    "sd:descriptionKeywordCount": {
+    "sosen:descriptionKeywordCount": {
         "@path": "keywordCount",
-        "@value": "xsd:integer",
+        "@type": "xsd:integer",
     }
 }

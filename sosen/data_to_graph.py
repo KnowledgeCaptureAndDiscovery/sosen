@@ -115,7 +115,6 @@ class DataGraph:
             return None
 
         rdf_id = self.resolve_type(data_id)
-        print(rdf_id)
 
         # then, get the type
         rdf_type = self.resolve_type(schema["@class"])
@@ -154,7 +153,8 @@ class DataGraph:
                         lambda x: Literal(x["value"], datatype=x["type"]) if x["value"] is not None else None
                     )
                 else:
-                    break
+                    exit(f"{attr_schema} not a valid schema")
+                    return None  # needed because the linter doesn't know exit is a return
 
                 # add the object to the graph if it does not already exist
 
