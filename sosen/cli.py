@@ -99,46 +99,8 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     document_data = [{**cli_data[data["github_url"]], "zenodo_data": data["zenodo_data"]}
                      for data in filtered_data]
 
-    # create the keywords with document frequencies
+    # get total number of software entities
     total_documents = len(document_data)
-
-    # todo: get this up and running again
-    # create the keywords from descriptions
-
-    # description keywords
-    # descriptions = []
-    # data_ids = []
-    # for data in document_data:
-    #     data_id = data["github_url"]
-    #     description_schema = somef_software_schema["sd:description"]
-    #
-    #     out_data = ""
-    #     for schema in description_schema:
-    #         description_data = make_list(DataGraph.resolve_value(data, schema))
-    #         out_data += "\n".join(description_data)
-    #
-    #     data_ids.append(data_id)
-    #     descriptions.append(out_data)
-    #
-    # print(descriptions)
-    # print(data_ids)
-
-    # github keywords
-    # keyword_frequency = {}
-    #
-    # for document in document_data:
-    #     topics = document["topics"]
-    #     topics = make_list(topics)
-    #     for keyword_obj in topics:
-    #         keyword_second_list = make_list(keyword_obj["excerpt"])
-    #         for keyword in keyword_second_list:
-    #             if keyword in keyword_frequency:
-    #                 keyword_frequency[keyword] += 1
-    #             else:
-    #                 keyword_frequency[keyword] = 1
-    #
-    # keyword_data = ({"keyword": keyword, "documentFrequency": frequency/total_documents}
-    #                 for keyword, frequency in keyword_frequency.items())
 
     # add data to graph
     graph = DataGraph()
@@ -176,7 +138,6 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     keyword_counter = ExistingKeywordCounter(keywords_dict)
     keyword_data = keyword_counter.get_keyword_data()
     keyword_relationship_data = keyword_counter.get_keyword_relationship_data()
-    print(keyword_data)
 
     # merge the keywords
     def merge_with_prop_name(source, dest, prop_name):
@@ -208,13 +169,10 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
         all_keyword_data,
         "keywordInCount"
     )
-    print(all_keyword_data)
     # flatten and add to the graph
     all_keyword_data_list = [
         {"keyword": keyword, **data} for keyword, data in all_keyword_data.items()
     ]
-    print(all_keyword_data_list)
-
     graph.add_data(all_keyword_data_list, keyword_schema, keyword_prefixes)
 
     # add the keywords to the software

@@ -4666,10 +4666,8 @@ The performance improvements in this release are impressive. The list below show
 
 <https://w3id.org/okn/o/i/Keyword/cloudsimplus> a sosen:Keyword ;
     rdfs:label "cloudsimplus"^^xsd:string ;
-    sosen:descriptionInCount 0,
-        1 ;
-    sosen:keywordInCount 0,
-        1 ;
+    sosen:descriptionInCount 1 ;
+    sosen:keywordInCount 1 ;
     sosen:titleInCount 0 .
 
 <https://w3id.org/okn/o/i/Keyword/features> a sosen:Keyword ;
@@ -4680,10 +4678,8 @@ The performance improvements in this release are impressive. The list below show
 
 <https://w3id.org/okn/o/i/Keyword/java> a sosen:Keyword ;
     rdfs:label "java"^^xsd:string ;
-    sosen:descriptionInCount 0,
-        1 ;
-    sosen:keywordInCount 0,
-        1 ;
+    sosen:descriptionInCount 1 ;
+    sosen:keywordInCount 1 ;
     sosen:titleInCount 0 .
 
 <https://w3id.org/okn/o/i/Keyword/manoelcampos> a sosen:Keyword ;
@@ -4706,21 +4702,15 @@ The performance improvements in this release are impressive. The list below show
 
 <https://w3id.org/okn/o/i/Keyword/cloudsim> a sosen:Keyword ;
     rdfs:label "cloudsim"^^xsd:string ;
-    sosen:descriptionInCount 0,
-        1 ;
-    sosen:keywordInCount 0,
-        1 ;
-    sosen:titleInCount 0,
-        1 .
+    sosen:descriptionInCount 1 ;
+    sosen:keywordInCount 1 ;
+    sosen:titleInCount 1 .
 
 <https://w3id.org/okn/o/i/Keyword/simulation> a sosen:Keyword ;
     rdfs:label "simulation"^^xsd:string ;
-    sosen:descriptionInCount 0,
-        1 ;
-    sosen:keywordInCount 0,
-        1 ;
-    sosen:titleInCount 0,
-        1 .
+    sosen:descriptionInCount 1 ;
+    sosen:keywordInCount 1 ;
+    sosen:titleInCount 1 .
 
 <https://w3id.org/okn/o/i/Software/manoelcampos/cloudsim-plus> a sd:Software ;
     sosen:descriptionKeywordCount 630 ;
