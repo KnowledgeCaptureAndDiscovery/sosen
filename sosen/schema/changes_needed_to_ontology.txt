@@ -11,16 +11,27 @@ For description keywords:
 
 sd:Software
     sosen:descriptionKeywordCount: the total number of keywords in the description
-    sosen:hasDescriptionKeyword: Link to a KeywordRelationship object
+    sosen:hasDescriptionKeyword: Link to a Keyword object
+
+    sosen:titleKeywordCount
+    sosen:hasTitleKeyword
+
+    sosen:hasKeyword
+    sosen:keywordCount
 
 sosen:KeywordRelationship:
     sosen:descriptionCount
-    sosen:keyword
+    sosen:keywordCount
+    sosen:titleCount
+    sosen:hasKeyword
+    sosen:hasSoftware
 
 sosen:Keyword
-    sosen:documentInCount
+    sosen:descriptionInCount
+    sosen:titleInCount
+    sosen:keywordInCount
     rdfs:label
 
 sosen:Global
-    sosen:documentCount
+    sosen:totalSoftwareCount
 

@@ -83,22 +83,24 @@ somef_software_schema = {
         "@path": ["support", "excerpt"],
         "@type": "xsd:string"
     },
-    "sd:name": {
-        "@path": ["fullName", "excerpt"],
-        "@type": "xsd:string"
-    },
+    "sd:name": [
+        {
+            "@path": ["fullName", "excerpt"],
+            "@type": "xsd:string"
+        },
+        {
+            "@path": ["zenodo_data", "metadata", "title"],
+            "@type": "xsd:string"
+        }
+    ],
     "sd:license": {
         "@path": ["license", "excerpt", "url"],
         "@type": "xsd:anyURI"
     },
     # link to the keyword, which will be generated separately
-    # todo: this needs to be changed
-    "sd:hasKeyword": {
-        "@class": "sd:Keyword",
-        "@id": {
-            "@format": keyword_id_format,
-            "keyword": ["topics", "excerpt"]
-        },
+    "sd:keyword": {
+        "@path": ["topics", "excerpt"],
+        "@type": "xsd:string"
     },
     "sd:doi": {
         "@required": True,

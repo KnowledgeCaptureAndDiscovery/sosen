@@ -21,31 +21,37 @@ SELECT ?keyword_id ?keyword_df {{
 """
 
 get_description_keyword = """
-PREFIX sosen: <('http://example.org/sosen#',)> 
+PREFIX sosen: <http://example.org/sosen#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?obj ?doc_count {
+SELECT ?obj ?doc_count {{
   ?obj a sosen:Keyword .
-  ?obj rdfs:label "lauren" .
+  ?obj rdfs:label "{keyword}" .
   ?obj sosen:documentCount ?doc_count
-}
-
+}}
 """
 
 get_document_from_description_kw = """
-PREFIX sd: <https://w3id.org/okn/o/sd#>
 PREFIX sosen: <http://example.org/sosen#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sd: <https://w3id.org/okn/o/sd#>
 
-SELECT ?obj ?kw_count {
+SELECT ?obj ?kw_count ?doc_length {{
   ?obj a sd:Software .
-  ?obj sd:hasDescriptionKeyword ?kw_relationship .
-  ?kw_relationship sosen:keyword <keyword> .
+  ?obj sosen:descriptionKeywordCount ?doc_length .
+  ?obj sosen:hasDescriptionKeyword ?kw_relationship .
+  ?kw_relationship sosen:keyword <{keyword_id}> .
   ?kw_relationship sosen:descriptionCount ?kw_count
-}
-GROUP BY ?obj
+}}
 """
 
 get_global_doc_count = """
+PREFIX sosen: <http://example.org/sosen#>
 
+SELECT ?doc_count {
+  ?obj a sosen:Global .
+  ?obj sosen:descriptionDocumentCount ?doc_count
+}
 """
+
+describe_iri = """DESCRIBE <{iri}>"""

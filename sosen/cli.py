@@ -4,8 +4,10 @@ from somef import cli as somef_cli
 
 from .get_zenodo_query_data import get_zenodo_query_data
 from .data_to_graph import DataGraph
+from .keywords import KeywordCounter, ExistingKeywordCounter
 from .schema.global_schema import global_prefixes, global_schema
-from .schema.keyword_schema import keyword_schema, keyword_prefixes, description_keyword_in_software_schema
+from .schema.keyword_schema import keyword_schema, keyword_prefixes, keyword_in_software_schema,\
+    description_keyword_relationship_schema, title_keyword_relationship_schema, keyword_relationship_schema
 from .schema.software_schema import somef_software_schema
 from .get_data import get_zenodo_data
 import math
@@ -14,7 +16,8 @@ from rdflib import Graph
 import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
-from .sparql_queries import get_keyword_matches, get_keyword
+from .sparql_queries import get_keyword_matches, get_keyword, describe_iri
+from .sparql_queries import get_description_keyword, get_document_from_description_kw, get_global_doc_count
 from .config import get_config
 
 from rdflib import RDF, Namespace
@@ -99,12 +102,7 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     # create the keywords with document frequencies
     total_documents = len(document_data)
 
-    def make_list(maybe_list):
-        if isinstance(maybe_list, list) or isinstance(maybe_list, tuple):
-            return maybe_list
-        else:
-            return [maybe_list]
-
+    # todo: get this up and running again
     # create the keywords from descriptions
 
     # description keywords
@@ -154,57 +152,113 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     # search through graph to add the description keyword data
     software_ids = []
     full_descriptions = []
+    software_names = []
+    keywords_dict = {}
     for software_id, _, _ in graph.g.triples((None, RDF.type, SD.Software)):
-        full_description = "\n".join([description for _, _, description in
-                                      graph.g.triples((software_id, SD.description, None))])
-        software_ids.append(software_id)
-        full_descriptions.append(full_description)
-
-    # https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
-    vectorizer = CountVectorizer(stop_words="english")
-    tokens = vectorizer.fit_transform(full_descriptions)
-    keyword_names = vectorizer.get_feature_names()
-    keyword_count_array = tokens.toarray()
-
-    keyword_length = len(keyword_names)
-    doc_length = len(keyword_count_array)
-
-    # get the keyword data
-    keyword_document_counts = [sum([keyword_count_array[doc_index][keyword_index]
-                                    for doc_index in range(doc_length)])
-                               for keyword_index in range(keyword_length)
-                               ]
-
-    keyword_data = [{"keyword": keyword_names[i], "documentCount": keyword_document_counts[i]}
-                    for i in range(keyword_length)]
-
-    # add the keywords
-    graph.add_data(keyword_data, keyword_schema, keyword_prefixes)
-
-    # get and add the keyword relationship data
-    for doc_index, keyword_count_row in enumerate(keyword_count_array):
-        software_id = software_ids[doc_index]
-        # get the keyword data
-        keyword_relationship_data = [
-            {"label": keyword_names[keyword_index], "count": keyword_count}
-            for keyword_index, keyword_count in enumerate(keyword_count_row)
-            if keyword_count > 0
+        full_descriptions.append("\n".join([description for _, _, description in
+                                      graph.g.triples((software_id, SD.description, None))]))
+        software_names.append("\n".join([name for _, _, name in
+                                   graph.g.triples((software_id, SD.name, None))]))
+        keywords_dict[software_id] = [
+            keyword for _, _, keyword in graph.g.triples((software_id, SD.keyword, None))
         ]
+        software_ids.append(software_id)
 
-        # get the total number of keywords (used for the tf in tf-idf)
-        total_keyword_count = sum(keyword_count_row)
+    # setup the counters
+    description_counter = KeywordCounter(software_ids, full_descriptions)
+    description_keyword_data = description_counter.get_keyword_data()
+    description_keyword_relationship_data = description_counter.get_keyword_relationship_data()
 
-        software_keyword_relationship_data = {
-            "id": software_id,
-            "keywords": keyword_relationship_data,
-            "keywordCount": total_keyword_count
-        }
+    title_counter = KeywordCounter(software_ids, software_names)
+    title_keyword_data = title_counter.get_keyword_data()
+    title_keyword_relationship_data = title_counter.get_keyword_relationship_data()
 
-        graph.add_data(software_keyword_relationship_data, description_keyword_in_software_schema, keyword_prefixes)
+    keyword_counter = ExistingKeywordCounter(keywords_dict)
+    keyword_data = keyword_counter.get_keyword_data()
+    keyword_relationship_data = keyword_counter.get_keyword_relationship_data()
 
-    # add the global documentCount, which is used to find DF in tf-idf
+    # merge the keywords
+    def merge_with_prop_name(source, dest, prop_name):
+        for key, value in source.items():
+            if key not in dest:
+                dest[key] = {
+                    "descriptionInCount": 0,
+                    "titleInCount": 0,
+                    "keywordInCount": 0
+                }
+
+            dest[key][prop_name] = value
+
+        return dest
+
+    all_keyword_data = {}
+    all_keyword_data = merge_with_prop_name(
+        description_keyword_data,
+        all_keyword_data,
+        "descriptionInCount"
+    )
+    all_keyword_data = merge_with_prop_name(
+        title_keyword_data,
+        all_keyword_data,
+        "titleInCount"
+    )
+    all_keyword_data = merge_with_prop_name(
+        keyword_data,
+        all_keyword_data,
+        "keywordInCount"
+    )
+
+    # flatten and add to the graph
+    all_keyword_data_list = [
+        {"keyword": keyword, **data} for keyword, data in all_keyword_data.items()
+    ]
+    graph.add_data(all_keyword_data_list, keyword_schema, keyword_prefixes)
+
+    # add the keywords to the software
+    def merge_relationships(source, dest, count_name, keywords_name):
+        for key, value in source.items():
+            if key not in dest:
+                dest[key] = {}
+
+            dest[key][count_name] = value["count"]
+            dest[key][keywords_name] = value["keywords"]
+
+        return dest
+
+    all_relationships = merge_relationships(
+        description_keyword_relationship_data,
+        {},
+        "descriptionKeywordCount",
+        "descriptionKeywords"
+    )
+    all_relationships = merge_relationships(
+        title_keyword_relationship_data,
+        all_relationships,
+        "titleKeywordCount",
+        "titleKeywords"
+    )
+    all_relationships = merge_relationships(
+        keyword_relationship_data,
+        all_relationships,
+        "keywordCount",
+        "keywords"
+    )
+
+    all_relationships_list = [
+        {"id": key, **value} for key, value in all_relationships.items()
+    ]
+
+    graph.add_data(all_relationships_list, keyword_in_software_schema, keyword_prefixes)
+
+    # but we'll have to make 3 calls for the relationships (one for each type)
+    graph.add_data(all_relationships_list, description_keyword_relationship_schema, keyword_prefixes)
+    graph.add_data(all_relationships_list, title_keyword_relationship_schema, keyword_prefixes)
+    graph.add_data(all_relationships_list, keyword_relationship_schema, keyword_prefixes)
+
+
+
     global_data = {
-        "descriptionDocumentCount": total_documents
+        "totalSoftwareCount": total_documents
     }
 
     graph.add_data(global_data, global_schema, global_prefixes)
@@ -241,123 +295,108 @@ def get_all_keywords(keywords):
     return [*keywords_using_first, *other_keywords]
 
 
-def run_search(keywords, method="keyword"):
-
+def run_search(keywords, method="description"):
     graph_in = get_config()["endpoint"]
-
-    keywords = [keyword.lower() for keyword in keywords]
     sparql = SPARQLWrapper(graph_in)
 
-
+    keywords = [keyword.lower() for keyword in keywords]
     if method == "keyword":
-        pass
-        # keywords = get_all_keywords(keywords)
-        # keyword_dfs = {}
-        #
-        # # first, get all of the keywords and their frequencies
-        # for keyword in keywords:
-        #     query_string = get_keyword.format(keyword=keyword)
-        #     sparql.setQuery(query_string)
-        #     print(query_string)
-        #     sparql.setReturnFormat(SPARQL_JSON)
-        #     results = sparql.query().convert()
-        #
-        #     # there's only 1 or 0 results but this is an easier way of writing that
-        #     for result in results['results']['bindings']:
-        #         keyword_id = result['keyword_id']['value']
-        #         keyword_df = result['keyword_df']['value']
-        #         keyword_dfs[keyword_id] = float(keyword_df)
-        #
-        # # now, get the documents that match these keywords
-        # all_results = {}
-        # for keyword_id, keyword_df in keyword_dfs.items():
-        #     query_string = get_keyword_matches.format(keyword_id=keyword_id)
-        #     sparql.setQuery(query_string)
-        #     print(query_string)
-        #     sparql.setReturnFormat(SPARQL_JSON)
-        #     results = sparql.query().convert()
-        #
-        #     # calculate the idf
-        #     keyword_idf = -1 * math.log(keyword_df, math.e)
-        #
-        #     print(f"keyword: {keyword_id}, idf: {keyword_idf}")
-        #
-        #     for result in results['results']['bindings']:
-        #         obj_id = result['obj']['value']
-        #         keyword_count = result['keyword_count']['value']
-        #
-        #         if obj_id in all_results:
-        #             all_results[obj_id]['keyword_idf_sum'] += keyword_idf
-        #         else:
-        #             all_results[obj_id] = {
-        #                 'keyword_idf_sum': keyword_idf,
-        #                 'keyword_count': int(keyword_count)
-        #             }
-        #
-        # tf_idf_results = [{"obj_id": obj_id, "tf_idf": value['keyword_idf_sum']/value['keyword_count']}
-        #                   for obj_id, value in all_results.items()]
-        #
-        # tf_idf_results.sort(key=lambda obj: obj["tf_idf"], reverse=True)
-        #
-        # for index, result in enumerate(tf_idf_results):
-        #     if index >= 20:
-        #         break
-        #     print(result)
+        keywords = get_all_keywords(keywords)
 
-    elif method == "description":
-        keyword_dfs = {}
+    if method == "description":
+        # first, get the global document count
 
-        # first, get all of the keywords and their frequencies
-        for keyword in keywords:
-            query_string = get_keyword.format(keyword=keyword)
-            sparql.setQuery(query_string)
-            print(query_string)
-            sparql.setReturnFormat(SPARQL_JSON)
-            results = sparql.query().convert()
-
-            # there's only 1 or 0 results but this is an easier way of writing that
-            for result in results['results']['bindings']:
-                keyword_id = result['keyword_id']['value']
-                keyword_df = result['keyword_df']['value']
-                keyword_dfs[keyword_id] = float(keyword_df)
-
-        # now, get the documents that match these keywords
-        all_results = {}
-        for keyword_id, keyword_df in keyword_dfs.items():
-            query_string = get_keyword_matches.format(keyword_id=keyword_id)
-            sparql.setQuery(query_string)
-            print(query_string)
-            sparql.setReturnFormat(SPARQL_JSON)
-            results = sparql.query().convert()
-
-            # calculate the idf
-            keyword_idf = -1 * math.log(keyword_df, math.e)
-
-            print(f"keyword: {keyword_id}, idf: {keyword_idf}")
-
-            for result in results['results']['bindings']:
-                obj_id = result['obj']['value']
-                keyword_count = result['keyword_count']['value']
-
-                if obj_id in all_results:
-                    all_results[obj_id]['keyword_idf_sum'] += keyword_idf
-                else:
-                    all_results[obj_id] = {
-                        'keyword_idf_sum': keyword_idf,
-                        'keyword_count': int(keyword_count)
-                    }
-
-        tf_idf_results = [{"obj_id": obj_id, "tf_idf": value['keyword_idf_sum']/value['keyword_count']}
-                          for obj_id, value in all_results.items()]
-
-        tf_idf_results.sort(key=lambda obj: obj["tf_idf"], reverse=True)
-
-        for index, result in enumerate(tf_idf_results):
-            if index >= 20:
-                break
-            print(result)
-
+        sparql.setQuery(get_global_doc_count)
+        sparql.setReturnFormat(SPARQL_JSON)
+        results = sparql.query().convert()['results']['bindings']
+        assert(len(results) == 1)
+        doc_count = float(results[0]['doc_count']['value'])
     else:
-        exit(f"method {method} invalid")
+        doc_count = 0
+
+    print(keywords)
+    # first, get all of the keywords and their frequencies
+    keyword_idfs = {}
+    for keyword in keywords:
+        if method == "description":
+            query_string = get_description_keyword.format(keyword=keyword)
+        else:
+            assert(method=="keyword")
+            query_string = get_keyword.format(keyword=keyword)
+
+        sparql.setQuery(query_string)
+        print(query_string)
+        sparql.setReturnFormat(SPARQL_JSON)
+        results = sparql.query().convert()['results']['bindings']
+
+        # there's only 1 or 0 results but this is an easier way of writing that
+        for result in results:
+            keyword_id = result['obj']['value']
+
+            if method == "description":
+                kw_doc_count = float(result['doc_count']['value'])
+                keyword_df = kw_doc_count/doc_count
+            else:
+                assert(method == "keyword")
+                keyword_df = float(result['keyword_df_value'])
+
+            keyword_idf = -1 * math.log(keyword_df, math.e)
+            keyword_idfs[keyword_id] = keyword_idf
+
+    # now, get the documents that match these keywords
+    all_results = {}
+    for keyword_id, keyword_idf in keyword_idfs.items():
+        if method == "description":
+            query_string = get_document_from_description_kw\
+                .format(keyword_id=keyword_id)
+        else:
+            query_string = get_keyword_matches.format(keyword_id=keyword_id)
+
+        sparql.setQuery(query_string)
+        # print(query_string)
+        sparql.setReturnFormat(SPARQL_JSON)
+        results = sparql.query().convert()
+
+        print(f"keyword: {keyword_id}, idf: {keyword_idf}")
+
+        for result in results['results']['bindings']:
+            obj_id = result['obj']['value']
+            if method == "description":
+                keyword_count = float(result['kw_count']['value'])
+                doc_length = float(result['doc_length']['value'])
+                keyword_tf = keyword_count / doc_length
+            else:
+                assert(method == "keyword")
+                keyword_tf = 1/float(result['keyword_count'])
+
+            keyword_tf_idf = keyword_tf * keyword_idf
+
+            if obj_id not in all_results:
+                all_results[obj_id] = {
+                    "tf_idf": 0,
+                    "matches": 0
+                }
+
+            all_results[obj_id]["tf_idf"] += keyword_tf_idf
+            all_results[obj_id]["matches"] += 1
+
+    tf_idf_results = [{"obj_id": obj_id, "matches": value["matches"], "tf_idf": value["tf_idf"]}
+                      for obj_id, value in all_results.items()]
+
+    tf_idf_results.sort(key=lambda obj: (obj["matches"], obj["tf_idf"]), reverse=True)
+
+    for index, result in enumerate(tf_idf_results):
+        if index >= 20:
+            break
+        print(result)
 
 
+def run_describe(iri):
+    graph_in = get_config()["endpoint"]
+    sparql = SPARQLWrapper(graph_in)
+    query_string = describe_iri.format(iri=iri)
+    print(query_string)
+    sparql.setQuery(query_string)
+    sparql.setReturnFormat(SPARQL_JSON)
+    result = sparql.query().convert()
+    print(result.serialize(format="turtle").decode("utf-8"))

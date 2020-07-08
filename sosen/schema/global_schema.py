@@ -9,8 +9,8 @@ global_prefixes = {
 global_schema = {
     "@id": "obj:Global",
     "@class": "sosen:Global",
-    "sd:descriptionDocumentCount": {
-        "@path": "descriptionDocumentCount",
+    "sosen:totalSoftwareCount": {
+        "@path": "totalSoftwareCount",
         "@type": "xsd:integer"
     }
 }

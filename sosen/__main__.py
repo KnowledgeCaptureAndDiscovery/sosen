@@ -1,6 +1,6 @@
 import click
 from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
-from .cli import run_scrape, run_get_data, run_search
+from .cli import run_scrape, run_get_data, run_search, run_describe
 from .config import configure as configure_sosen
 
 @click.group(context_settings={'help_option_names':['-h','--help']})
@@ -83,6 +83,13 @@ def get_data(**kwargs):
     type=str,
     nargs=-1
 )
+@click.option(
+    "--method",
+    "-m",
+    type=click.Choice(["description", "keyword"]),
+    required=False,
+    default="description"
+)
 def search(**kwargs):
     run_search(**kwargs)
 
@@ -91,7 +98,11 @@ def configure():
     sparql_endpoint = click.prompt("SPARQL Endpoint", default="http://localhost:3030/zenodo")
     configure_sosen(sparql_endpoint)
 
-
+@cli.command(help="describe an object")
+@click.argument("iri",
+                type=str)
+def describe(**kwargs):
+    run_describe(**kwargs)
 
 
 if __name__ == "__main__":

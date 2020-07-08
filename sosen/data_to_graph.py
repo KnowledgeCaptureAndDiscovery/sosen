@@ -82,8 +82,12 @@ class DataGraph:
                 if None in args.values():
                     return None
 
+
                 def format_as_url(args):
                     # url encode if the string does not start with the value
+                    if None in args.values():
+                        return None
+
                     url_encoded_args = {key: value if schema["@format"].startswith("{" + key + "}")
                                         else urllib.parse.quote(value)
                                         for key, value in args.items()}
@@ -176,6 +180,7 @@ class DataGraph:
             return obj
         elif isinstance(obj, list) or isinstance(obj, tuple):
             return [DataGraph.resolve_path(item, path) for item in obj]
+
         else:
             try:
                 next_obj = obj[path[0]]
