@@ -27,7 +27,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?obj ?doc_count {{
   ?obj a sosen:Keyword .
   ?obj rdfs:label "{keyword}" .
-  ?obj sosen:documentCount ?doc_count
+  ?obj sosen:documentInCount ?doc_count
 }}
 """
 
@@ -39,8 +39,8 @@ PREFIX sd: <https://w3id.org/okn/o/sd#>
 SELECT ?obj ?kw_count ?doc_length {{
   ?obj a sd:Software .
   ?obj sosen:descriptionKeywordCount ?doc_length .
-  ?obj sosen:hasDescriptionKeyword ?kw_relationship .
-  ?kw_relationship sosen:keyword <{keyword_id}> .
+  ?kw_relationship sosen:hasSoftware ?obj .
+  ?kw_relationship sosen:hasKeyword <{keyword_id}>
   ?kw_relationship sosen:descriptionCount ?kw_count
 }}
 """
@@ -50,7 +50,7 @@ PREFIX sosen: <http://example.org/sosen#>
 
 SELECT ?doc_count {
   ?obj a sosen:Global .
-  ?obj sosen:descriptionDocumentCount ?doc_count
+  ?obj sosen:totalSoftwareCount ?doc_count
 }
 """
 
