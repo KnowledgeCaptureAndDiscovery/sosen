@@ -155,12 +155,12 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     software_names = []
     keywords_dict = {}
     for software_id, _, _ in graph.g.triples((None, RDF.type, SD.Software)):
-        full_descriptions.append("\n".join([description for _, _, description in
+        full_descriptions.append("\n".join([str(description) for _, _, description in
                                       graph.g.triples((software_id, SD.description, None))]))
-        software_names.append("\n".join([name for _, _, name in
+        software_names.append("\n".join([str(name) for _, _, name in
                                    graph.g.triples((software_id, SD.name, None))]))
         keywords_dict[software_id] = [
-            keyword for _, _, keyword in graph.g.triples((software_id, SD.keyword, None))
+            str(keyword) for _, _, keyword in graph.g.triples((software_id, SD.keyword, None))
         ]
         software_ids.append(software_id)
 
@@ -176,6 +176,7 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
     keyword_counter = ExistingKeywordCounter(keywords_dict)
     keyword_data = keyword_counter.get_keyword_data()
     keyword_relationship_data = keyword_counter.get_keyword_relationship_data()
+    print(keyword_data)
 
     # merge the keywords
     def merge_with_prop_name(source, dest, prop_name):
@@ -207,11 +208,13 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
         all_keyword_data,
         "keywordInCount"
     )
-
+    print(all_keyword_data)
     # flatten and add to the graph
     all_keyword_data_list = [
         {"keyword": keyword, **data} for keyword, data in all_keyword_data.items()
     ]
+    print(all_keyword_data_list)
+
     graph.add_data(all_keyword_data_list, keyword_schema, keyword_prefixes)
 
     # add the keywords to the software
