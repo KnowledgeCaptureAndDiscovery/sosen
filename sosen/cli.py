@@ -16,8 +16,7 @@ from rdflib import Graph
 import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
-from .sparql_queries import get_keyword_matches, get_keyword, describe_iri
-from .sparql_queries import get_description_keyword, get_document_from_description_kw, get_global_doc_count
+from .sparql_queries import get_keyword, describe_iri, get_document_from_kw, get_global_doc_count
 from .config import get_config
 
 from rdflib import RDF, Namespace
@@ -26,9 +25,9 @@ SD = Namespace(sd)
 
 from sklearn.feature_extraction.text import CountVectorizer
 
-def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dict):
+def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, format, data_dict):
     print("running")
-    if not zenodo_data:
+    if not zenodo_in:
         if all:
             queries = {""}
         else:
@@ -52,13 +51,14 @@ def run_scrape(queries, all, graph_out, zenodo_data, threshold, format, data_dic
             print(f"total len: {len(data_and_urls_flattened)}, total gathered: {total_len}, repeats: {total_len - len(data_and_urls_flattened)}")
 
     else:
-        with open(zenodo_data, "r") as in_file:
+        with open(zenodo_in, "r") as in_file:
             data_and_urls_flattened = json.load(in_file)
 
 
     # save the data and urls flattened object
-    with open(graph_out + ".data_and_urls.json", "w") as out_file:
-        json.dump(data_and_urls_flattened, out_file)
+    if zenodo_cache is not None:
+        with open(zenodo_cache, "w") as out_file:
+            json.dump(data_and_urls_flattened, out_file)
 
     # make sure that the github urls are all unique, too
     github_urls = {data["github_url"] for data in data_and_urls_flattened.values()}
@@ -264,26 +264,18 @@ def run_search(keywords, method="description"):
     if method == "keyword":
         keywords = get_all_keywords(keywords)
 
-    if method == "description":
-        # first, get the global document count
-
-        sparql.setQuery(get_global_doc_count)
-        sparql.setReturnFormat(SPARQL_JSON)
-        results = sparql.query().convert()['results']['bindings']
-        assert(len(results) == 1)
-        doc_count = float(results[0]['doc_count']['value'])
-    else:
-        doc_count = 0
+    # first, get the global document count
+    sparql.setQuery(get_global_doc_count)
+    sparql.setReturnFormat(SPARQL_JSON)
+    results = sparql.query().convert()['results']['bindings']
+    assert(len(results) == 1)
+    doc_count = float(results[0]['doc_count']['value'])
 
     print(keywords)
     # first, get all of the keywords and their frequencies
     keyword_idfs = {}
     for keyword in keywords:
-        if method == "description":
-            query_string = get_description_keyword.format(keyword=keyword)
-        else:
-            assert(method=="keyword")
-            query_string = get_keyword.format(keyword=keyword)
+        query_string = get_keyword(method).format(keyword=keyword)
 
         sparql.setQuery(query_string)
         print(query_string)
@@ -292,26 +284,18 @@ def run_search(keywords, method="description"):
 
         # there's only 1 or 0 results but this is an easier way of writing that
         for result in results:
-            keyword_id = result['obj']['value']
-
-            if method == "description":
-                kw_doc_count = float(result['doc_count']['value'])
+            kw_doc_count = float(result['doc_count']['value'])
+            if kw_doc_count > 0:
+                keyword_id = result['obj']['value']
                 keyword_df = kw_doc_count/doc_count
-            else:
-                assert(method == "keyword")
-                keyword_df = float(result['keyword_df_value'])
 
-            keyword_idf = -1 * math.log(keyword_df, math.e)
-            keyword_idfs[keyword_id] = keyword_idf
+                keyword_idf = -1 * math.log(keyword_df, math.e)
+                keyword_idfs[keyword_id] = keyword_idf
 
     # now, get the documents that match these keywords
     all_results = {}
     for keyword_id, keyword_idf in keyword_idfs.items():
-        if method == "description":
-            query_string = get_document_from_description_kw\
-                .format(keyword_id=keyword_id)
-        else:
-            query_string = get_keyword_matches.format(keyword_id=keyword_id)
+        query_string = get_document_from_kw(method).format(keyword_id=keyword_id)
 
         sparql.setQuery(query_string)
         # print(query_string)
@@ -322,13 +306,10 @@ def run_search(keywords, method="description"):
 
         for result in results['results']['bindings']:
             obj_id = result['obj']['value']
-            if method == "description":
-                keyword_count = float(result['kw_count']['value'])
-                doc_length = float(result['doc_length']['value'])
-                keyword_tf = keyword_count / doc_length
-            else:
-                assert(method == "keyword")
-                keyword_tf = 1/float(result['keyword_count'])
+
+            keyword_count = float(result['kw_count']['value'])
+            doc_length = float(result['doc_length']['value'])
+            keyword_tf = keyword_count / doc_length
 
             keyword_tf_idf = keyword_tf * keyword_idf
 

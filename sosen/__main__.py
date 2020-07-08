@@ -23,7 +23,7 @@ def cli():
     help="Run a blank search and get all inputs"
 )
 @optgroup.option(
-    '--zenodo_data',
+    '--zenodo_in',
     '-z',
     type=click.Path(exists=True),
     help="for debug"
@@ -52,6 +52,12 @@ def cli():
 @click.option(
     '--data_dict',
     '-d',
+    type=click.Path(),
+    required=False
+)
+@click.option(
+    '--zenodo_cache',
+    '-c',
     type=click.Path(),
     required=False
 )
@@ -86,7 +92,7 @@ def get_data(**kwargs):
 @click.option(
     "--method",
     "-m",
-    type=click.Choice(["description", "keyword"]),
+    type=click.Choice(["description", "keyword", "title"]),
     required=False,
     default="description"
 )
