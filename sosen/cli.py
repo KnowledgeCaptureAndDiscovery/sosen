@@ -278,7 +278,7 @@ def run_search(keywords, method="description"):
         query_string = get_keyword(method).format(keyword=keyword)
 
         sparql.setQuery(query_string)
-        print(query_string)
+        # print(query_string)
         sparql.setReturnFormat(SPARQL_JSON)
         results = sparql.query().convert()['results']['bindings']
 
@@ -294,6 +294,7 @@ def run_search(keywords, method="description"):
 
     # now, get the documents that match these keywords
     all_results = {}
+    print("\nFOUND KEYWORDS:")
     for keyword_id, keyword_idf in keyword_idfs.items():
         query_string = get_document_from_kw(method).format(keyword_id=keyword_id)
 
@@ -327,10 +328,11 @@ def run_search(keywords, method="description"):
 
     tf_idf_results.sort(key=lambda obj: (obj["matches"], obj["tf_idf"]), reverse=True)
 
+    print("\nMATCHES:")
     for index, result in enumerate(tf_idf_results):
         if index >= 20:
             break
-        print(result)
+        print(f"{index + 1}. {result['obj_id']}")
 
 
 def run_describe(iri):

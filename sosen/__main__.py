@@ -26,7 +26,7 @@ def cli():
     '--zenodo_in',
     '-z',
     type=click.Path(exists=True),
-    help="for debug"
+    help="Path to a Zenodo Cache .json file. The program will not make calls to Zenodo and instead use this"
 )
 @click.option(
     '--graph_out',
@@ -45,21 +45,24 @@ def cli():
 @click.option(
     '--format',
     '-f',
-    type=click.Choice(["json-ld", "turtle"]),
+    type=click.Choice(["json-ld", "turtle", "nt"]),
     required=False,
-    default="turtle"
+    default="turtle",
+    help="The output format of the knowledge graph"
 )
 @click.option(
     '--data_dict',
     '-d',
     type=click.Path(),
-    required=False
+    required=False,
+    help="The path to a dictionary that will be used both to load and save outputs from SoMEF"
 )
 @click.option(
     '--zenodo_cache',
     '-c',
     type=click.Path(),
-    required=False
+    required=False,
+    help="Path to a .json file which will be used to save data from Zenodo"
 )
 def scrape(**kwargs):
     run_scrape(**kwargs)
