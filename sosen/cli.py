@@ -331,7 +331,7 @@ def run_search(keywords, method="description"):
     print(tabulate(
         table_data,
         headers=["index", "result iri", "keyword matches", "tf-idf sum"],
-        tablefmt="github"
+        # tablefmt="github"
     ))
 
 
@@ -355,7 +355,7 @@ def run_describe(iri):
 
         table_dict[property].append(value)
 
-    text_width = 60
+    text_width = 50
 
     table = [
         ["" if line_index != 0 else property if value_index == 0 else '" "', value_line]
