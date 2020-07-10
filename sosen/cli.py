@@ -1,4 +1,3 @@
-import requests
 import json
 from somef import cli as somef_cli
 
@@ -8,12 +7,9 @@ from .keywords import KeywordCounter, ExistingKeywordCounter
 from .schema.global_schema import global_prefixes, global_schema
 from .schema.keyword_schema import keyword_schema, keyword_prefixes, keyword_in_software_schema,\
     description_keyword_relationship_schema, title_keyword_relationship_schema, keyword_relationship_schema
-from .schema.software_schema import somef_software_schema
 from .get_data import get_zenodo_data
 import math
 import os
-from rdflib import Graph
-import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
 from .sparql_queries import get_keyword, describe_iri, get_document_from_kw, get_global_doc_count
@@ -22,8 +18,6 @@ from .config import get_config
 from rdflib import RDF, Namespace
 from .schema.schema_prefixes import sd
 SD = Namespace(sd)
-
-from sklearn.feature_extraction.text import CountVectorizer
 
 def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, format, data_dict):
     print("running")
@@ -332,7 +326,7 @@ def run_search(keywords, method="description"):
     for index, result in enumerate(tf_idf_results):
         if index >= 20:
             break
-        print(f"{index + 1}. {result['obj_id']}")
+        print(f"{index + 1}. {result['obj_id']}, # keyword matches: {result['matches']}, tf-idf sum: {result['tf_idf']}")
 
 
 def run_describe(iri):
