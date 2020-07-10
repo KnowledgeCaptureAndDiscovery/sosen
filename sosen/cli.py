@@ -330,7 +330,7 @@ def run_search(keywords, method="description"):
                   for index, result in enumerate(tf_idf_results) if index < 20]
     print(tabulate(
         table_data,
-        headers=["index", "result iri", "keyword matches", "tf-idf sum"],
+        headers=["", "result iri", "matches", "tf-idf sum"],
         # tablefmt="github"
     ))
 
