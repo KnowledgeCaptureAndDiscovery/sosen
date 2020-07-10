@@ -1,5 +1,8 @@
-# sosen
+# SoSEn
 Repository for the Software Search Engine (SoSEn)
+
+# Search
+See an example [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KnowledgeCaptureAndDiscovery/sosen/master?filepath=search.ipynb)
 
 # instructions
 
