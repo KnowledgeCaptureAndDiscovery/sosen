@@ -19,6 +19,9 @@ from rdflib import RDF, Namespace
 from .schema.schema_prefixes import sd
 SD = Namespace(sd)
 
+from tabulate import tabulate
+from textwrap import wrap as text_wrap
+
 def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, format, data_dict):
     print("running")
     if not zenodo_in:
@@ -323,10 +326,13 @@ def run_search(keywords, method="description"):
     tf_idf_results.sort(key=lambda obj: (obj["matches"], obj["tf_idf"]), reverse=True)
 
     print("\nMATCHES:")
-    for index, result in enumerate(tf_idf_results):
-        if index >= 20:
-            break
-        print(f"{index + 1}. {result['obj_id']}, # keyword matches: {result['matches']}, tf-idf sum: {result['tf_idf']}")
+    table_data = [[index + 1, result['obj_id'], result['matches'], result['tf_idf']]
+                  for index, result in enumerate(tf_idf_results) if index < 20]
+    print(tabulate(
+        table_data,
+        headers=["index", "result iri", "keyword matches", "tf-idf sum"],
+        tablefmt="github"
+    ))
 
 
 def run_describe(iri):
@@ -337,4 +343,38 @@ def run_describe(iri):
     sparql.setQuery(query_string)
     sparql.setReturnFormat(SPARQL_JSON)
     result = sparql.query().convert()
-    print(result.serialize(format="turtle").decode("utf-8"))
+
+    table_dict = {}
+
+    for _, property, value in result.triples((None, None, None)):
+        property = str(property)
+        value = str(value)
+
+        if property not in table_dict:
+            table_dict[property] = []
+
+        table_dict[property].append(value)
+
+    text_width = 60
+
+    table = [
+        ["" if line_index != 0 else property if value_index == 0 else '" "', value_line]
+        for property, values in table_dict.items()
+        for value_index, value in enumerate(values)
+        for line_index, value_line in enumerate(text_wrap(value, width=text_width))
+    ]
+
+    print(tabulate(
+        table,
+        headers=["property", "value"],
+        tablefmt="github"
+    ))
+
+
+
+
+
+
+
+
+

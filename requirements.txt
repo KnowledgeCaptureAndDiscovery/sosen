@@ -29,6 +29,7 @@ six==1.15.0
 -e git+https://github.com/AidanKelley/somef.git@c176409d7bea4e1dfa1d4046d45a9ec5924ed7dd#egg=somef
 soupsieve==2.0.1
 SPARQLWrapper==1.8.5
+tabulate==0.8.7
 textblob==0.15.3
 threadpoolctl==2.1.0
 tqdm==4.47.0
