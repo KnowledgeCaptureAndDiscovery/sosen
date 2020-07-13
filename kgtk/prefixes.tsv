@@ -1,0 +1,7 @@
+node1	label	node2
+schema	prefix_expansion	"https://schema.org/"
+sd	prefix_expansion	"https://w3id.org/okn/o/sd#"
+xsd	prefix_expansion	"http://www.w3.org/2001/XMLSchema#"
+obj	prefix_expansion	"https://w3id.org/okn/o/i/"
+sosen	prefix_expansion	"http://example.org/sosen#"
+rdfs	prefix_expansion	"http://www.w3.org/2000/01/rdf-schema#"
