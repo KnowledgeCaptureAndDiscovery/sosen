@@ -35,20 +35,18 @@ def cli():
     help="Path to the output knowledge graph file"
 )
 @click.option(
+    '--keyword_out',
+    '-k',
+    type=click.Path(),
+    help="Path to the output knowledge graph file for keywords"
+)
+@click.option(
     '--threshold',
     '-t',
     type=float,
     help="Threshold for SoMEF",
     required=False,
     default=0.8
-)
-@click.option(
-    '--format',
-    '-f',
-    type=click.Choice(["json-ld", "turtle", "nt"]),
-    required=False,
-    default="turtle",
-    help="The output format of the knowledge graph"
 )
 @click.option(
     '--data_dict',

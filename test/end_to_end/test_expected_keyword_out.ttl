@@ -1,0 +1,77 @@
+@prefix obj: <https://w3id.org/okn/o/i/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosen: <http://example.org/sosen#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org/KeywordRelationship/esipfed> a sosen:KeywordRelationship ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/esipfed> ;
+    sosen:hasSoftware <https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> ;
+    sosen:titleCount 1 .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org/KeywordRelationship/org> a sosen:KeywordRelationship ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/org> ;
+    sosen:hasSoftware <https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> ;
+    sosen:titleCount 1 .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org/KeywordRelationship/schema> a sosen:KeywordRelationship ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/schema> ;
+    sosen:hasSoftware <https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> ;
+    sosen:titleCount 1 .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org/KeywordRelationship/science> a sosen:KeywordRelationship ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/science> ;
+    sosen:hasSoftware <https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> ;
+    sosen:titleCount 1 .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org/KeywordRelationship/testkeyword> a sosen:KeywordRelationship ;
+    sosen:descriptionCount 1 ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
+    sosen:hasSoftware <https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> ;
+    sosen:keywordCount 1 ;
+    sosen:titleCount 1 .
+
+obj:Global a sosen:Global ;
+    sosen:totalSoftwareCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/esipfed> a sosen:Keyword ;
+    rdfs:label "esipfed"^^xsd:string ;
+    sosen:descriptionInCount 0 ;
+    sosen:keywordInCount 0 ;
+    sosen:titleInCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/org> a sosen:Keyword ;
+    rdfs:label "org"^^xsd:string ;
+    sosen:descriptionInCount 0 ;
+    sosen:keywordInCount 0 ;
+    sosen:titleInCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/schema> a sosen:Keyword ;
+    rdfs:label "schema"^^xsd:string ;
+    sosen:descriptionInCount 0 ;
+    sosen:keywordInCount 0 ;
+    sosen:titleInCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/science> a sosen:Keyword ;
+    rdfs:label "science"^^xsd:string ;
+    sosen:descriptionInCount 0 ;
+    sosen:keywordInCount 0 ;
+    sosen:titleInCount 1 .
+
+<https://w3id.org/okn/o/i/Keyword/testkeyword> a sosen:Keyword ;
+    rdfs:label "testkeyword"^^xsd:string ;
+    sosen:descriptionInCount 1 ;
+    sosen:keywordInCount 1 ;
+    sosen:titleInCount 1 .
+
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> a <sd:Software> ;
+    sosen:descriptionKeywordCount 1 ;
+    sosen:hasDescriptionKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
+    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
+    sosen:hasTitleKeyword <https://w3id.org/okn/o/i/Keyword/esipfed>,
+        <https://w3id.org/okn/o/i/Keyword/org>,
+        <https://w3id.org/okn/o/i/Keyword/schema>,
+        <https://w3id.org/okn/o/i/Keyword/science>,
+        <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
+    sosen:keywordCount 1 ;
+    sosen:titleKeywordCount 5 .
+

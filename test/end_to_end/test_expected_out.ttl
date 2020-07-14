@@ -1,54 +1,43 @@
-@prefix obj: <https://w3id.org/okn/o/i/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix sd: <https://w3id.org/okn/o/sd#> .
-@prefix sosen: <http://example.org/sosen#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-obj:Global a sosen:Global ;
-    sosen:totalSoftwareCount 1 .
+<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> a sd:Software ;
+    sd:author <https://w3id.org/okn/iPerson/ESIPFed> ;
+    sd:description "testkeyword"^^xsd:string ;
+    sd:doi "10.5281/zenodo.2628755"^^xsd:string ;
+    sd:downloadUrl "https://github.com/ESIPFed/science-on-schema.org/releases"^^xsd:anyURI ;
+    sd:executionInstructions """Data Catalog Vocabulary (DCAT) 
+"""^^xsd:string,
+        """Google structured data test tool 
+"""^^xsd:string ;
+    sd:hasSourceCode <https://w3id.org/okn/iSoftwareSource/ESIPFed/science-on-schema.org> ;
+    sd:hasVersion <https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
+        <https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
+    sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
+        "10.5281/zenodo.3736235"^^xsd:string ;
+    sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
+    sd:keywords "testkeyword"^^xsd:string ;
+    sd:name "ESIPFed/science-on-schema.org"^^xsd:string,
+        "testkeyword"^^xsd:string ;
+    sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
 
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/esipfed> a sosen:KeywordRelationship ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/esipfed> ;
-    sosen:hasSoftware <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:titleCount 1 .
-
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/org> a sosen:KeywordRelationship ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/org> ;
-    sosen:hasSoftware <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:titleCount 1 .
-
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/schema> a sosen:KeywordRelationship ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/schema> ;
-    sosen:hasSoftware <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:titleCount 1 .
-
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/science> a sosen:KeywordRelationship ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/science> ;
-    sosen:hasSoftware <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:titleCount 1 .
-
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/testkeyword> a sosen:KeywordRelationship ;
-    sosen:descriptionCount 1 ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
-    sosen:hasSoftware <https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:keywordCount 1 ;
-    sosen:titleCount 1 .
-
-<https://w3id.org/okn/o/i/Person/ESIPFed> a schema:Person ;
+<https://w3id.org/okn/iPerson/ESIPFed> a schema:Person ;
     sd:additionalName "ESIPFed"^^schema:Text .
 
-<https://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
+<https://w3id.org/okn/iSoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
     sd:codeRepository "https://github.com/ESIPFed/science-on-schema.org"^^xsd:anyURI .
 
-<https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/iPerson/ashepherd> ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/ESIPFed/science-on-schema.org/tarball/1.0.0"^^xsd:anyURI,
         "https://api.github.com/repos/ESIPFed/science-on-schema.org/zipball/1.0.0"^^xsd:anyURI,
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "1.0.0"^^xsd:string .
 
-<https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
+<https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/iPerson/ashepherd> ;
     sd:description """## FIXES\r
 - Using `@type` instead of `schema:additionalType` ([decision](decisions/74-schemaorg-additionalType-vs-RDF-typing.md), Issue #74)\r
 \r
@@ -69,63 +58,6 @@ obj:Global a sosen:Global ;
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.1.0"^^xsd:anyURI ;
     sd:hasVersionId "1.1.0"^^xsd:string .
 
-<https://w3id.org/okn/o/i/Keyword/esipfed> a sosen:Keyword ;
-    rdfs:label "esipfed"^^xsd:string ;
-    sosen:descriptionInCount 0 ;
-    sosen:keywordInCount 0 ;
-    sosen:titleInCount 1 .
-
-<https://w3id.org/okn/o/i/Keyword/org> a sosen:Keyword ;
-    rdfs:label "org"^^xsd:string ;
-    sosen:descriptionInCount 0 ;
-    sosen:keywordInCount 0 ;
-    sosen:titleInCount 1 .
-
-<https://w3id.org/okn/o/i/Keyword/schema> a sosen:Keyword ;
-    rdfs:label "schema"^^xsd:string ;
-    sosen:descriptionInCount 0 ;
-    sosen:keywordInCount 0 ;
-    sosen:titleInCount 1 .
-
-<https://w3id.org/okn/o/i/Keyword/science> a sosen:Keyword ;
-    rdfs:label "science"^^xsd:string ;
-    sosen:descriptionInCount 0 ;
-    sosen:keywordInCount 0 ;
-    sosen:titleInCount 1 .
-
-<https://w3id.org/okn/o/i/Keyword/testkeyword> a sosen:Keyword ;
-    rdfs:label "testkeyword"^^xsd:string ;
-    sosen:descriptionInCount 1 ;
-    sosen:keywordInCount 1 ;
-    sosen:titleInCount 1 .
-
-<https://w3id.org/okn/o/i/Software/ESIPFed/science-on-schema.org> a sd:Software ;
-    sosen:descriptionKeywordCount 1 ;
-    sosen:hasDescriptionKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
-    sosen:hasTitleKeyword <https://w3id.org/okn/o/i/Keyword/esipfed>,
-        <https://w3id.org/okn/o/i/Keyword/org>,
-        <https://w3id.org/okn/o/i/Keyword/schema>,
-        <https://w3id.org/okn/o/i/Keyword/science>,
-        <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
-    sosen:keywordCount 1 ;
-    sosen:titleKeywordCount 5 ;
-    sd:author <https://w3id.org/okn/o/i/Person/ESIPFed> ;
-    sd:description "testkeyword"^^xsd:string ;
-    sd:doi "10.5281/zenodo.2628755"^^xsd:string ;
-    sd:downloadUrl "https://github.com/ESIPFed/science-on-schema.org/releases"^^xsd:anyURI ;
-    sd:executionInstructions """Data Catalog Vocabulary (DCAT) 
-"""^^xsd:string,
-        """Google structured data test tool 
-"""^^xsd:string ;
-    sd:hasSourceCode <https://w3id.org/okn/o/i/SoftwareSource/ESIPFed/science-on-schema.org> ;
-    sd:hasVersion <https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
-        <https://w3id.org/okn/o/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
-    sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
-        "10.5281/zenodo.3736235"^^xsd:string ;
-    sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
-    sd:keyword "testkeyword"^^xsd:string ;
-    sd:name "ESIPFed/science-on-schema.org"^^xsd:string,
-        "testkeyword"^^xsd:string ;
-    sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
+<https://w3id.org/okn/iPerson/ashepherd> a schema:Person ;
+    sd:additionalName "ashepherd"^^xsd:string .
 

@@ -16,13 +16,14 @@ from .sparql_queries import get_keyword, describe_iri, get_document_from_kw, get
 from .config import get_config
 
 from rdflib import RDF, Namespace
+from rdflib.util import guess_format
 from .schema.schema_prefixes import sd
 SD = Namespace(sd)
 
 from tabulate import tabulate
 from textwrap import wrap as text_wrap
 
-def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, format, data_dict):
+def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, threshold, data_dict):
     print("running")
     if not zenodo_in:
         if all:
@@ -104,11 +105,18 @@ def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, form
     for data in document_data:
         graph.add_somef_data(data)
 
-    # add keyword data to graph
-    # for data in keyword_data:
-    #     graph.add_data(data, keyword_schema, keyword_prefixes)
+    graph_out_format = guess_format(graph_out)
+    print(f"saving graph to {graph_out} as {graph_out_format} format")
+    with open(graph_out, "wb") as out_file:
+        out_file.write(graph.g.serialize(format=graph_out_format))
+
+    # end early if there is no keyword file
+    if keyword_out is None:
+        return
 
     # search through graph to add the description keyword data
+    kw_graph = DataGraph()
+
     software_ids = []
     full_descriptions = []
     software_names = []
@@ -119,7 +127,7 @@ def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, form
         software_names.append("\n".join([str(name) for _, _, name in
                                    graph.g.triples((software_id, SD.name, None))]))
         keywords_dict[software_id] = [
-            str(keyword) for _, _, keyword in graph.g.triples((software_id, SD.keyword, None))
+            str(keyword) for _, _, keyword in graph.g.triples((software_id, SD.keywords, None))
         ]
         software_ids.append(software_id)
 
@@ -170,7 +178,7 @@ def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, form
     all_keyword_data_list = [
         {"keyword": keyword, **data} for keyword, data in all_keyword_data.items()
     ]
-    graph.add_data(all_keyword_data_list, keyword_schema, keyword_prefixes)
+    kw_graph.add_data(all_keyword_data_list, keyword_schema, keyword_prefixes)
 
     # add the keywords to the software
     def merge_relationships(source, dest, count_name, keywords_name):
@@ -206,12 +214,12 @@ def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, form
         {"id": key, **value} for key, value in all_relationships.items()
     ]
 
-    graph.add_data(all_relationships_list, keyword_in_software_schema, keyword_prefixes)
+    kw_graph.add_data(all_relationships_list, keyword_in_software_schema, keyword_prefixes)
 
     # but we'll have to make 3 calls for the relationships (one for each type)
-    graph.add_data(all_relationships_list, description_keyword_relationship_schema, keyword_prefixes)
-    graph.add_data(all_relationships_list, title_keyword_relationship_schema, keyword_prefixes)
-    graph.add_data(all_relationships_list, keyword_relationship_schema, keyword_prefixes)
+    kw_graph.add_data(all_relationships_list, description_keyword_relationship_schema, keyword_prefixes)
+    kw_graph.add_data(all_relationships_list, title_keyword_relationship_schema, keyword_prefixes)
+    kw_graph.add_data(all_relationships_list, keyword_relationship_schema, keyword_prefixes)
 
 
 
@@ -219,10 +227,12 @@ def run_scrape(queries, all, graph_out, zenodo_in, zenodo_cache, threshold, form
         "totalSoftwareCount": total_documents
     }
 
-    graph.add_data(global_data, global_schema, global_prefixes)
+    kw_graph.add_data(global_data, global_schema, global_prefixes)
 
-    with open(graph_out, "wb") as out_file:
-        out_file.write(graph.g.serialize(format=format))
+    kw_graph_format = guess_format(keyword_out)
+    print(f"writing keyword graph to {keyword_out} as {kw_graph_format} format")
+    with open(keyword_out, "wb") as out_file:
+        out_file.write(kw_graph.g.serialize(format=kw_graph_format))
 
 
 def run_get_data(queries, output):
