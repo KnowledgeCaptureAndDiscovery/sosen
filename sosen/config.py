@@ -16,14 +16,22 @@ def configure(sparql_endpoint):
         print(yaml.dump(_config))
         out_file.write(yaml.dump(_config))
 
+
+class SosenConfigurationException(Exception):
+    pass
+
+
 def get_config():
     global _config
     config_path = os.path.expanduser(config_file)
 
     if _config is None:
-        with open(config_path, "r") as in_file:
-            config_yaml = in_file.read()
-        _config = yaml.safe_load(config_yaml)
+        if os.path.exists(config_path):
+            with open(config_path, "r") as in_file:
+                config_yaml = in_file.read()
+            _config = yaml.safe_load(config_yaml)
+        else:
+            raise SosenConfigurationException("SoSEn is not configured. You must run \"sosen configure\"")
 
 
     return _config
