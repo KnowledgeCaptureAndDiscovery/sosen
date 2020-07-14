@@ -1,7 +1,7 @@
 import click
 from click_option_group import optgroup, RequiredMutuallyExclusiveOptionGroup
 from .cli import run_scrape, run_get_data, run_search, run_describe
-from .config import configure as configure_sosen
+from .config import configure as configure_sosen, get_config, SosenConfigurationException, get_defaults
 
 @click.group(context_settings={'help_option_names':['-h','--help']})
 def cli():
@@ -104,8 +104,15 @@ def search(**kwargs):
 
 @cli.command(help="Configure sosen. You will be prompted for information")
 def configure():
-    sparql_endpoint = click.prompt("SPARQL Endpoint", default="http://localhost:3030/zenodo")
-    configure_sosen(sparql_endpoint)
+    try:
+        defaults = get_config()
+    except SosenConfigurationException:
+        defaults = get_defaults()
+
+    endpoint = click.prompt("SPARQL Endpoint", default=defaults["endpoint"])
+    object_prefix = click.prompt("Object Prefix", default=defaults["object_prefix"])
+
+    configure_sosen(endpoint=endpoint, object_prefix=object_prefix)
 
 @cli.command(help="describe an object")
 @click.argument("iri",

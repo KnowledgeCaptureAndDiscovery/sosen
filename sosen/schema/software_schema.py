@@ -1,10 +1,11 @@
 from .schema_prefixes import schema, sd, xsd, obj, sosen, rdfs
+from ..config import get_config
 
 software_prefixes = {
     "schema": schema,
     "sd": sd,
     "xsd": xsd,
-    "obj": obj,
+    "obj": get_config()["object_prefix"],
     "sosen": sosen,
     "rdfs": rdfs
 }
