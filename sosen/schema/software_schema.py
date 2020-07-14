@@ -98,8 +98,7 @@ somef_software_schema = {
         "@path": ["license", "excerpt", "url"],
         "@type": "xsd:anyURI"
     },
-    # link to the keyword, which will be generated separately
-    "sd:keyword": {
+    "sd:keywords": {
         "@path": ["topics", "excerpt"],
         "@type": "xsd:string"
     },
@@ -162,17 +161,17 @@ somef_software_schema = {
             "tag_name": ["releases", "excerpt", "tag_name"],
             "name": ["fullName", "excerpt"]
         },
-        # "sd:author": {
-        #     "@class": "schema:Person",
-        #     "@id": {
-        #         "@format": "obj:Person/{name}",
-        #         "name": ["releases", "excerpt", "author_name"]
-        #     },
-        #     "sd:additionalName": {
-        #         "@path": ["releases", "excerpt", "author_name"],
-        #         "@type": "xsd:string"
-        #     }
-        # },
+        "sd:author": {
+            "@class": "schema:Person",
+            "@id": {
+                "@format": "obj:Person/{name}",
+                "name": ["releases", "excerpt", "author_name"]
+            },
+            "sd:additionalName": {
+                "@path": ["releases", "excerpt", "author_name"],
+                "@type": "xsd:string"
+            }
+        },
         "sd:hasVersionId": {
             "@path": ["releases", "excerpt", "tag_name"],
             "@type": "xsd:string"
