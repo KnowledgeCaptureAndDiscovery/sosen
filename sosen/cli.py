@@ -58,6 +58,10 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
         with open(zenodo_cache, "w") as out_file:
             json.dump(data_and_urls_flattened, out_file)
 
+    # do not proceed unless we have an output graph or output data_dict
+    if graph_out is None and data_dict is None:
+        return
+
     # make sure that the github urls are all unique, too
     github_urls = {data["github_url"] for data in data_and_urls_flattened.values()}
 
