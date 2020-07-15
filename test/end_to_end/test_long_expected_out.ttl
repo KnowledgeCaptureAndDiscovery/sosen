@@ -2,8 +2,8 @@
 @prefix sd: <https://w3id.org/okn/o/sd#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/okn/iSoftware/manoelcampos/cloudsim-plus> a sd:Software ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/Software/manoelcampos/cloudsim-plus> a sd:Software ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:contributionInstructions """Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/cloudsim-plus/contribute)]
 
 """^^xsd:string,
@@ -83,7 +83,7 @@ and by the [Brazilian foundation Coordenação de Aperfeiçoamento de Pessoal de
 """^^xsd:string ;
     sd:hasInstallationInstructions """download the project source by cloning the repository issuing the command git clone https://github.com/manoelcampos/cloudsim-plus.git  
 """^^xsd:string ;
-    sd:hasSourceCode <https://w3id.org/okn/iSoftwareSource/manoelcampos/cloudsim-plus> ;
+    sd:hasSourceCode <https://w3id.org/okn/i/SoftwareSource/manoelcampos/cloudsim-plus> ;
     sd:hasUsageNotes """In order to build a simulation scenario you have to create, at least: 
 - a datacenter with a list of physical machines (Hosts); 
 - a broker that allows submission of VMs and Cloudlets to be executed, on behalf of a given customer, into the cloud infrastructure; 
@@ -248,36 +248,36 @@ or follow the instructions in one of the next subsections.
 ![Downloading CloudSim Plus and running Examples using NetBeans](https://github.com/manoelcampos/cloudsim-plus/raw/master/docs/images/cloudsim-plus-netbeans.gif)
 
 """^^xsd:string ;
-    sd:hasVersion <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0>,
-        <https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> ;
+    sd:hasVersion <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> ;
     sd:identifier "10.5281/zenodo.3743168"^^xsd:string,
         "10.5281/zenodo.595340"^^xsd:string ;
     sd:issueTracker "https://github.com/manoelcampos/cloudsim-plus/issues"^^xsd:anyURI ;
@@ -326,13 +326,13 @@ See the [publications](#publications) section to access published CloudSim Plus 
 
 """^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareSource/manoelcampos/cloudsim-plus> a sd:SourceCode ;
+<https://w3id.org/okn/i/SoftwareSource/manoelcampos/cloudsim-plus> a sd:SourceCode ;
     sd:codeRepository "https://github.com/manoelcampos/cloudsim-plus"^^xsd:anyURI ;
     sd:programmingLanguage "Java"^^xsd:string,
         "Shell"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.8> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added\r
 - Enabled dynamic creation of VMs and Cloudlets without requiring creation of Datacenter Brokers at runtime, enabling VMs to be created on-demand according to arrived cloudlets.\r
   During simulation execution, new VMs and Cloudlets can be submitted using the methods `submitVmList` and `submitCloudletList` that they will be dynamically created. See the [DynamicCreationOfVmsAndCloudlets.java](cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/DynamicCreationOfVmsAndCloudlets.java) example for more details.\r
@@ -358,8 +358,8 @@ See the [publications](#publications) section to access published CloudSim Plus 
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.8"^^xsd:anyURI ;
     sd:hasVersionId "v0.8-beta.8"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.8-beta.9> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """This release introduces a huge amount of internal refactoring to provide a framework that really deals with actual Objects instead of Integer IDs. This work started several commits before. Previously the framework didn't create actual relationships among different classes, but stored Integer IDs as attributes to represent such relationships. This was a bad, confusing and very error prone design. \r
 \r
 Since such attributes were just an Integer (for instance the Cloudlet.vmId or Vm.brokerId), any possible integer value could be passed to such attributes, even an inexistent ID or the ID of an entity that wasn't from the expected class (the ID of a Datacenter could be set for the Cloudlet.vmId without compilation errors).\r
@@ -394,8 +394,8 @@ Some of the benefits of this new design are presented below:\r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.8-beta.9"^^xsd:anyURI ;
     sd:hasVersionId "v0.8-beta.9"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.1> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added\r
 - Allowed to delay the submission of VMs by a `DatacenterBroker`, simulating the dynamic arrival of VMs (closes the feature request #23)\r
 - Included extremelly helpful package documentation that can be viewed directly on your IDE or online [here](http://cloudsimplus.org/apidocs/).\r
@@ -423,8 +423,8 @@ Some of the benefits of this new design are presented below:\r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.1"^^xsd:anyURI ;
     sd:hasVersionId "v0.9-beta.1"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v0.9-beta.2> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """After that CloudSim Plus allowed the submission of VMs and Cloudlets to an already existing DatacenterBroker during simulation execution (see #43), now it provides an exclusive mechanism to perform horizontal scaling of VMs. Such a mechanism creates new VMs for a simulation with dynamic cloudlet arrival, according to a condition defined by the developer. That condition can check if the VM is overloaded based on CPU, BW or RAM usage.\r
 \r
 It also provides a completely redesigned and refactored Network module that just works. The list of included features are as follows:\r
@@ -457,8 +457,8 @@ It also provides a completely redesigned and refactored Network module that just
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v0.9-beta.2"^^xsd:anyURI ;
     sd:hasVersionId "v0.9-beta.2"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """In January of 2015 we started to contribute to CloudSim and due to different philosophies from CloudSim team we decided to initiate CloudSim Plus as an independent project. One year of intense and constant work later, after 375 commits and [30 issues closed](https://github.com/manoelcampos/cloudsim-plus/issues?utf8=✓&q=is%3Aissue%20is%3Aclosed%20milestone%3A%22CloudSim%20Plus%201.0%22%20), we are proud to announce that CloudSim Plus 1.0 is available as the first stable release.\r
 \r
 The framework went through a comprehensive re-design and we doubt there is a single class that was not refactored to improve code quality, clarity and extensiblity and to provide an [extensive and updated documentation](http://cloudsimplus.org/apidocs/).\r
@@ -495,8 +495,8 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.1.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """This release provides some refactoring and bug fixes to enable implementation of Vertical VM Scaling proposed in #7.\r
 \r
 ### Fixed\r
@@ -517,8 +517,8 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.1.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added\r
 \r
 - [Vertical VM Scaling Mechanism](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/autoscaling/) ([#7](https://github.com/manoelcampos/cloudsim-plus/issues/7)) \r
@@ -577,8 +577,8 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.1> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added\r
 - `PowerVmAllocationPolicyMigrationBestFitStaticThreshold` to select the Host to place or migrate a VM\r
   using a Best Fit policy, that is, it selects the Host with less available resources\r
@@ -601,8 +601,8 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.1"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.1"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.2> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added \r
 - [Amazon EC2](http://aws.amazon.com/ec2/) instance templates in JSON format ([#97](https://github.com/manoelcampos/cloudsim-plus/pull/97)).\r
 - `Vm.getStartTime()`, `Vm.getStopTime()` and `Vm.getTotalExecutionTime()` methods to, respectively: get the time a VM started running for the first time; the time it was destroyed in the last Host it executed; and the total execution time across all Hosts the VM possibly have migrated across ([#98](https://github.com/manoelcampos/cloudsim-plus/issues/98)).\r
@@ -618,8 +618,8 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.2"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.2"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.3> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """### Added / Changed\r
 - Renamed the `DatacenterBroker` `getVmsCreatedList()` method to `getVmCreatedList()`\r
   and added a `getVmExecList()` one ([#106](https://github.com/manoelcampos/cloudsim-plus/pull/106)).\r
@@ -637,24 +637,24 @@ For more information, check the [README file at the project's home page](https:/
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.3"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.3"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.6> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description "Fix the issue #123 to enable canceling the execution of running Cloudlets."^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.6"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.6"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.6"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.6"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.2.7> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v1.2.7"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v1.2.7"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.2.7"^^xsd:anyURI ;
     sd:hasVersionId "v1.2.7"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """Enables simulating the physical expansion of a `Datacenter` by dynamically adding new `Hosts` (PMs) at simulation runtime. The `Datacenter` interface now has the methods `addHost` and `addHostList`, which can be called before or after starting the simulation, to expand a `Datacenter` physical capacity by adding new Hosts.\r
 \r
 This release also makes it easier to create a `Datacenter` since a `DatacenterCharacteristics` object is not required anymore. When a `Datacenter` is instantiated, it internally creates a `DatacenterCharacteristics` object. In place of passing such an object to the `Datacenter` constructor, you just need to pass a `List` of `Hosts`.\r
@@ -678,8 +678,8 @@ The `DatacenterCharacteristics` can be accessed using the `Datacenter.getDatacen
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.0"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.1> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## Fix issue #126\r
 Consider there are 4 Cloudlets running at the same time inside the same VM and that a `UtilizationModelFull` was used to define how a Cloudlet requests RAM from its VM. This issue was enabling, for instance, that all Cloudlets requested together 400% of RAM from the VM, which is obviously not possible without virtual memory (which is not supported in simulations).\r
 \r
@@ -695,8 +695,8 @@ This feature also enables freely changing entities' names. When the ID of an ent
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.1"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.2> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## Updates the `ResourceLoader` class \r
 Enables loading a resource from the resource directory, regardless the simulation is running directly from a compiled class or from a jar file.\r
 \r
@@ -708,8 +708,8 @@ now have a simplified `getInstance(String path)` method that just requires the r
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.2"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.2"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v1.3.3> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## Removes all the examples that were available at package `org.cloudbus.cloudsim.examples.power`\r
     \r
 Those simulations aren't in fact examples. They were clearly used just to publish results for the paper [Optimal Online Deterministic Algorithms and Adaptive Heuristics for Energy and Performance Efficient Dynamic Consolidation of Virtual Machines in Cloud Data Centers](http://dx.doi.org/10.1002/cpe.1867).\r
@@ -720,8 +720,8 @@ Since the code lacks organization and results aren't structured and clear, such 
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v1.3.3"^^xsd:anyURI ;
     sd:hasVersionId "v1.3.3"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """# INTRODUCTION\r
 \r
 Enables power-aware simulations using regular classes such as`DatacenterSimple`, `HostSimple` and `VmSimple`.  **This way, it automatically allows creating simulations that are both network- and power-aware by using the network versions of such classes.**\r
@@ -780,8 +780,8 @@ Check [release 2.2.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.1.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- Provides a functional implementation of `PowerModel` classes, enabling to pass a `Function` as a parameter to the constructor. Such a `Function` defines how the power consumption increases along the time.\r
 - Introduces the `PowerModelSimple`, enabling the developer to define the power consumption increment as a `Function`. This way, it doesn't require the creation of a new class.\r
 - Removes all code duplication between `PowerModel` classes."""^^xsd:string ;
@@ -790,8 +790,8 @@ Check [release 2.2.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.1.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """The `PowerSupply` was just delegating everything to `PowerModel`. \r
 After refactoring the latter one to provide a better class hierarchy, remove code duplication and fix bugs (#127), `PowerSupply` was merged into the `PowerModel` and the former removed. \r
 \r
@@ -803,8 +803,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.2.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.2.2> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- General cleanup to remove unused and redundant code.\r
 - General code review and refactoring."""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.2.2"^^xsd:anyURI,
@@ -812,16 +812,16 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.2.2"^^xsd:anyURI ;
     sd:hasVersionId "v2.2.2"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description "- Closes #130"^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v2.3.0"^^xsd:anyURI,
         "https://api.github.com/repos/manoelcampos/cloudsim-plus/zipball/v2.3.0"^^xsd:anyURI,
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.3.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.3.1> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## Updates #130\r
     \r
 - Postpone DatacenterBroker shutdown to the end of the simulation when a termination time is set,\r
@@ -834,8 +834,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v2.3.1"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v2.4.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- General refactoring of Network module, improving code organization and reducing duplication.\r
 - Fix infinite loop issue with network examples.\r
 - Improves documentation.\r
@@ -855,8 +855,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0"^^xsd:anyURI ;
     sd:hasVersionId "v2.4.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v3.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- Defines types and colors for log messages and enables filtering the level of messages to print. The image below shows how easy is to check things that may be wrong in your simulation ([#24](https://github.com/manoelcampos/cloudsim-plus/issues/24)). ![](docs/images/log-messages-by-type.png) And for instance, if you want to see just messages from warning level, it's as simple as calling `Log.setLevel(ch.qos.logback.classic.Level.WARN);` \r
 - Includes all fixes in the Network Module from [version 2.4.0](https://github.com/manoelcampos/cloudsim-plus/releases/tag/v2.4.0)."""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/manoelcampos/cloudsim-plus/tarball/v3.0.0"^^xsd:anyURI,
@@ -864,8 +864,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v3.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v3.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- Process trace files from [Google Cluster Data](https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md) creating Hosts and Cloudlets (tasks). A script to download the trace files is available at [download-google-cluster-data.sh](https://github.com/manoelcampos/cloudsim-plus/blob/master/script/download-google-cluster-data.sh). Examples are available [here](https://github.com/manoelcampos/cloudsim-plus/tree/master/cloudsim-plus-examples/src/main/java/org/cloudsimplus/examples/traces/google) (#149).\r
 - Reimplement Host's and VM's power usage computation that were returning inconsistent results for different Datacenter's scheduling intervals (#153).\r
 - Makes the UtilizationModelPlanetLab work as a circular list when the Cloudlet using it as a CPU UtilizationModel runs longer than there is data in the trace file. This way, when the end of the file is reached, it starts reading from the beginning to avoid `ArrayIndexOutOfBoundsException` (#152).\r
@@ -877,8 +877,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v4.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.0.3> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- Fix #154\r
 - Fix #156\r
 """^^xsd:string ;
@@ -887,8 +887,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.0.3"^^xsd:anyURI ;
     sd:hasVersionId "v4.0.3"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v4.3.1> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """- #185 :: Warn when a simulation which has an explicit termination time is lasting too long. This way, the researcher may know if he/she has set a too long termination time, instead of just keep waiting the simulation to finish when there are no events to process.\r
 - #184 :: Refactor ContinuousDistribution implementations providing consistent order in construtor parameters. The parameter order of NormalDistr's constructor was changed from `NormalDistr(long seed, double mean, double standardDeviation)` to `NormalDistr(double mean, double standardDeviation, long seed)`. This way, the `SEED` (when available) is always the last parameter, conforming to constructors of other random number generators such as the UniformDistr. This change probably will cause a compilation error and will be easy to detect and fix. However, if you are using int or long for all the 3 parameters, there will be no error or warning and your simulation results will be just wrong. In such a case, you need to find where you are using this NormalDistr constructor and correct parameters order.\r
 - #183 :: Adds time conversion methods to the Conversion class\r
@@ -906,8 +906,8 @@ You just need to call Host's `setPowerModel(PowerModel powerModel)` method to en
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v4.3.1"^^xsd:anyURI ;
     sd:hasVersionId "v4.3.1"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## 1. Important new Features\r
 \r
 ### 1.1. Implement synchronous simulations (#205)\r
@@ -990,8 +990,8 @@ The performance improvements in this release are impressive. The list below show
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.0.0"^^xsd:anyURI ;
     sd:hasVersionId "v5.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.1.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## New Features\r
 \r
 - Add size() method to Datacenter interface to enable getting its number of Hosts.\r
@@ -1016,8 +1016,8 @@ The performance improvements in this release are impressive. The list below show
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.1.0"^^xsd:anyURI ;
     sd:hasVersionId "v5.1.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/manoelcampos> ;
+<https://w3id.org/okn/i/SoftwareVersion/manoelcampos/cloudsim-plus/v5.4.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/manoelcampos> ;
     sd:description """## Updates and New Features\r
 \r
 - Includes all AWS EC2 Instance Templates from the "US Est (Ohio)" Region, available at https://aws.amazon.com/ec2/pricing/on-demand/\r
@@ -1043,7 +1043,7 @@ The performance improvements in this release are impressive. The list below show
         "https://github.com/manoelcampos/cloudsim-plus/releases/tag/v5.4.0"^^xsd:anyURI ;
     sd:hasVersionId "v5.4.0"^^xsd:string .
 
-<https://w3id.org/okn/iPerson/manoelcampos> a schema:Person ;
+<https://w3id.org/okn/i/Person/manoelcampos> a schema:Person ;
     sd:additionalName "manoelcampos"^^xsd:string,
         "manoelcampos"^^schema:Text .
 

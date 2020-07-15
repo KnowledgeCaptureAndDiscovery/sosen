@@ -25,7 +25,7 @@ def configure(**kwargs):
 def get_defaults():
     return {
         "endpoint": "https://dev.endpoint.mint.isi.edu/sosen/query",
-        "object_prefix": "https://w3id.org/okn/i",
+        "object_prefix": "https://w3id.org/okn/i/",
     }
 
 

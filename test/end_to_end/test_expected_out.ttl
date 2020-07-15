@@ -2,8 +2,8 @@
 @prefix sd: <https://w3id.org/okn/o/sd#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/okn/iSoftware/ESIPFed/science-on-schema.org> a sd:Software ;
-    sd:author <https://w3id.org/okn/iPerson/ESIPFed> ;
+<https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org> a sd:Software ;
+    sd:author <https://w3id.org/okn/i/Person/ESIPFed> ;
     sd:description "testkeyword"^^xsd:string ;
     sd:doi "10.5281/zenodo.2628755"^^xsd:string ;
     sd:downloadUrl "https://github.com/ESIPFed/science-on-schema.org/releases"^^xsd:anyURI ;
@@ -11,9 +11,9 @@
 """^^xsd:string,
         """Google structured data test tool 
 """^^xsd:string ;
-    sd:hasSourceCode <https://w3id.org/okn/iSoftwareSource/ESIPFed/science-on-schema.org> ;
-    sd:hasVersion <https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
-        <https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
+    sd:hasSourceCode <https://w3id.org/okn/i/SoftwareSource/ESIPFed/science-on-schema.org> ;
+    sd:hasVersion <https://w3id.org/okn/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0>,
+        <https://w3id.org/okn/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> ;
     sd:identifier "10.5281/zenodo.2628755"^^xsd:string,
         "10.5281/zenodo.3736235"^^xsd:string ;
     sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
@@ -22,22 +22,22 @@
         "testkeyword"^^xsd:string ;
     sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
 
-<https://w3id.org/okn/iPerson/ESIPFed> a schema:Person ;
+<https://w3id.org/okn/i/Person/ESIPFed> a schema:Person ;
     sd:additionalName "ESIPFed"^^schema:Text .
 
-<https://w3id.org/okn/iSoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
+<https://w3id.org/okn/i/SoftwareSource/ESIPFed/science-on-schema.org> a sd:SourceCode ;
     sd:codeRepository "https://github.com/ESIPFed/science-on-schema.org"^^xsd:anyURI .
 
-<https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/ashepherd> ;
+<https://w3id.org/okn/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.0.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/ashepherd> ;
     sd:description ""^^xsd:string ;
     sd:downloadUrl "https://api.github.com/repos/ESIPFed/science-on-schema.org/tarball/1.0.0"^^xsd:anyURI,
         "https://api.github.com/repos/ESIPFed/science-on-schema.org/zipball/1.0.0"^^xsd:anyURI,
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.0.0"^^xsd:anyURI ;
     sd:hasVersionId "1.0.0"^^xsd:string .
 
-<https://w3id.org/okn/iSoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
-    sd:author <https://w3id.org/okn/iPerson/ashepherd> ;
+<https://w3id.org/okn/i/SoftwareVersion/ESIPFed/science-on-schema.org/1.1.0> a sd:SoftwareVersion ;
+    sd:author <https://w3id.org/okn/i/Person/ashepherd> ;
     sd:description """## FIXES\r
 - Using `@type` instead of `schema:additionalType` ([decision](decisions/74-schemaorg-additionalType-vs-RDF-typing.md), Issue #74)\r
 \r
@@ -58,6 +58,6 @@
         "https://github.com/ESIPFed/science-on-schema.org/releases/tag/1.1.0"^^xsd:anyURI ;
     sd:hasVersionId "1.1.0"^^xsd:string .
 
-<https://w3id.org/okn/iPerson/ashepherd> a schema:Person ;
+<https://w3id.org/okn/i/Person/ashepherd> a schema:Person ;
     sd:additionalName "ashepherd"^^xsd:string .
 
