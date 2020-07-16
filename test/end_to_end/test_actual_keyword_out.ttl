@@ -3,11 +3,6 @@
 @prefix sosen: <http://example.org/sosen#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/esipfed> a sosen:KeywordRelationship ;
-    sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/esipfed> ;
-    sosen:hasSoftware <https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:titleCount 1 .
-
 <https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org/KeywordRelationship/org> a sosen:KeywordRelationship ;
     sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/org> ;
     sosen:hasSoftware <https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org> ;
@@ -27,17 +22,10 @@
     sosen:descriptionCount 1 ;
     sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
     sosen:hasSoftware <https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org> ;
-    sosen:keywordCount 1 ;
-    sosen:titleCount 1 .
+    sosen:keywordCount 1 .
 
 obj:Global a sosen:Global ;
     sosen:totalSoftwareCount 1 .
-
-<https://w3id.org/okn/o/i/Keyword/esipfed> a sosen:Keyword ;
-    rdfs:label "esipfed"^^xsd:string ;
-    sosen:descriptionInCount 0 ;
-    sosen:keywordInCount 0 ;
-    sosen:titleInCount 1 .
 
 <https://w3id.org/okn/o/i/Keyword/org> a sosen:Keyword ;
     rdfs:label "org"^^xsd:string ;
@@ -61,17 +49,15 @@ obj:Global a sosen:Global ;
     rdfs:label "testkeyword"^^xsd:string ;
     sosen:descriptionInCount 1 ;
     sosen:keywordInCount 1 ;
-    sosen:titleInCount 1 .
+    sosen:titleInCount 0 .
 
 <https://w3id.org/okn/i/Software/ESIPFed/science-on-schema.org> a <sd:Software> ;
     sosen:descriptionKeywordCount 1 ;
     sosen:hasDescriptionKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
     sosen:hasKeyword <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
-    sosen:hasTitleKeyword <https://w3id.org/okn/o/i/Keyword/esipfed>,
-        <https://w3id.org/okn/o/i/Keyword/org>,
+    sosen:hasTitleKeyword <https://w3id.org/okn/o/i/Keyword/org>,
         <https://w3id.org/okn/o/i/Keyword/schema>,
-        <https://w3id.org/okn/o/i/Keyword/science>,
-        <https://w3id.org/okn/o/i/Keyword/testkeyword> ;
+        <https://w3id.org/okn/o/i/Keyword/science> ;
     sosen:keywordCount 1 ;
-    sosen:titleKeywordCount 5 .
+    sosen:titleKeywordCount 3 .
 

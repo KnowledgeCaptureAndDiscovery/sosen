@@ -301,8 +301,7 @@ or follow the instructions in one of the next subsections.
         "test-bed"^^xsd:string,
         "trace"^^xsd:string,
         "workload"^^xsd:string ;
-    sd:name "manoelcampos/cloudsim-plus"^^xsd:string,
-        "manoelcampos/cloudsim-plus: Fixes critical bugs and introduces features to provide more simulation control"^^xsd:string ;
+    sd:name "cloudsim-plus"^^xsd:string ;
     sd:readme "https://github.com/manoelcampos/cloudsim-plus/blob/master/README.md"^^xsd:anyURI ;
     sd:softwareRequirements """You can add CloudSim Plus API module (which is the only one required to build simulations) as a dependency inside your own Maven or Gradle project.
 This way you can start building your simulations from scratch.

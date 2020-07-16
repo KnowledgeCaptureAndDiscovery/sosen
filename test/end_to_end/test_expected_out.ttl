@@ -18,8 +18,7 @@
         "10.5281/zenodo.3736235"^^xsd:string ;
     sd:issueTracker "https://github.com/ESIPFed/science-on-schema.org/issues"^^xsd:anyURI ;
     sd:keywords "testkeyword"^^xsd:string ;
-    sd:name "ESIPFed/science-on-schema.org"^^xsd:string,
-        "testkeyword"^^xsd:string ;
+    sd:name "science-on-schema.org"^^xsd:string ;
     sd:readme "https://github.com/ESIPFed/science-on-schema.org/blob/master/README.md"^^xsd:anyURI .
 
 <https://w3id.org/okn/i/Person/ESIPFed> a schema:Person ;
