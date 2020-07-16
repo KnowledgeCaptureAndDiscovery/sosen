@@ -62,8 +62,16 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
     if graph_out is None and data_dict is None:
         return
 
-    # make sure that the github urls are all unique, too
-    github_urls = {data["github_url"] for data in data_and_urls_flattened.values()}
+    zenodo_data = {}
+    # change data_and_urls so that it is indexed by github url
+    for zenodo_id, data in data_and_urls_flattened.items():
+        github_url = data["github_url"]
+        if github_url not in zenodo_data:
+            zenodo_data[github_url] = []
+
+        zenodo_data[github_url].append(
+            {"data": data["data"], "version": data["version"]}
+        )
 
     cli_data = {}
 
@@ -75,31 +83,29 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
 
     # get the data from the cli
     index = 0
-    for github_url in github_urls:
+    for github_url, object_data in zenodo_data.items():
         if github_url not in cli_data:
             index += 1
             data = somef_cli.cli_get_data(threshold, repo_url=github_url)
-            cli_data.update({github_url: data})
+            cli_data.update({github_url: {"github_data": data, "zenodo_data": object_data}})
 
             # save every 10 times... saving is pretty quick.
             if index == 10:
                 index = 0
-                with open(data_dict, "w") as json_out:
-                    json.dump(cli_data, json_out)
-                print(f"saved cli_data to {data_dict}")
+                if data_dict:
+                    with open(data_dict, "w") as json_out:
+                        json.dump(cli_data, json_out)
+                    print(f"saved cli_data to {data_dict}")
         else:
             print(f"{github_url} found cached in {data_dict}")
 
-
     # save at the end, too
-    with open(data_dict, "w") as json_out:
-        json.dump(cli_data, json_out)
+    if data_dict:
+        with open(data_dict, "w") as json_out:
+            json.dump(cli_data, json_out)
 
-    filtered_data = (data for data in data_and_urls_flattened.values()
-                     if data["github_url"] in cli_data and cli_data[data["github_url"]] is not None)
-
-    document_data = [{**cli_data[data["github_url"]], "zenodo_data": data["zenodo_data"]}
-                     for data in filtered_data]
+    document_data = [{**data["github_data"], "zenodo_data": data["zenodo_data"]}
+                     for data in cli_data.values()]
 
     # get total number of software entities
     total_documents = len(document_data)

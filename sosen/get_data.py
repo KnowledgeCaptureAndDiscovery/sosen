@@ -2,7 +2,7 @@ import json
 import requests
 from somef import cli as somef_cli
 
-def get_zenodo_data(query):
+def get_zenodo_data(query, recursive=True):
     zenodo_api_base = 'https://zenodo.org/api'
 
     total_count = -1
@@ -17,6 +17,11 @@ def get_zenodo_data(query):
             else:
                 query_size = min(total_count - zenodo_max_api_call, zenodo_max_api_call)
 
+        all_versions = {}
+
+        if not recursive:
+            all_versions["all_versions"] = True
+
         response = requests.get(
             f"{zenodo_api_base}/records",
             params={
@@ -24,7 +29,8 @@ def get_zenodo_data(query):
                 'size': query_size,
                 'type': 'software',
                 'page': 1,
-                'sort': 'mostrecent' if is_forwards else '-mostrecent'
+                'sort': 'mostrecent' if is_forwards else '-mostrecent',
+                **all_versions
             },
             headers={
                 'Accept': "application/vnd.zenodo.v1+json"
@@ -53,17 +59,43 @@ def get_zenodo_data(query):
                         assert (github_base_url in github_url)
                         # now, process the URL
                         _, _, path = github_url.partition(github_base_url)
-                        path_components = path.split('/', 2)
+                        path_components = path.split('/')
 
-                        return github_base_url + "/".join(path_components[:2])
+                        return github_base_url + "/".join(path_components[:2]), path_components[-1]
             except AssertionError:
                 pass
 
             return None
 
-        processed_results = ((result, get_github_url(result)) for result in results)
-        output_results.update({result["id"]: {"github_url": github_url, "zenodo_data": result}
-                               for result, github_url in processed_results if github_url is not None})
+        for result in results:
+            github_url_result = get_github_url(result)
+            result_id = result["id"]
+            if github_url_result is not None:
+                github_url, github_version = github_url_result
+
+                output_results[result_id] = {
+                    "github_url": github_url,
+                    "version": github_version,
+                    "data": result
+                }
+
+                # add the children, too
+                if recursive:
+                    conceptrecid = result["conceptrecid"]
+                    print("doing recursive search")
+                    children_data = get_zenodo_data(f"conceptrecid:\"{conceptrecid}\"", recursive=False)
+                    output_results.update(children_data)
+            else:
+                output_results[result_id] = None
+
+                #
+                # if github_url not in output_results:
+                #     output_results[github_url] = []
+                #
+                # output_results[github_url].append(
+                #     {"version": github_version, "data": result}
+                # )
+
 
     with open("test_zenodo_results.json", "w") as test_out:
         json.dump(output_results, test_out)

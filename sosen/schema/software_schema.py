@@ -29,10 +29,6 @@ somef_software_schema = {
         {
             "@path": ["issues", "excerpt"],
             "@type": "xsd:string"
-        },
-        {
-            "@path": ["zenodo_data", "metadata", "description"],
-            "@type": "xsd:string"
         }
     ],
     "sd:referencePublication": {
@@ -100,16 +96,16 @@ somef_software_schema = {
     },
     "sd:doi": {
         "@required": True,
-        "@path": ["zenodo_data", "conceptdoi"],
+        "@path": ["zenodo_data", "data", "conceptdoi"],
         "@type": "xsd:string"
     },
     "sd:identifier": [
         {
-            "@path": ["zenodo_data", "doi"],
+            "@path": ["zenodo_data", "data", "doi"],
             "@type": "xsd:string"
         },
         {
-            "@path": ["zenodo_data", "conceptdoi"],
+            "@path": ["zenodo_data", "data", "conceptdoi"],
             "@type": "xsd:string"
         }
     ],
@@ -150,45 +146,62 @@ somef_software_schema = {
             "@type": "schema:Text"
         }
     },
-    "sd:hasVersion": {
-        "@class": "sd:SoftwareVersion",
-        "@id": {
-            "@format": "obj:SoftwareVersion/{name}/{tag_name}",
-            "tag_name": ["releases", "excerpt", "tag_name"],
-            "name": ["fullName", "excerpt"]
-        },
-        "sd:author": {
-            "@class": "schema:Person",
+    "sd:hasVersion": [
+        {
+            "@class": "sd:SoftwareVersion",
             "@id": {
-                "@format": "obj:Person/{name}",
-                "name": ["releases", "excerpt", "author_name"]
+                "@format": "obj:SoftwareVersion/{name}/{tag_name}",
+                "tag_name": ["releases", "excerpt", "tag_name"],
+                "name": ["fullName", "excerpt"]
             },
-            "sd:additionalName": {
-                "@path": ["releases", "excerpt", "author_name"],
+            "sd:author": {
+                "@class": "schema:Person",
+                "@id": {
+                    "@format": "obj:Person/{name}",
+                    "name": ["releases", "excerpt", "author_name"]
+                },
+                "sd:additionalName": {
+                    "@path": ["releases", "excerpt", "author_name"],
+                    "@type": "xsd:string"
+                }
+            },
+            "sd:hasVersionId": {
+                "@path": ["releases", "excerpt", "tag_name"],
+                "@type": "xsd:string"
+            },
+            "sd:description": {
+                "@path": ["releases", "excerpt", "body"],
+                "@type": "xsd:string"
+            },
+            "sd:downloadUrl": [
+                {
+                    "@path": ["releases", "excerpt", "tarball_url"],
+                    "@type": "xsd:anyURI"
+                },
+                {
+                    "@path": ["releases", "excerpt", "zipball_url"],
+                    "@type": "xsd:anyURI"
+                },
+                {
+                    "@path": ["releases", "excerpt", "html_url"],
+                    "@type": "xsd:anyURI"
+                }
+            ]
+        }, {
+            "@class": "sd:SoftwareVersion",
+            "@id": {
+                "@format": "obj:SoftwareVersion/{name}/{tag_name}",
+                "tag_name": ["zenodo_data", "version"],
+                "name": ["fullName", "excerpt"]
+            },
+            "sd:description": {
+                "@path": ["zenodo_data", "data", "metadata", "description"],
+                "@type": "xsd:string"
+            },
+            "sd:doi": {
+                "@path": ["zenodo_data", "data", "doi"],
                 "@type": "xsd:string"
             }
-        },
-        "sd:hasVersionId": {
-            "@path": ["releases", "excerpt", "tag_name"],
-            "@type": "xsd:string"
-        },
-        "sd:description": {
-            "@path": ["releases", "excerpt", "body"],
-            "@type": "xsd:string"
-        },
-        "sd:downloadUrl": [
-            {
-                "@path": ["releases", "excerpt", "tarball_url"],
-                "@type": "xsd:anyURI"
-            },
-            {
-                "@path": ["releases", "excerpt", "zipball_url"],
-                "@type": "xsd:anyURI"
-            },
-            {
-                "@path": ["releases", "excerpt", "html_url"],
-                "@type": "xsd:anyURI"
-            }
-        ]
-    }
+        }
+    ]
 }
