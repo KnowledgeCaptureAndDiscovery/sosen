@@ -12,7 +12,7 @@ import math
 import os
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
-from .sparql_queries import get_keyword, describe_iri, get_document_from_kw, get_global_doc_count
+from .sparql_queries import get_keywords, get_document_from_kw, get_global_doc_count
 from .config import get_config
 
 from rdflib import RDF, Namespace
@@ -276,72 +276,49 @@ def run_search(keywords, method="description"):
         keywords = get_all_keywords(keywords)
 
     # first, get the global document count
-    sparql.setQuery(get_global_doc_count)
-    sparql.setReturnFormat(SPARQL_JSON)
-    results = sparql.query().convert()['results']['bindings']
-    assert(len(results) == 1)
-    doc_count = float(results[0]['doc_count']['value'])
+    doc_count = get_global_doc_count(sparql)
 
     print(keywords)
     # first, get all of the keywords and their frequencies
     keyword_idfs = {}
-    for keyword in keywords:
-        query_string = get_keyword(method).format(keyword=keyword)
+    results = get_keywords(keywords, method, sparql)
 
-        sparql.setQuery(query_string)
-        # print(query_string)
-        sparql.setReturnFormat(SPARQL_JSON)
-        results = sparql.query().convert()['results']['bindings']
+    for result in results:
+        kw_doc_count = float(result['doc_count']['value'])
+        if kw_doc_count > 0:
+            keyword_id = result['obj']['value']
+            keyword_df = kw_doc_count/doc_count
 
-        # there's only 1 or 0 results but this is an easier way of writing that
-        for result in results:
-            kw_doc_count = float(result['doc_count']['value'])
-            if kw_doc_count > 0:
-                keyword_id = result['obj']['value']
-                keyword_df = kw_doc_count/doc_count
+            keyword_idf = -1 * math.log(keyword_df, math.e)
+            keyword_idfs[keyword_id] = keyword_idf
 
-                keyword_idf = -1 * math.log(keyword_df, math.e)
-                keyword_idfs[keyword_id] = keyword_idf
+    keyword_table = [[keyword, idf] for keyword, idf in keyword_idfs.items()]
+    print("\nFOUND KEYWORDS:")
+    print(tabulate(
+        keyword_table,
+        headers=["keyword iri", "idf"]
+    ))
 
     # now, get the documents that match these keywords
     all_results = {}
-    print("\nFOUND KEYWORDS:")
-    for keyword_id, keyword_idf in keyword_idfs.items():
-        query_string = get_document_from_kw(method).format(keyword_id=keyword_id)
 
-        sparql.setQuery(query_string)
-        # print(query_string)
-        sparql.setReturnFormat(SPARQL_JSON)
-        results = sparql.query().convert()
+    results = get_document_from_kw(keyword_idfs, method, sparql)
 
-        print(f"keyword: {keyword_id}, idf: {keyword_idf}")
+    for result in results:
+        obj_id = result['obj']['value']
 
-        for result in results['results']['bindings']:
-            obj_id = result['obj']['value']
-
-            keyword_count = float(result['kw_count']['value'])
-            doc_length = float(result['doc_length']['value'])
-            keyword_tf = keyword_count / doc_length
-
-            keyword_tf_idf = keyword_tf * keyword_idf
-
-            if obj_id not in all_results:
-                all_results[obj_id] = {
-                    "tf_idf": 0,
-                    "matches": 0
-                }
-
-            all_results[obj_id]["tf_idf"] += keyword_tf_idf
-            all_results[obj_id]["matches"] += 1
+        all_results[obj_id] = {
+            "tf_idf": result["sum_tf_idf"]["value"],
+            "matches": result["matches"]["value"]
+        }
 
     tf_idf_results = [{"obj_id": obj_id, "matches": value["matches"], "tf_idf": value["tf_idf"]}
                       for obj_id, value in all_results.items()]
 
-    tf_idf_results.sort(key=lambda obj: (obj["matches"], obj["tf_idf"]), reverse=True)
 
     print("\nMATCHES:")
     table_data = [[index + 1, result['obj_id'], result['matches'], result['tf_idf']]
-                  for index, result in enumerate(tf_idf_results) if index < 20]
+                  for index, result in enumerate(tf_idf_results)]
     print(tabulate(
         table_data,
         headers=["", "result iri", "matches", "tf-idf sum"],
