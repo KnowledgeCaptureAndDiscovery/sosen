@@ -98,9 +98,9 @@ def get_keywords_relationship_schema(option):
     config = config_options[option]
 
     return {
-        "@class": "sosen:KeywordRelationship",
+        "@class": "sosen:QualifiedKeyword",
         "@id": {
-            "@format": "{softwareId}/KeywordRelationship/{keyword}",
+            "@format": "{softwareId}/QualifiedKeyword/{keyword}",
             "softwareId": ["id"],
             "keyword": [config["keywords_directory"], "label"]
         },
