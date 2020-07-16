@@ -39,12 +39,13 @@ def get_zenodo_data(query, recursive=True):
         data_out = response.json()
         if "message" in data_out:
             print(f"error with request: {response.request.path_url}")
-            print(data_out["message"])
+            print(data_out)
             break
 
         results = data_out["hits"]["hits"]
         total_count = data_out["hits"]["total"]
 
+        print(f"in request: {response.request.path_url}")
         print(f"got {min(query_size, total_count)} results from {'asc' if is_forwards else 'desc'} search")
 
         def get_github_url(result):
