@@ -86,13 +86,9 @@ somef_software_schema = {
     },
     "sd:name": [
         {
-            "@path": ["fullName", "excerpt"],
+            "@path": ["name", "excerpt"],
             "@type": "xsd:string"
         },
-        {
-            "@path": ["zenodo_data", "metadata", "title"],
-            "@type": "xsd:string"
-        }
     ],
     "sd:license": {
         "@path": ["license", "excerpt", "url"],
