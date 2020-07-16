@@ -1,6 +1,25 @@
 import json
 import requests
+import time
 from somef import cli as somef_cli
+
+def zenodo_get(*args, **kwargs):
+    backoff_rate = 2
+    backoff = 1
+    while True:
+        response = requests.get(*args, **kwargs)
+        data = response.json()
+
+        if "message" in data:
+            if "status" in data and data["status"] == 429:
+                print(f"rate limited. sleeping for {backoff} seconds")
+                time.sleep(backoff)
+                backoff *= backoff_rate
+            else:
+                print(f"other error in the data for {response.request.path_url}")
+                print(data)
+        else:
+            return data
 
 def get_zenodo_data(query, recursive=True):
     zenodo_api_base = 'https://zenodo.org/api'
@@ -22,7 +41,7 @@ def get_zenodo_data(query, recursive=True):
         if not recursive:
             all_versions["all_versions"] = True
 
-        response = requests.get(
+        data_out = zenodo_get(
             f"{zenodo_api_base}/records",
             params={
                 'q': query,
@@ -36,16 +55,10 @@ def get_zenodo_data(query, recursive=True):
                 'Accept': "application/vnd.zenodo.v1+json"
             }
         )
-        data_out = response.json()
-        if "message" in data_out:
-            print(f"error with request: {response.request.path_url}")
-            print(data_out)
-            break
 
         results = data_out["hits"]["hits"]
         total_count = data_out["hits"]["total"]
 
-        print(f"in request: {response.request.path_url}")
         print(f"got {min(query_size, total_count)} results from {'asc' if is_forwards else 'desc'} search")
 
         def get_github_url(result):
