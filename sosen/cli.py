@@ -73,8 +73,6 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
             zenodo_data[github_url].append(
                 {"data": data["data"], "version": data["version"]}
             )
-        else:
-            print(f"None for {zenodo_id}")
 
     cli_data = {}
 
