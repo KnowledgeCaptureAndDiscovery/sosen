@@ -143,7 +143,7 @@ somef_software_schema = {
         },
         "sd:additionalName": {
             "@path": ["owner", "excerpt"],
-            "@type": "schema:Text"
+            "@type": "xsd:string"
         }
     },
     "sd:hasVersion": [
