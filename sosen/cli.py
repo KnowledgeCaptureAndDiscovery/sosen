@@ -65,13 +65,16 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
     zenodo_data = {}
     # change data_and_urls so that it is indexed by github url
     for zenodo_id, data in data_and_urls_flattened.items():
-        github_url = data["github_url"]
-        if github_url not in zenodo_data:
-            zenodo_data[github_url] = []
+        if data is not None:
+            github_url = data["github_url"]
+            if github_url not in zenodo_data:
+                zenodo_data[github_url] = []
 
-        zenodo_data[github_url].append(
-            {"data": data["data"], "version": data["version"]}
-        )
+            zenodo_data[github_url].append(
+                {"data": data["data"], "version": data["version"]}
+            )
+        else:
+            print(f"None for {zenodo_id}")
 
     cli_data = {}
 
