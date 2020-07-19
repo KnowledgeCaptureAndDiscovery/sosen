@@ -20,15 +20,15 @@ keyword_schema = {
         "@path": "keyword",
         "@type": "xsd:string"
     },
-    "sosen:descriptionInCount": {
+    "sosen:totalDescriptionInCount": {
         "@path": "descriptionInCount",
         "@type": "xsd:integer"
     },
-    "sosen:titleInCount": {
+    "sosen:totalTitleInCount": {
         "@path": "titleInCount",
         "@type": "xsd:integer"
     },
-    "sosen:keywordInCount": {
+    "sosen:totalKeywordInCount": {
         "@path": "keywordInCount",
         "@type": "xsd:integer"
     }
@@ -83,15 +83,15 @@ def get_keywords_relationship_schema(option):
     config_options = {
         "description": {
             "keywords_directory": "descriptionKeywords",
-            "count_name": "sosen:descriptionCount"
+            "count_name": "sosen:inDescriptionCount"
         },
         "keyword": {
             "keywords_directory": "keywords",
-            "count_name": "sosen:keywordCount"
+            "count_name": "sosen:inKeywordCount"
         },
         "title": {
             "keywords_directory": "titleKeywords",
-            "count_name": "sosen:titleCount"
+            "count_name": "sosen:inTitleCount"
         }
     }
 
@@ -108,14 +108,14 @@ def get_keywords_relationship_schema(option):
             "@path": [config["keywords_directory"], "count"],
             "@type": "xsd:integer"
         },
-        "sosen:hasKeyword": {
+        "sosen:keyword": {
             "@id": {
                 "@format": keyword_id_format,
                 "keyword": [config["keywords_directory"], "label"]
             },
             "@class": "sosen:Keyword"
         },
-        "sosen:hasSoftware": software_class_id_dict
+        "sosen:software": software_class_id_dict
     }
 
 description_keyword_relationship_schema = get_keywords_relationship_schema("description")
