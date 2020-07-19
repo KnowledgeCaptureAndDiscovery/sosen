@@ -99,16 +99,6 @@ somef_software_schema = {
         "@path": ["zenodo_data", "data", "conceptdoi"],
         "@type": "xsd:string"
     },
-    "sd:identifier": [
-        {
-            "@path": ["zenodo_data", "data", "doi"],
-            "@type": "xsd:string"
-        },
-        {
-            "@path": ["zenodo_data", "data", "conceptdoi"],
-            "@type": "xsd:string"
-        }
-    ],
     "sd:issueTracker": {
         "@value": {
             "@format": "https://github.com/{fullName}/issues",
