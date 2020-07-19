@@ -1,0 +1,508 @@
+<h2 id="crossreference" class="list">Cross reference for [Ontology Name] classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [Ontology Name].
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Global" title="https://w3id.org/okn/o/sosen#Global">Global</a>
+      </li>
+      <li>
+         <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+      </li>
+      <li>
+         <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+      </li>
+   </ul>
+   <div class="entity" id="Global">
+      <h3>Global<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#Global</p>
+      <div class="comment">
+         <span class="markdown">An object to store global information. Currently, it only stores the total number of software objects in the graph.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#totalSoftwareCount" title="https://w3id.org/okn/o/sosen#totalSoftwareCount">total software count</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Keyword">
+      <h3>Keyword<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#Keyword</p>
+      <div class="comment">
+         <span class="markdown">A keyword, which can appear in the keyword list, title, or description of a software. It also stores the number of documents that this keyword appears in, which can be used to compute the document frequency of the keyword, a part of the computation for the tf-idf score.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#totalDescriptionInCount"
+               title="https://w3id.org/okn/o/sosen#totalDescriptionInCount">total description in count</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#totalKeywordInCount" title="https://w3id.org/okn/o/sosen#totalKeywordInCount">total keyword in count</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#totalTitleInCount" title="https://w3id.org/okn/o/sosen#totalTitleInCount">total title in count</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDescriptionKeyword" title="https://w3id.org/okn/o/sosen#hasDescriptionKeyword">has description keyword</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasKeyword" title="https://w3id.org/okn/o/sosen#hasKeyword">has keyword</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTitleKeyword" title="https://w3id.org/okn/o/sosen#hasTitleKeyword">has title keyword</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#keyword" title="https://w3id.org/okn/o/sosen#keyword">keyword</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QualifiedKeyword">
+      <h3>Qualified Keyword<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#QualifiedKeyword</p>
+      <div class="comment">
+         <span class="markdown">This stores information about the edge between a Sofware and a Keyword. It says how many times that keyword appears in the keyword list, the title, and the description.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#inDescriptionCount" title="https://w3id.org/okn/o/sosen#inDescriptionCount">in description count</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#inKeywordCount" title="https://w3id.org/okn/o/sosen#inKeywordCount">in keyword count</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#inTitleCount" title="https://w3id.org/okn/o/sosen#inTitleCount">in title count</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#keyword" title="https://w3id.org/okn/o/sosen#keyword">keyword</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#software" title="https://w3id.org/okn/o/sosen#software">software</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasDescriptionKeyword" title="https://w3id.org/okn/o/sosen#hasDescriptionKeyword">
+            <span>has description keyword</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasKeyword" title="https://w3id.org/okn/o/sosen#hasKeyword">has keyword</a>
+      </li>
+      <li>
+         <a href="#hasTitleKeyword" title="https://w3id.org/okn/o/sosen#hasTitleKeyword">has title keyword</a>
+      </li>
+      <li>
+         <a href="#keyword" title="https://w3id.org/okn/o/sosen#keyword">keyword</a>
+      </li>
+      <li>
+         <a href="#software" title="https://w3id.org/okn/o/sosen#software">software</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasDescriptionKeyword">
+      <h3>has description keyword<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#hasDescriptionKeyword</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasKeyword">
+      <h3>has keyword<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#hasKeyword</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTitleKeyword">
+      <h3>has title keyword<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#hasTitleKeyword</p>
+      <div class="comment">
+         <span class="markdown">A keyword that has been extracted from the title of the software</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="keyword">
+      <h3>keyword<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#keyword</p>
+      <div class="comment">
+         <span class="markdown">This is the keyword that a QualifiedKeyword object is refering to</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="software">
+      <h3>software<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#software</p>
+      <div class="comment">
+         <span class="markdown">The software that a QualifiedKeyword object is refering to.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#descriptionKeywordCount"
+            title="https://w3id.org/okn/o/sosen#descriptionKeywordCount">description keyword count</a>
+      </li>
+      <li>
+         <a href="#inDescriptionCount" title="https://w3id.org/okn/o/sosen#inDescriptionCount">in description count</a>
+      </li>
+      <li>
+         <a href="#inKeywordCount" title="https://w3id.org/okn/o/sosen#inKeywordCount">in keyword count</a>
+      </li>
+      <li>
+         <a href="#inTitleCount" title="https://w3id.org/okn/o/sosen#inTitleCount">in title count</a>
+      </li>
+      <li>
+         <a href="#keywordCount" title="https://w3id.org/okn/o/sosen#keywordCount">keyword count</a>
+      </li>
+      <li>
+         <a href="#titleKeywordCount" title="https://w3id.org/okn/o/sosen#titleKeywordCount">title keyword count</a>
+      </li>
+      <li>
+         <a href="#totalDescriptionInCount"
+            title="https://w3id.org/okn/o/sosen#totalDescriptionInCount">
+            <span>total description in count</span>
+         </a>
+      </li>
+      <li>
+         <a href="#totalKeywordInCount" title="https://w3id.org/okn/o/sosen#totalKeywordInCount">
+            <span>total keyword in count</span>
+         </a>
+      </li>
+      <li>
+         <a href="#totalSoftwareCount" title="https://w3id.org/okn/o/sosen#totalSoftwareCount">total software count</a>
+      </li>
+      <li>
+         <a href="#totalTitleInCount" title="https://w3id.org/okn/o/sosen#totalTitleInCount">
+            <span>total title in count</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="descriptionKeywordCount">
+      <h3>description keyword count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#descriptionKeywordCount</p>
+      <div class="comment">
+         <span class="markdown">The number of keywords that were extracted from the software description</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inDescriptionCount">
+      <h3>in description count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#inDescriptionCount</p>
+      <div class="comment">
+         <span class="markdown">The number of software descriptions that this keyword appears in.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inKeywordCount">
+      <h3>in keyword count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#inKeywordCount</p>
+      <div class="comment">
+         <span class="markdown">This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inTitleCount">
+      <h3>in title count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#inTitleCount</p>
+      <div class="comment">
+         <span class="markdown">For a Keyword, this is the total number of titles that that keyword appears in.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QualifiedKeyword" title="https://w3id.org/okn/o/sosen#QualifiedKeyword">Qualified Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="keywordCount">
+      <h3>keyword count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#keywordCount</p>
+      <div class="comment">
+         <span class="markdown">The number of keywords in the keyword list of a software</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="titleKeywordCount">
+      <h3>title keyword count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#titleKeywordCount</p>
+      <div class="comment">
+         <span class="markdown">The number of keywords that were extracted from the title</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="totalDescriptionInCount">
+      <h3>total description in count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#totalDescriptionInCount</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="totalKeywordInCount">
+      <h3>total keyword in count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#totalKeywordInCount</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="totalSoftwareCount">
+      <h3>total software count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#totalSoftwareCount</p>
+      <div class="comment">
+         <span class="markdown">The total number of software objects that are present in the graph. This is used in order to computer document frequency (the "df" in "tf-idf") of keywords.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Global" title="https://w3id.org/okn/o/sosen#Global">Global</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="totalTitleInCount">
+      <h3>total title in count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sosen#totalTitleInCount</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Keyword" title="https://w3id.org/okn/o/sosen#Keyword">Keyword</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

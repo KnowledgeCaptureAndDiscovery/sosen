@@ -1,0 +1,430 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/okn/o/sd", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/okn/o/sosen" ],
+    "iri" : "https://w3id.org/okn/o/sosen#"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#Keyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Keyword",
+      "en" : "Keyword"
+    },
+    "comment" : {
+      "en" : "A keyword, which can appear in the keyword list, title, or description of a software. It also stores the number of documents that this keyword appears in, which can be used to compute the document frequency of the keyword, a part of the computation for the tf-idf score."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#Software",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Software"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#Global",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Global",
+      "en" : "Global"
+    },
+    "comment" : {
+      "en" : "An object to store global information. Currently, it only stores the total number of software objects in the graph."
+    },
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#QualifiedKeyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualifiedKeyword",
+      "en" : "Qualified Keyword"
+    },
+    "comment" : {
+      "en" : "This stores information about the edge between a Sofware and a Keyword. It says how many times that keyword appears in the keyword list, the title, and the description."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/okn/o/sosen#hasDescriptionKeyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasDescriptionKeyword",
+      "en" : "has description keyword"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A keyword that has been extracted from the description of a software."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#totalTitleInCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "totalTitleInCount"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#hasTitleKeyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasTitleKeyword",
+      "en" : "has title keyword"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "A keyword that has been extracted from the title of the software"
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#inKeywordCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "inKeywordCount",
+      "en" : "in keyword count"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#totalDescriptionInCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "totalDescriptionInCount"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#totalKeywordInCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "totalKeywordInCount"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#keyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "keyword",
+      "en" : "keyword"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "This is the keyword that a QualifiedKeyword object is refering to"
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#titleKeywordCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "titleKeywordCount",
+      "en" : "title keyword count"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "The number of keywords that were extracted from the title"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#keywordCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "keywordCount",
+      "en" : "keyword count"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "The number of keywords in the keyword list of a software"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#totalSoftwareCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "totalSoftwareCount",
+      "en" : "total software count"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "The total number of software objects that are present in the graph. This is used in order to computer document frequency (the \"df\" in \"tf-idf\") of keywords."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#inDescriptionCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "inDescriptionCount",
+      "en" : "in description count"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "The number of software descriptions that this keyword appears in."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#descriptionKeywordCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "descriptionKeywordCount",
+      "en" : "description keyword count"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "The number of keywords that were extracted from the software description"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#software",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "software",
+      "en" : "software"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "The software that a QualifiedKeyword object is refering to."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#hasKeyword",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasKeyword",
+      "en" : "has keyword"
+    },
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sosen#inTitleCount",
+    "baseIri" : "https://w3id.org/okn/o/sosen",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "inTitleCount",
+      "en" : "in title count"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "For a Keyword, this is the total number of titles that that keyword appears in."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  } ]
+}

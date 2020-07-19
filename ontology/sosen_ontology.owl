@@ -7,8 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/okn/o/sosen#> .
 
-<https://w3id.org/okn/o/sosen#> rdf:type owl:Ontology ;
-                                 owl:imports <https://w3id.org/okn/o/sd/1.7.0> .
+<https://w3id.org/okn/o/sosen#> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties

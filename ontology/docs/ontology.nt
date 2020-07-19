@@ -1,0 +1,158 @@
+<https://w3id.org/okn/o/sosen#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/okn/o/sosen#hasDescriptionKeyword
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sd#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sosen#Keyword> .
+# 
+# https://w3id.org/okn/o/sosen#hasKeyword
+<https://w3id.org/okn/o/sosen#hasKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sosen#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#label> "has keyword"@en .
+# 
+# https://w3id.org/okn/o/sosen#hasTitleKeyword
+<https://w3id.org/okn/o/sosen#hasTitleKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sosen#hasTitleKeyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#hasTitleKeyword> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#hasTitleKeyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword that has been extracted from the title of the software"@en .
+<https://w3id.org/okn/o/sosen#hasTitleKeyword> <http://www.w3.org/2000/01/rdf-schema#label> "has title keyword"@en .
+# 
+# https://w3id.org/okn/o/sosen#keyword
+<https://w3id.org/okn/o/sosen#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sosen#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#QualifiedKeyword> .
+<https://w3id.org/okn/o/sosen#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the keyword that a QualifiedKeyword object is refering to"@en .
+<https://w3id.org/okn/o/sosen#keyword> <http://www.w3.org/2000/01/rdf-schema#label> "keyword"@en .
+# 
+# https://w3id.org/okn/o/sosen#software
+<https://w3id.org/okn/o/sosen#software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sosen#software> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#QualifiedKeyword> .
+<https://w3id.org/okn/o/sosen#software> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#software> <http://www.w3.org/2000/01/rdf-schema#comment> "The software that a QualifiedKeyword object is refering to."@en .
+<https://w3id.org/okn/o/sosen#software> <http://www.w3.org/2000/01/rdf-schema#label> "software"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/okn/o/sosen#descriptionKeywordCount
+<https://w3id.org/okn/o/sosen#descriptionKeywordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#descriptionKeywordCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#descriptionKeywordCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#descriptionKeywordCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of keywords that were extracted from the software description"@en .
+<https://w3id.org/okn/o/sosen#descriptionKeywordCount> <http://www.w3.org/2000/01/rdf-schema#label> "description keyword count"@en .
+# 
+# https://w3id.org/okn/o/sosen#hasDescriptionKeyword
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/okn/o/sosen#inDescriptionCount
+<https://w3id.org/okn/o/sosen#inDescriptionCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#inDescriptionCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#QualifiedKeyword> .
+<https://w3id.org/okn/o/sosen#inDescriptionCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#inDescriptionCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of software descriptions that this keyword appears in."@en .
+<https://w3id.org/okn/o/sosen#inDescriptionCount> <http://www.w3.org/2000/01/rdf-schema#label> "in description count"@en .
+# 
+# https://w3id.org/okn/o/sosen#inKeywordCount
+<https://w3id.org/okn/o/sosen#inKeywordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#inKeywordCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#QualifiedKeyword> .
+<https://w3id.org/okn/o/sosen#inKeywordCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#inKeywordCount> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub."@en .
+<https://w3id.org/okn/o/sosen#inKeywordCount> <http://www.w3.org/2000/01/rdf-schema#label> "in keyword count"@en .
+# 
+# https://w3id.org/okn/o/sosen#inTitleCount
+<https://w3id.org/okn/o/sosen#inTitleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#inTitleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#QualifiedKeyword> .
+<https://w3id.org/okn/o/sosen#inTitleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#inTitleCount> <http://www.w3.org/2000/01/rdf-schema#comment> "For a Keyword, this is the total number of titles that that keyword appears in."@en .
+<https://w3id.org/okn/o/sosen#inTitleCount> <http://www.w3.org/2000/01/rdf-schema#label> "in title count"@en .
+# 
+# https://w3id.org/okn/o/sosen#keywordCount
+<https://w3id.org/okn/o/sosen#keywordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#keywordCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#keywordCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#keywordCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of keywords in the keyword list of a software"@en .
+<https://w3id.org/okn/o/sosen#keywordCount> <http://www.w3.org/2000/01/rdf-schema#label> "keyword count"@en .
+# 
+# https://w3id.org/okn/o/sosen#titleKeywordCount
+<https://w3id.org/okn/o/sosen#titleKeywordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#titleKeywordCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sosen#titleKeywordCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#titleKeywordCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of keywords that were extracted from the title"@en .
+<https://w3id.org/okn/o/sosen#titleKeywordCount> <http://www.w3.org/2000/01/rdf-schema#label> "title keyword count"@en .
+# 
+# https://w3id.org/okn/o/sosen#totalDescriptionInCount
+<https://w3id.org/okn/o/sosen#totalDescriptionInCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#totalDescriptionInCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#totalDescriptionInCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/okn/o/sosen#totalKeywordInCount
+<https://w3id.org/okn/o/sosen#totalKeywordInCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#totalKeywordInCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#totalKeywordInCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/okn/o/sosen#totalSoftwareCount
+<https://w3id.org/okn/o/sosen#totalSoftwareCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#totalSoftwareCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#Global> .
+<https://w3id.org/okn/o/sosen#totalSoftwareCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/okn/o/sosen#totalSoftwareCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of software objects that are present in the graph. This is used in order to computer document frequency (the \"df\" in \"tf-idf\") of keywords."@en .
+<https://w3id.org/okn/o/sosen#totalSoftwareCount> <http://www.w3.org/2000/01/rdf-schema#label> "total software count"@en .
+# 
+# https://w3id.org/okn/o/sosen#totalTitleInCount
+<https://w3id.org/okn/o/sosen#totalTitleInCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sosen#totalTitleInCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sosen#Keyword> .
+<https://w3id.org/okn/o/sosen#totalTitleInCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/okn/o/sd#Software
+# 
+# https://w3id.org/okn/o/sosen#Global
+<https://w3id.org/okn/o/sosen#Global> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sosen#Global> <http://www.w3.org/2000/01/rdf-schema#comment> "An object to store global information. Currently, it only stores the total number of software objects in the graph."@en .
+<https://w3id.org/okn/o/sosen#Global> <http://www.w3.org/2000/01/rdf-schema#label> "Global"@en .
+# 
+# https://w3id.org/okn/o/sosen#Keyword
+<https://w3id.org/okn/o/sosen#Keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sosen#Keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword, which can appear in the keyword list, title, or description of a software. It also stores the number of documents that this keyword appears in, which can be used to compute the document frequency of the keyword, a part of the computation for the tf-idf score."@en .
+<https://w3id.org/okn/o/sosen#Keyword> <http://www.w3.org/2000/01/rdf-schema#label> "Keyword"@en .
+# 
+# https://w3id.org/okn/o/sosen#QualifiedKeyword
+<https://w3id.org/okn/o/sosen#QualifiedKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sosen#QualifiedKeyword> <http://www.w3.org/2000/01/rdf-schema#comment> "This stores information about the edge between a Sofware and a Keyword. It says how many times that keyword appears in the keyword list, the title, and the description."@en .
+<https://w3id.org/okn/o/sosen#QualifiedKeyword> <http://www.w3.org/2000/01/rdf-schema#label> "Qualified Keyword"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword that has been extracted from the description of a software."@en .
+<https://w3id.org/okn/o/sosen#hasDescriptionKeyword> <http://www.w3.org/2000/01/rdf-schema#label> "has description keyword"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
