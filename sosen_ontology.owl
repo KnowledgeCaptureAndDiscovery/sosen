@@ -1,0 +1,166 @@
+@prefix : <https://w3id.org/okn/o/sosen#> .
+@prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/okn/o/sosen#> .
+
+<https://w3id.org/okn/o/sosen#> rdf:type owl:Ontology ;
+                                 owl:imports <https://w3id.org/okn/o/sd/1.7.0> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/okn/o/sosen#hasDescriptionKeyword
+:hasDescriptionKeyword rdf:type owl:ObjectProperty ;
+                       rdfs:domain sd:Software ;
+                       rdfs:range :Keyword .
+
+
+###  https://w3id.org/okn/o/sosen#hasKeyword
+:hasKeyword rdf:type owl:ObjectProperty ;
+            rdfs:domain sd:Software ;
+            rdfs:range :Keyword ;
+            rdfs:label "has keyword"@en .
+
+
+###  https://w3id.org/okn/o/sosen#hasTitleKeyword
+:hasTitleKeyword rdf:type owl:ObjectProperty ;
+                 rdfs:domain sd:Software ;
+                 rdfs:range :Keyword ;
+                 rdfs:comment "A keyword that has been extracted from the title of the software"@en ;
+                 rdfs:label "has title keyword"@en .
+
+
+###  https://w3id.org/okn/o/sosen#keyword
+:keyword rdf:type owl:ObjectProperty ;
+         rdfs:domain :QualifiedKeyword ;
+         rdfs:range :Keyword ;
+         rdfs:comment "This is the keyword that a QualifiedKeyword object is refering to"@en ;
+         rdfs:label "keyword"@en .
+
+
+###  https://w3id.org/okn/o/sosen#software
+:software rdf:type owl:ObjectProperty ;
+          rdfs:domain :QualifiedKeyword ;
+          rdfs:range sd:Software ;
+          rdfs:comment "The software that a QualifiedKeyword object is refering to."@en ;
+          rdfs:label "software"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/okn/o/sosen#descriptionKeywordCount
+:descriptionKeywordCount rdf:type owl:DatatypeProperty ;
+                         rdfs:domain sd:Software ;
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "The number of keywords that were extracted from the software description"@en ;
+                         rdfs:label "description keyword count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#hasDescriptionKeyword
+:hasDescriptionKeyword rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/okn/o/sosen#inDescriptionCount
+:inDescriptionCount rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :QualifiedKeyword ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "The number of software descriptions that this keyword appears in."@en ;
+                    rdfs:label "in description count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#inKeywordCount
+:inKeywordCount rdf:type owl:DatatypeProperty ;
+                rdfs:domain :QualifiedKeyword ;
+                rdfs:range xsd:integer ;
+                rdfs:comment "This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub."@en ;
+                rdfs:label "in keyword count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#inTitleCount
+:inTitleCount rdf:type owl:DatatypeProperty ;
+              rdfs:domain :QualifiedKeyword ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "For a Keyword, this is the total number of titles that that keyword appears in."@en ;
+              rdfs:label "in title count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#keywordCount
+:keywordCount rdf:type owl:DatatypeProperty ;
+              rdfs:domain sd:Software ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The number of keywords in the keyword list of a software"@en ;
+              rdfs:label "keyword count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#titleKeywordCount
+:titleKeywordCount rdf:type owl:DatatypeProperty ;
+                   rdfs:domain sd:Software ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "The number of keywords that were extracted from the title"@en ;
+                   rdfs:label "title keyword count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#totalDescriptionInCount
+:totalDescriptionInCount rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Keyword ;
+                         rdfs:range xsd:integer .
+
+
+###  https://w3id.org/okn/o/sosen#totalKeywordInCount
+:totalKeywordInCount rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Keyword ;
+                     rdfs:range xsd:integer .
+
+
+###  https://w3id.org/okn/o/sosen#totalSoftwareCount
+:totalSoftwareCount rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Global ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "The total number of software objects that are present in the graph. This is used in order to computer document frequency (the \"df\" in \"tf-idf\") of keywords."@en ;
+                    rdfs:label "total software count"@en .
+
+
+###  https://w3id.org/okn/o/sosen#totalTitleInCount
+:totalTitleInCount rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Keyword ;
+                   rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/okn/o/sosen#Global
+:Global rdf:type owl:Class ;
+        rdfs:comment "An object to store global information. Currently, it only stores the total number of software objects in the graph."@en ;
+        rdfs:label "Global"@en .
+
+
+###  https://w3id.org/okn/o/sosen#Keyword
+:Keyword rdf:type owl:Class ;
+         rdfs:comment "A keyword, which can appear in the keyword list, title, or description of a software. It also stores the number of documents that this keyword appears in, which can be used to compute the document frequency of the keyword, a part of the computation for the tf-idf score."@en ;
+         rdfs:label "Keyword"@en .
+
+
+###  https://w3id.org/okn/o/sosen#QualifiedKeyword
+:QualifiedKeyword rdf:type owl:Class ;
+                  rdfs:comment "This stores information about the edge between a Sofware and a Keyword. It says how many times that keyword appears in the keyword list, the title, and the description."@en ;
+                  rdfs:label "Qualified Keyword"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:hasDescriptionKeyword rdfs:label "has description keyword"@en ;
+                       rdfs:comment "A keyword that has been extracted from the description of a software."@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
