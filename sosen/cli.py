@@ -106,7 +106,8 @@ def run_scrape(queries, all, graph_out, keyword_out, zenodo_in, zenodo_cache, th
             json.dump(cli_data, json_out)
 
     document_data = [{**cli_data[github_url], "zenodo_data": data}
-                     for github_url, data in zenodo_data.items()]
+                     for github_url, data in zenodo_data.items()
+                     if data is not None and cli_data[github_url] is not None]
 
     # get total number of software entities
     total_documents = len(document_data)

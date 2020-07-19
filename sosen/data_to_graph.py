@@ -195,6 +195,9 @@ class DataGraph:
         return DataGraph.recursive_map(type_name, self.resolve_type_helper)
 
     def resolve_type_helper(self, type_name):
+        if type_name is None:
+            return None
+
         # split the string around the colon
         try:
             colon_index = type_name.index(":")
