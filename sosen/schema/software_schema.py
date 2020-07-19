@@ -187,6 +187,10 @@ somef_software_schema = {
             "sd:doi": {
                 "@path": ["zenodo_data", "data", "doi"],
                 "@type": "xsd:string"
+            },
+            "sd:name": {
+                "@path": ["zenodo_data", "data", "metadata", "title"],
+                "@type": "xsd:string"
             }
         }
     ]
