@@ -184,10 +184,6 @@ somef_software_schema = {
                 "tag_name": ["zenodo_data", "version"],
                 "name": ["fullName", "excerpt"]
             },
-            "sd:description": {
-                "@path": ["zenodo_data", "data", "metadata", "description"],
-                "@type": "xsd:string"
-            },
             "sd:doi": {
                 "@path": ["zenodo_data", "data", "doi"],
                 "@type": "xsd:string"
