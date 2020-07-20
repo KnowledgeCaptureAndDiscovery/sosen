@@ -70,7 +70,7 @@
 :inDescriptionCount rdf:type owl:DatatypeProperty ;
                     rdfs:domain :QualifiedKeyword ;
                     rdfs:range xsd:integer ;
-                    rdfs:comment "The number of software descriptions that this keyword appears in."@en ;
+                    rdfs:comment "The number of times the keyword appears in the description of the software"@en ;
                     rdfs:label "in description count"@en .
 
 
@@ -78,7 +78,7 @@
 :inKeywordCount rdf:type owl:DatatypeProperty ;
                 rdfs:domain :QualifiedKeyword ;
                 rdfs:range xsd:integer ;
-                rdfs:comment "This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub."@en ;
+                rdfs:comment "The number of times the keyword appears in the keyword list of the software (in this case, it is either 0 or 1)"@en ;
                 rdfs:label "in keyword count"@en .
 
 
@@ -86,7 +86,7 @@
 :inTitleCount rdf:type owl:DatatypeProperty ;
               rdfs:domain :QualifiedKeyword ;
               rdfs:range xsd:integer ;
-              rdfs:comment "For a Keyword, this is the total number of titles that that keyword appears in."@en ;
+              rdfs:comment "The number of times the keyword appears in the title of the software"@en ;
               rdfs:label "in title count"@en .
 
 
@@ -109,13 +109,17 @@
 ###  https://w3id.org/okn/o/sosen#totalDescriptionInCount
 :totalDescriptionInCount rdf:type owl:DatatypeProperty ;
                          rdfs:domain :Keyword ;
-                         rdfs:range xsd:integer .
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "The number of software descriptions that this keyword appears in."@en ;
+                         rdfs:label "total number of descriptions in"@en .
 
 
 ###  https://w3id.org/okn/o/sosen#totalKeywordInCount
 :totalKeywordInCount rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Keyword ;
-                     rdfs:range xsd:integer .
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "This is the number of keyword lists that this keyword appears in. The keyword list is a manual set of keywords that describe the software, which can be extracted from GitHub."@en ;
+                     rdfs:label "total number of keyword lists in"@en .
 
 
 ###  https://w3id.org/okn/o/sosen#totalSoftwareCount
@@ -129,12 +133,18 @@
 ###  https://w3id.org/okn/o/sosen#totalTitleInCount
 :totalTitleInCount rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Keyword ;
-                   rdfs:range xsd:integer .
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "For a Keyword, this is the total number of titles that that keyword appears in."@en ;
+                   rdfs:label "total number of titles in"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/okn/o/sd#Software
+sd:Software rdf:type owl:Class .
+
 
 ###  https://w3id.org/okn/o/sosen#Global
 :Global rdf:type owl:Class ;
