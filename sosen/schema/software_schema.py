@@ -5,7 +5,7 @@ software_prefixes = {
     "schema": schema,
     "sd": sd,
     "xsd": xsd,
-    "obj": get_config()["object_prefix"],
+    "obj": obj,
     "sosen": sosen,
     "rdfs": rdfs
 }

@@ -276,6 +276,9 @@ def get_all_keywords(keywords):
 
 
 def run_search(keywords, method="description"):
+    if isinstance(keywords, str):
+        keywords = keywords.split(" ")
+
     graph_in = get_config()["endpoint"]
     sparql = SPARQLWrapper(graph_in)
 
