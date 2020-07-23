@@ -113,8 +113,9 @@ def configure():
     configure_sosen(endpoint=endpoint, object_prefix=object_prefix)
 
 @cli.command(help="describe an object")
-@click.argument("iri",
-                type=str)
+@click.argument("iris",
+                type=str,
+                nargs=-1)
 def describe(**kwargs):
     run_describe(**kwargs)
 

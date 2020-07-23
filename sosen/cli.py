@@ -12,7 +12,7 @@ import math
 import os
 from SPARQLWrapper import SPARQLWrapper, JSON as SPARQL_JSON
 
-from .sparql_queries import get_keywords, get_document_from_kw, get_global_doc_count
+from .sparql_queries import get_software_from_kw, compare_softwares
 from .config import get_config
 
 from rdflib import RDF, Namespace
@@ -286,50 +286,20 @@ def run_search(keywords, method="description"):
     if method == "keyword":
         keywords = get_all_keywords(keywords)
 
-    # first, get the global document count
-    doc_count = get_global_doc_count(sparql)
+    results = get_software_from_kw(keywords, method, sparql)
 
-    print(keywords)
-    # first, get all of the keywords and their frequencies
-    keyword_idfs = {}
-    results = get_keywords(keywords, method, sparql)
-
-    for result in results:
-        kw_doc_count = float(result['doc_count']['value'])
-        if kw_doc_count > 0:
-            keyword_id = result['obj']['value']
-            keyword_df = kw_doc_count/doc_count
-
-            keyword_idf = -1 * math.log(keyword_df, math.e)
-            keyword_idfs[keyword_id] = keyword_idf
-
-    keyword_table = [[keyword, idf] for keyword, idf in keyword_idfs.items()]
-    print("\nFOUND KEYWORDS:")
-    print(tabulate(
-        keyword_table,
-        headers=["keyword iri", "idf"]
-    ))
-
-    # now, get the documents that match these keywords
-    all_results = {}
-
-    results = get_document_from_kw(keyword_idfs, method, sparql)
-
-    for result in results:
-        obj_id = result['obj']['value']
-
-        all_results[obj_id] = {
-            "tf_idf": result["sum_tf_idf"]["value"],
-            "matches": result["matches"]["value"]
-        }
-
-    tf_idf_results = [{"obj_id": obj_id, "matches": value["matches"], "tf_idf": value["tf_idf"]}
-                      for obj_id, value in all_results.items()]
-
+    table_data = [
+        [
+            index + 1,
+            result['software']['value'],
+            result['matches']['value'],
+            result['sum_tf_idf']['value']
+        ]
+        for index, result in enumerate(results)
+    ]
 
     print("\nMATCHES:")
-    table_data = [[index + 1, result['obj_id'], result['matches'], result['tf_idf']]
-                  for index, result in enumerate(tf_idf_results)]
+
     print(tabulate(
         table_data,
         headers=["", "result iri", "matches", "tf-idf sum"],
@@ -337,38 +307,55 @@ def run_search(keywords, method="description"):
     ))
 
 
-def run_describe(iri):
+def run_describe(iris):
     graph_in = get_config()["endpoint"]
     sparql = SPARQLWrapper(graph_in)
-    query_string = describe_iri.format(iri=iri)
-    print(query_string)
-    sparql.setQuery(query_string)
-    sparql.setReturnFormat(SPARQL_JSON)
-    result = sparql.query().convert()
-
-    table_dict = {}
-
-    for _, property, value in result.triples((None, None, None)):
-        property = str(property)
-        value = str(value)
-
-        if property not in table_dict:
-            table_dict[property] = []
-
-        table_dict[property].append(value)
 
     text_width = 50
 
-    table = [
-        ["" if line_index != 0 else property if value_index == 0 else '" "', value_line]
-        for property, values in table_dict.items()
-        for value_index, value in enumerate(values)
-        for line_index, value_line in enumerate(text_wrap(value, width=text_width))
-    ]
+    data = compare_softwares(iris, sparql)
+
+
+    # table = [
+    #     ["" if line_index != 0 else property if value_index == 0 else '" "', value_line]
+    #     for property, values in data
+    #     for value_index, value in enumerate(values)
+    #     for line_index, value_line in enumerate(text_wrap(value, width=text_width))
+    # ]
+    table = []
+    for row in data:
+        key = row[0]
+        row_values = row[1:]
+        print(f"{key}: {row_values}")
+        count_row_values = max([len(value) for value in row_values])
+        print(f"count row values: {count_row_values}")
+        for index in range(count_row_values):
+            print(f"index: {index}")
+            print(f"first row val: {row_values[0]}")
+            values = [(row_value[index] if index < len(row_value) else "") for row_value in row_values]
+            wrapped_values = [text_wrap(value, width=text_width) for value in values]
+            print(wrapped_values)
+            max_line_length = max([len(lines) for lines in wrapped_values])
+            print(f"max line len: {max_line_length}")
+            out_rows = [
+                [
+                    "" if line_index != 0 else key if index == 0 else '" "',
+                    *[
+                        wrapped_value[line_index] if line_index < len(wrapped_value) else ""
+                        for wrapped_value in wrapped_values
+                    ]
+                ]
+                for line_index in range(max_line_length)
+            ]
+
+            table += out_rows
+
+
+    print(table)
 
     print(tabulate(
         table,
-        headers=["property", "value"],
+        headers=["property"] + [f"software {i+1}" for i in range(len(iris))],
         tablefmt="github"
     ))
 
