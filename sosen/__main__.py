@@ -132,89 +132,10 @@ def describe(**kwargs):
     run_describe(**kwargs)
 
 
-def get_input_with_constraint(message, constraint):
-    while True:
-        user_input = input(message)
-        if constraint(user_input):
-            return user_input
-
-
-def get_input_from_choices(message, choices):
-    def choice_constraint(choice):
-        return choice in choices
-
-    return get_input_with_constraint(message, choice_constraint)
-
-def get_choice(message, choices_dict):
-    reverse_dict = {
-        value: key for key, values in choices_dict.items() for value in values
-    }
-    choices = [value for value in reverse_dict.keys()]
-    choice = get_input_from_choices(message, choices)
-
-    return reverse_dict[choice]
-
+from .cli import run_interactive
 @cli.command(help="run interactively")
 def interactive():
-
-    search_results = None
-
-    while True:
-        choice = get_choice(
-            "Choose an action (search/describe/quit):> ",
-            {
-                "search": [
-                    "search",
-                    "s"
-                ],
-                "describe": [
-                    "describe",
-                    "d"
-                ],
-                "quit": [
-                    "quit",
-                    "q"
-                ]
-            }
-        )
-
-        if choice == "quit":
-            return
-        elif choice == "describe":
-            print("Enter a space-separated list of URIs")
-            if search_results is not None:
-                print("Alternatively, enter numbers 1-20, referring to the results of the previous search")
-
-            choice = get_input_with_constraint(">", lambda x: True)
-
-            def decode_uri(uri):
-                try:
-                    assert(search_results is not None)
-                    index = int(uri)
-                    assert(1 <= index <= 20)
-                    return search_results[index-1]
-                except (ValueError, KeyError, AssertionError):
-                    return uri
-
-            uris = [decode_uri(uri) for uri in choice.split(" ")]
-
-            run_describe(iris=uris)
-
-        elif choice == "search":
-            method = get_choice("Which method (description/keyword/title)?> ",
-                                    {
-                                        "description": ["description", "d"],
-                                        "keyword": ["keyword", "k"],
-                                        "title": ["title", "t"]
-                                    }
-                                )
-
-            query = get_input_with_constraint("what is your query?> ", lambda x: True)
-            keywords = query.split(" ")
-
-            search_results = run_search(keywords=keywords, method=method)
-
-
+    run_interactive()
 
 
 if __name__ == "__main__":
