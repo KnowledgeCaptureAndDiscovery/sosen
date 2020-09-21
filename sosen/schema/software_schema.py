@@ -125,6 +125,10 @@ somef_software_schema = {
             "@type": "xsd:string"
         }
     },
+    "sd:dateCreated": {
+        "@path": ["dateCreated", "excerpt"],
+        "@type": "xsd:datetime"
+    },
     "sd:author": {
         "@class": "schema:Person",
         "@id": {
@@ -176,7 +180,15 @@ somef_software_schema = {
                     "@path": ["releases", "excerpt", "html_url"],
                     "@type": "xsd:anyURI"
                 }
-            ]
+            ],
+            "sd:dateCreated": {
+                "@type": "xsd:datetime",
+                "@path": ["releases", "excerpt", "dateCreated"]
+            },
+            "sd:datePublished": {
+                "@type": "xsd:datetime",
+                "@path": ["releases", "excerpt", "datePublished"]
+            }
         }, {
             "@class": "sd:SoftwareVersion",
             "@id": {
