@@ -15,6 +15,17 @@ Next, configure sosen with
 
 ```python -m sosen configure```
 
+# Recreate the SOSEN-KG
+SOMEF continuously evolves, improving metadata extraction, extracting more metadata categories, etc. Therefore, it's recommendable to re-create the SOSEN-KG when SOMEF does a new release. 
+
+To re-run the metadata extraction and KG creation pipeline, just run:
+
+```
+python -m sosen scrape --all -g graph_out.ttl -k keywords_out.ttl -t 0.8 -d somef_cache.json -c zenodo_cache.json
+```
+
+The graph will be stored in `graph_out.ttl`, and the keywords in `keywords_out.ttl`. This process may take several hours to finish. 
+
 # Search
 
 There are currently two methods for search: Description-Based search and Title-based search
