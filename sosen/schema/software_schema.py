@@ -140,6 +140,14 @@ somef_software_schema = {
             "@type": "xsd:string"
         }
     },
+    "sd:hasFAQ": {
+        "@path": ["faq", "excerpt"],
+        "@type": "xsd:string",
+    },
+    "sd:hasExecutableNotebook": {
+        "@path": ["executable_example", "excerpt"],
+        "@type": "xsd:anyURI"
+    },
     "sd:hasVersion": [
         {
             "@class": "sd:SoftwareVersion",
