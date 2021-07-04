@@ -41,6 +41,8 @@ def get_zenodo_data(query, recursive=True):
         if not recursive:
             all_versions["all_versions"] = True
 
+        print("calling zenodo api")
+        zenodo_call_time = time.time()
         data_out = zenodo_get(
             f"{zenodo_api_base}/records",
             params={
@@ -55,6 +57,7 @@ def get_zenodo_data(query, recursive=True):
                 'Accept': "application/vnd.zenodo.v1+json"
             }
         )
+        print(f"got result from zenodo api in {time.time() - zenodo_call_time} seconds")
 
         results = data_out["hits"]["hits"]
         total_count = data_out["hits"]["total"]

@@ -9,10 +9,7 @@ config_file = "~/.sosen/config.yml"
 def configure(**kwargs):
     global _config
 
-    try:
-        get_config()
-    except SosenConfigurationException:
-        _config = get_defaults()
+    get_config()
 
     _config.update(kwargs)
 
@@ -48,7 +45,7 @@ def get_config():
                     _config[key] = default_value
 
         else:
-            raise SosenConfigurationException("SoSEn is not configured. You must run \"sosen configure\"")
+            _config = get_defaults()
 
     return _config
 
