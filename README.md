@@ -63,13 +63,17 @@ To run the unit tests, run
 ```python -m unittest test```
 
 # Disclaimer
-SOSEN currently works against an endpoint where the TTL files from this repository are loaded.
+SOSEN currently works against an endpoint where the TTL files from this repository are loaded (`https://sosen.linkeddata.es/`). To test the endpoint, a sample query may be performed:
+```
+curl https://sosen.linkeddata.es/sosen -X POST --data 'query=SELECT+%3Fp+(count+(distinct+%3Fsoft)+as+%3Ftotal)%0AWHERE+%7B%0A++%3Fsoft+a+%3Chttps%3A%2F%2Fw3id.org%2Fokn%2Fo%2Fsd%23Software%3E.%0A++%3Fsoft+%3Fp+%3Fv%0A%7Dgroup+by+%3Fp' -H 'Accept: application/sparql-results+json,*/*;q=0.9'
+```
+
 Unfortunately, we cannot ensure the long term accessibility of this endpoint, and hence we provide the RDF dumps.
-If the endpoint is not available, you can load the provided data in a local one and change it in the notebooks (look in the first lines for the `configure` command). Replacing the URL should be sufficient for ensuring SOSEN will work.
+If the endpoint is not available, you can load the provided data in a local one and change the right field in the notebooks (look in the first lines for the `configure` command). Replacing the URL should be sufficient for ensuring the right responses from SOSEN.
 
 # Example queries
 
-## Basic statistics
+## Basic queries
 Let's start by extracting some basic metadata from the SOSEN graph. For example, how many software entries have a description?
 
 ```
@@ -153,5 +157,32 @@ which would return
 ```
 Meaning that some of these software entries do not have a license (as it is the case of FragFlow), or that the license was not one of the common licenses used in GitHub (as it's the case of WIDOCO)
 
+## SOSEN in numbers:
+The following queries may be slow, but will retrieve property coverage in SOSEN:
 
+```
+SELECT ?p (count (distinct ?soft) as ?total)
+WHERE {
+  ?soft a <https://w3id.org/okn/o/sd#Software>.
+  ?soft ?p ?v
+}group by ?p
+```
+To get the distribution of the programming languages in SOSEN:
 
+```
+SELECT ?pl (count (distinct ?soft) as ?total)
+WHERE {
+  ?soft <https://w3id.org/okn/o/sd#programmingLanguage> ?pl
+}group by ?pl order by desc(?total)
+```
+
+Finally, number of repositories with more than one version:
+
+```
+SELECT (count (distinct ?s) as ?total)
+WHERE {
+ ?s <https://w3id.org/okn/o/sd#hasVersion> ?v.
+ ?s <https://w3id.org/okn/o/sd#hasVersion> ?w
+  filter(?v!=?w) 
+}
+```
