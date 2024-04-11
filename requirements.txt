@@ -5,7 +5,7 @@ chardet==3.0.4
 click==7.1.2
 click-option-group==0.5.1
 cycler==0.10.0
-idna==2.10
+idna==3.7
 importlib-metadata==1.7.0
 isodate==0.6.0
 joblib==1.2.0
